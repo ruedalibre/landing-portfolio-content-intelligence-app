@@ -1,32 +1,32 @@
 const steps = [
   {
     title: "Capture content",
-    description: "Register your content with structured metadata.",
+    description: "Log your content in a structured and organized way.",
   },
   {
     title: "Structure ideas",
-    description: "Organize content into reusable creative units.",
+    description: "Connect content to ideas and topics.",
   },
   {
     title: "Analyze patterns",
-    description: "Detect trends, behaviors and content signals.",
+    description: "Understand what works across formats and platforms.",
   },
   {
     title: "Get insights",
-    description: "Turn data into actionable recommendations.",
+    description: "Turn data into clear, actionable decisions.",
   },
 ];
 
 const HowItWorks = () => {
   return (
-    <section className="how-it-works">
-      <div className="container">
-        <h2 className="how-it-works__title">How it works</h2>
+    <section className="how">
+      <div className="container how__content">
+        <h2 className="how__title">How it works</h2>
 
-        <div className="how-it-works__steps">
+        <div className="how__grid">
           {steps.map((step, index) => (
-            <div key={index} className="how-it-works__step">
-              <div className="how-it-works__number">{index + 1}</div>
+            <div key={index} className="how__step">
+              <div className="how__number">{index + 1}</div>
 
               <h3>{step.title}</h3>
               <p>{step.description}</p>

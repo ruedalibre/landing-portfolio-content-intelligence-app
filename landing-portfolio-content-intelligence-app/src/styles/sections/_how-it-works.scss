@@ -1,52 +1,71 @@
-.how-it-works {
+@use "../abstracts/variables" as *;
+
+.how {
   padding: 120px 0;
-  background: #ffffff;
+  background: $color-surface;
 }
 
-.how-it-works__title {
+.how__content {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+/* TITLE */
+.how__title {
   text-align: center;
-  font-size: 32px;
-  font-weight: 600;
+
+  font-family: $font-serif;
+  font-size: $fs-3xl;
+  font-weight: $fw-semibold;
+
   margin-bottom: 60px;
 }
 
-.how-it-works__steps {
+/* GRID */
+.how__grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 24px;
 }
 
-.how-it-works__step {
+/* STEP */
+.how__step {
   text-align: center;
-  padding: 20px;
+
+  h3 {
+    font-family: $font-sans;
+    font-size: $fs-md;
+    font-weight: $fw-semibold;
+
+    margin-bottom: 8px;
+  }
+
+  p {
+    font-size: $fs-sm;
+    color: $color-text-secondary;
+  }
 }
 
-.how-it-works__number {
-  width: 40px;
-  height: 40px;
+/* NUMBER */
+.how__number {
+  width: 42px;
+  height: 42px;
+  margin: 0 auto 16px;
+
   border-radius: 50%;
-  background: #f2f2f7;
+  background: $color-bg-light;
+
+  border: 1px solid $color-border;
 
   display: flex;
   align-items: center;
   justify-content: center;
 
-  font-weight: 600;
-  margin: 0 auto 16px;
-}
-
-.how-it-works__step h3 {
-  font-size: 16px;
-  margin-bottom: 8px;
-}
-
-.how-it-works__step p {
-  font-size: 14px;
-  color: #666;
+  font-weight: $fw-semibold;
 }
 
 @media (max-width: 768px) {
-  .how-it-works__steps {
+  .how__grid {
     grid-template-columns: 1fr;
   }
 }

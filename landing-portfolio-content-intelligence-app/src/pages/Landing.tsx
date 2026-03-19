@@ -1,17 +1,16 @@
-import Navbar from "../components/layout/Navbar";
-
-import Hero from "../components/sections/Hero";
-import Problem from "../components/sections/Problem";
-import Solution from "../components/sections/Solution";
+import Navbar from "../components/layout/Navbar.tsx";
+import Hero from "../components/sections/Hero.tsx";
+import Problem from "../components/sections/Problem.tsx";
+import Solution from "../components/sections/Solution.tsx";
 import CoreInsight from "../components/sections/CoreInsight.tsx";
-import CoreLoop from "../components/sections/CoreLoop";
+import CoreLoop from "../components/sections/CoreLoop.tsx";
 import Capabilities from "../components/sections/Capabilities.tsx";
-import ProductVisuals from "../components/sections/ProductVisuals";
-import HowItWorks from "../components/sections/HowItWorks";
-import WhyItMatters from "../components/sections/WhyItMatters";
-import NorthStar from "../components/sections/NorthStar";
-import Vision from "../components/sections/Vision";
-import FinalCTA from "../components/sections/FinalCTA";
+import ProductVisuals from "../components/sections/ProductVisuals.tsx";
+import HowItWorks from "../components/sections/HowItWorks.tsx";
+import WhyItMatters from "../components/sections/WhyItMatters.tsx";
+import NorthStar from "../components/sections/NorthStar.tsx";
+import Vision from "../components/sections/Vision.tsx";
+import FinalCTA from "../components/sections/FinalCTA.tsx";
 
 const Landing = () => {
   return (

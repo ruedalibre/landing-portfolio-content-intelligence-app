@@ -1,6 +1,8 @@
+@use "../abstracts/variables" as *;
+
 .problem {
   padding: 120px 0;
-  background: #ffffff;
+  background: $color-bg-light;
   text-align: center;
 }
 
@@ -10,14 +12,18 @@
 }
 
 .problem__title {
-  font-size: 34px;
-  font-weight: 600;
+  font-family: $font-serif;
+  font-size: $fs-3xl;
+  font-weight: $fw-semibold;
+
   margin-bottom: 12px;
 }
 
 .problem__subtitle {
-  font-size: 16px;
-  color: #666;
+  font-family: $font-sans;
+  font-size: $fs-md;
+  color: $color-text-secondary;
+
   margin-bottom: 48px;
 }
 
@@ -32,41 +38,31 @@
   align-items: flex-start;
   gap: 12px;
 
-  padding: 20px;
-  border-radius: 14px;
-  border: 1px solid #eee;
-  background: #fafafa;
+  padding: 22px;
+  border-radius: 16px;
+
+  border: 1px solid $color-border;
+  background: $color-surface;
 
   text-align: left;
 
   transition: all 0.2s ease;
 
   p {
-    font-size: 14px;
-    color: #444;
-    line-height: 1.5;
+    font-size: $fs-sm;
+    color: $color-text-primary;
+    line-height: $lh-normal;
   }
 
   &:hover {
-    border-color: #ddd;
-    transform: translateY(-2px);
-    background: #fff;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    transform: translateY(-3px);
+    border-color: #dcdcdc;
+    background: #ffffff;
   }
 }
 
 .problem__icon {
-  font-size: 16px;
+  font-size: 14px;
   color: #ff5c5c;
-  margin-top: 2px;
-}
-
-@media (max-width: 768px) {
-  .problem__grid {
-    grid-template-columns: 1fr;
-  }
-
-  .problem__title {
-    font-size: 28px;
-  }
+  margin-top: 3px;
 }

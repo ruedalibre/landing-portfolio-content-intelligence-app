@@ -1,13 +1,14 @@
-// import heroImage from "../../assets/images/hero-dashboard.png";
+import heroImage from "../../assets/images/hero-dashboard.png";
 
 const Hero = () => {
   return (
     <section className="hero">
       <div className="container hero__grid">
-        {/* LEFT CONTENT */}
+        {/* LEFT */}
         <div className="hero__content">
           <h1 className="hero__title">
-            Turn your content into a scalable system
+            Turn your content into a{" "}
+            <span className="highlight">scalable system</span>
           </h1>
 
           <p className="hero__subtitle">
@@ -21,13 +22,14 @@ const Hero = () => {
 
           <div className="hero__cta">
             <button className="btn btn--primary">Request early access</button>
+
             <button className="btn btn--secondary">Let’s connect</button>
           </div>
         </div>
 
-        {/* RIGHT VISUAL */}
+        {/* RIGHT */}
         <div className="hero__visual">
-          <div className="hero__mock">Dashboard Preview</div>
+          <img src={heroImage} alt="Dashboard preview" />
         </div>
       </div>
     </section>

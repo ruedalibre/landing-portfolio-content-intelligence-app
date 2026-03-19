@@ -1,6 +1,8 @@
+@use "../abstracts/variables" as *;
+
 .north-star {
   padding: 120px 0;
-  background: #ffffff;
+  background: $color-bg-light;
   text-align: center;
 }
 

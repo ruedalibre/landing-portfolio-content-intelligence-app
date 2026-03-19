@@ -30,7 +30,7 @@ const capabilities = [
 const Capabilities = () => {
   return (
     <section className="capabilities">
-      <div className="container">
+      <div className="container capabilities__content">
         <h2 className="capabilities__title">What you can do</h2>
 
         <div className="capabilities__grid">

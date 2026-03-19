@@ -1,31 +1,36 @@
-.why-it-matters {
+@use "../abstracts/variables" as *;
+
+.why {
   padding: 140px 0;
-  background: #0b0b0f;
-  color: white;
+  background: $color-bg-dark;
+  color: $color-text-white;
   text-align: center;
 }
 
-.why-it-matters__content {
-  max-width: 700px;
+.why__content {
+  max-width: 800px;
   margin: 0 auto;
 }
 
-.why-it-matters__title {
-  font-size: 40px;
-  line-height: 1.2;
-  font-weight: 700;
+.why__title {
+  font-family: $font-serif;
+  font-size: $fs-3xl;
+  font-weight: $fw-semibold;
+
+  margin-bottom: 12px;
+}
+
+.why__subtitle {
+  font-family: $font-sans;
+  font-size: $fs-xl;
+
+  color: $color-text-white-muted;
+
   margin-bottom: 24px;
-  text-shadow: 0 10px 40px rgba(255, 255, 255, 0.08);
 }
 
-.why-it-matters__title span {
-  background: linear-gradient(90deg, #6c5ce7, #5a4bd6);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
-.why-it-matters__text {
-  font-size: 18px;
-  color: #b3b3b3;
-  line-height: 1.6;
+.why__text {
+  font-size: $fs-md;
+  color: $color-text-white-muted;
+  line-height: $lh-normal;
 }
