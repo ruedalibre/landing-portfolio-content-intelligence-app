@@ -1,0 +1,16 @@
+body {
+  font-family: $font-sans;
+  color: $color-text-primary;
+  background: $color-bg-light;
+}
+
+h1,
+h2,
+h3 {
+  font-family: $font-sans;
+  font-weight: $fw-semibold;
+}
+
+.serif {
+  font-family: $font-serif;
+}

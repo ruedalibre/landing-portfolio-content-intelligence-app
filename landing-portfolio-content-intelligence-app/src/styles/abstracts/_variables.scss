@@ -1,1 +1,47 @@
 $light-bg: #f5f5f5;
+
+// 🎯 BASE
+$color-bg-dark: #0b0b0f;
+$color-bg-light: #ffffff;
+
+// 🎯 TEXTOS
+$color-text-primary: #111111;
+$color-text-secondary: #666666;
+$color-text-muted: #999999;
+
+// 🎯 BORDES / UI
+$color-border: #e5e5e5;
+$color-surface: #f8f8fa;
+
+// 🎯 ACCENT (clave)
+$color-accent: #6c5ce7;
+$color-accent-soft: #a29bfe;
+
+// 🎯 DARK MODE TEXT
+$color-text-white: #ffffff;
+$color-text-white-muted: #b3b3b3;
+
+// FONTS
+$font-sans: "Inter", sans-serif;
+$font-serif: "Playfair Display", serif;
+
+// FONT SIZES
+$fs-xs: 12px;
+$fs-sm: 14px;
+$fs-md: 16px;
+$fs-lg: 18px;
+$fs-xl: 24px;
+$fs-2xl: 32px;
+$fs-3xl: 40px;
+$fs-4xl: 48px;
+
+// FONT WEIGHTS
+$fw-regular: 400;
+$fw-medium: 500;
+$fw-semibold: 600;
+$fw-bold: 700;
+
+// LINE HEIGHTS
+$lh-tight: 1.2;
+$lh-normal: 1.5;
+$lh-loose: 1.7;

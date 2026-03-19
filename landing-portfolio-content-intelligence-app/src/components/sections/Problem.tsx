@@ -1,14 +1,27 @@
+const problems = [
+  "They don’t know what actually works",
+  "Content is scattered across platforms",
+  "Ideas are reused randomly (or not at all)",
+  "Strategy is based on intuition, not data",
+];
+
 const Problem = () => {
   return (
-    <section className="section section--light">
-      <div className="container">
-        <h2>Creators publish constantly</h2>
+    <section className="problem">
+      <div className="container problem__content">
+        <h2 className="problem__title">Creators publish constantly</h2>
 
-        <div className="grid grid--2">
-          <div className="card">No clarity</div>
-          <div className="card">No strategy</div>
-          <div className="card">No reuse</div>
-          <div className="card">Scattered</div>
+        <p className="problem__subtitle">
+          But they lack clarity on what actually drives growth.
+        </p>
+
+        <div className="problem__grid">
+          {problems.map((item, index) => (
+            <div key={index} className="problem__card">
+              <span className="problem__icon">✕</span>
+              <p>{item}</p>
+            </div>
+          ))}
         </div>
       </div>
     </section>
