@@ -1,0 +1,44 @@
+.north-star {
+  padding: 120px 0;
+  background: #ffffff;
+  text-align: center;
+}
+
+.north-star__content {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.north-star__label {
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #888;
+  margin-bottom: 16px;
+}
+
+.north-star__title {
+  font-size: 36px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  line-height: 1.2;
+}
+
+.north-star__title span {
+  color: #6c5ce7;
+}
+
+.north-star__title::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 2px;
+  background: #eee;
+  margin: 20px auto 0;
+}
+
+.north-star__description {
+  font-size: 16px;
+  color: #666;
+  line-height: 1.5;
+}
