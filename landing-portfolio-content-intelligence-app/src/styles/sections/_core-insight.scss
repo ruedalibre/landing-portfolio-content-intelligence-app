@@ -1,0 +1,28 @@
+.core-insight {
+  padding: 140px 0;
+  background: #ffffff;
+  text-align: center;
+}
+
+.core-insight__content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.core-insight__pre {
+  font-size: 18px;
+  color: #777;
+  margin-bottom: 16px;
+}
+
+.core-insight__title {
+  font-size: 56px;
+  font-weight: 700;
+  line-height: 1.1;
+  color: #111;
+
+  /* opcional: efecto leve de gradiente */
+  background: linear-gradient(90deg, #111, #555);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
