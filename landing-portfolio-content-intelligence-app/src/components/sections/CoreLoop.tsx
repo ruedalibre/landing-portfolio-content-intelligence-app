@@ -1,20 +1,30 @@
 const CoreLoop = () => {
   return (
-    <section className="section section--light">
-      <div className="container center">
-        <h2>Core Loop</h2>
+    <section className="core-loop-section">
+      <div className="container">
+
+        <h2 className="core-loop__title">
+          Turn your creativity into a system
+        </h2>
 
         <div className="core-loop">
-          <span>Idea</span>
-          <span>→</span>
-          <span>Content</span>
-          <span>→</span>
-          <span>Patterns</span>
-          <span>→</span>
-          <span>Insights</span>
-          <span>→</span>
-          <span>Strategy</span>
+
+          <div className="core-loop__item">Ideas</div>
+          <div className="core-loop__arrow">→</div>
+
+          <div className="core-loop__item">Content</div>
+          <div className="core-loop__arrow">→</div>
+
+          <div className="core-loop__item">Patterns</div>
+          <div className="core-loop__arrow">→</div>
+
+          <div className="core-loop__item">Insights</div>
+          <div className="core-loop__arrow">→</div>
+
+          <div className="core-loop__item">Strategy</div>
+
         </div>
+
       </div>
     </section>
   );
