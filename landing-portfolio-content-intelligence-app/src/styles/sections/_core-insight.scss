@@ -1,24 +1,26 @@
 @use "../abstracts/variables" as *;
 
 .core-insight {
-  padding: 140px 0;
+  padding: $space-9 0;
   background: $color-bg-light;
   text-align: center;
 }
 
 .core-insight__content {
-  max-width: 800px;
+  max-width: 780px;
   margin: 0 auto;
 }
 
+/* PRE TEXT */
 .core-insight__pre {
   font-family: $font-sans;
   font-size: $fs-md;
   color: $color-text-secondary;
 
-  margin-bottom: 16px;
+  margin-bottom: $space-2;
 }
 
+/* TITLE */
 .core-insight__title {
   font-family: $font-serif;
   font-size: 56px;
@@ -28,17 +30,23 @@
   color: $color-text-primary;
 }
 
-/* highlight coherente con Hero */
+/* HIGHLIGHT */
 .highlight {
   font-family: $font-sans;
 
   background: linear-gradient(90deg, $color-accent, $color-accent-soft);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+
+  text-shadow: 0 12px 40px rgba(108, 92, 231, 0.2);
 }
 
 @media (max-width: 768px) {
   .core-insight__title {
     font-size: 36px;
+  }
+
+  .core-insight {
+    padding: $space-8 0;
   }
 }

@@ -9,20 +9,17 @@ const capabilities = [
   },
   {
     title: "Topic Intelligence",
-    description:
-      "Identify your dominant topics and detect emerging opportunities.",
+    description: "Identify dominant topics and detect emerging opportunities.",
     icon: Layers,
   },
   {
     title: "Content DNA",
-    description:
-      "Discover your creative profile: topics, formats and patterns.",
+    description: "Discover your creative profile across formats and patterns.",
     icon: Fingerprint,
   },
   {
     title: "Insights Engine",
-    description:
-      "Turn data into clear, actionable insights you can use immediately.",
+    description: "Turn data into clear, actionable insights.",
     icon: Sparkles,
   },
 ];
@@ -40,7 +37,7 @@ const Capabilities = () => {
             return (
               <div key={index} className="capabilities__card">
                 <div className="capabilities__icon">
-                  <Icon size={22} strokeWidth={1.8} />
+                  <Icon size={20} strokeWidth={1.8} />
                 </div>
 
                 <h3>{item.title}</h3>

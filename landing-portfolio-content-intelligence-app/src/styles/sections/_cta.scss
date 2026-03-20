@@ -1,46 +1,42 @@
 @use "../abstracts/variables" as *;
 
-.final-cta {
-  padding: 140px 0;
-  background: linear-gradient(135deg, #0b0b0f, #141420);
-  color: white;
+.cta {
+  padding: $space-9 0;
   text-align: center;
+
+  background: radial-gradient(
+      circle at center,
+      rgba(108, 92, 231, 0.15),
+      transparent 60%
+    ),
+    $color-bg-dark;
 }
 
-.final-cta__content {
+.cta__content {
   max-width: 700px;
   margin: 0 auto;
 }
 
-.final-cta__title {
-  font-size: 40px;
-  font-weight: 700;
-  margin-bottom: 20px;
+/* TITLE */
+.cta__title {
+  font-family: $font-serif;
+  font-size: $fs-3xl;
+  color: white;
+
+  margin-bottom: $space-3;
 }
 
-.final-cta__text {
-  font-size: 18px;
-  color: #b3b3b3;
-  margin-bottom: 32px;
-  line-height: 1.6;
+/* SUBTITLE */
+.cta__subtitle {
+  font-size: $fs-md;
+  color: $color-text-white-muted;
+
+  margin-bottom: $space-5;
 }
 
-.final-cta__actions {
+/* ACTIONS */
+.cta__actions {
   display: flex;
   justify-content: center;
-  gap: 16px;
-}
-
-.btn--primary:hover {
-  transform: translateY(-2px);
-}
-
-.btn--secondary:hover {
-  border-color: #666;
-}
-
-@media (max-width: 768px) {
-  .final-cta__actions {
-    flex-direction: column;
-  }
+  gap: $space-3;
 }

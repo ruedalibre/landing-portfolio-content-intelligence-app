@@ -1,7 +1,7 @@
 const problems = [
   "They don’t know what actually works",
   "Content is scattered across platforms",
-  "Ideas are reused randomly (or not at all)",
+  "Ideas are reused randomly or not at all",
   "Strategy is based on intuition, not data",
 ];
 

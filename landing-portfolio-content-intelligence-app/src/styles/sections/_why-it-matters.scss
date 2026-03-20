@@ -1,36 +1,50 @@
 @use "../abstracts/variables" as *;
 
 .why {
-  padding: 140px 0;
+  padding: $space-9 0;
   background: $color-bg-dark;
   color: $color-text-white;
   text-align: center;
+
+  /* 🔥 profundidad sutil */
+  background:
+    radial-gradient(
+      circle at center,
+      rgba(108, 92, 231, 0.08),
+      transparent 60%
+    ),
+    $color-bg-dark;
 }
 
 .why__content {
-  max-width: 800px;
+  max-width: 720px;
   margin: 0 auto;
 }
 
+/* TITLE */
 .why__title {
   font-family: $font-serif;
   font-size: $fs-3xl;
   font-weight: $fw-semibold;
 
-  margin-bottom: 12px;
+  margin-bottom: $space-2;
 }
 
+/* SUBTITLE */
 .why__subtitle {
   font-family: $font-sans;
   font-size: $fs-xl;
 
   color: $color-text-white-muted;
-
-  margin-bottom: 24px;
+  margin-bottom: $space-4;
 }
 
+/* TEXT */
 .why__text {
   font-size: $fs-md;
   color: $color-text-white-muted;
   line-height: $lh-normal;
+
+  max-width: 640px;
+  margin: 0 auto;
 }

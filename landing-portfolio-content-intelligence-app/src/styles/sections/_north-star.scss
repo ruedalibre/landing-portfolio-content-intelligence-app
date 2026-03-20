@@ -1,46 +1,59 @@
 @use "../abstracts/variables" as *;
 
 .north-star {
-  padding: 120px 0;
+  padding: $space-8 0;
   background: $color-bg-light;
   text-align: center;
 }
 
 .north-star__content {
-  max-width: 700px;
+  max-width: 720px;
   margin: 0 auto;
 }
 
+/* LABEL */
 .north-star__label {
-  font-size: 12px;
+  font-size: $fs-sm;
+  color: $color-text-muted;
+
+  margin-bottom: $space-2;
+
   text-transform: uppercase;
   letter-spacing: 1px;
-  color: #888;
-  margin-bottom: 16px;
 }
 
+/* TITLE */
 .north-star__title {
-  font-size: 36px;
-  font-weight: 700;
-  margin-bottom: 20px;
-  line-height: 1.2;
+  font-family: $font-serif;
+  font-size: $fs-3xl;
+  font-weight: $fw-semibold;
+
+  margin-bottom: $space-3;
+
+  line-height: $lh-tight;
 }
 
-.north-star__title span {
-  color: #6c5ce7;
+/* HIGHLIGHT */
+.north-star__title .highlight {
+  font-family: $font-sans;
+
+  background: linear-gradient(
+    90deg,
+    $color-accent,
+    $color-accent-soft
+  );
+
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
-.north-star__title::after {
-  content: "";
-  display: block;
-  width: 60px;
-  height: 2px;
-  background: #eee;
-  margin: 20px auto 0;
-}
-
+/* DESCRIPTION */
 .north-star__description {
-  font-size: 16px;
-  color: #666;
-  line-height: 1.5;
+  font-size: $fs-md;
+  color: $color-text-secondary;
+
+  line-height: $lh-normal;
+
+  max-width: 600px;
+  margin: 0 auto;
 }

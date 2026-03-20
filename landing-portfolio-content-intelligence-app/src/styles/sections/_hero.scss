@@ -1,22 +1,31 @@
 @use "../abstracts/variables" as *;
 
 .hero {
-  padding: 140px 0;
+  padding: $space-9 0;
   background: $color-bg-dark;
   color: $color-text-white;
+
+  /* fondo premium sutil */
+  background:
+    radial-gradient(
+      circle at 20% 20%,
+      rgba(108, 92, 231, 0.08),
+      transparent 40%
+    ),
+    $color-bg-dark;
 }
 
 /* GRID */
 .hero__grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 64px;
+  gap: $space-7;
   align-items: center;
 }
 
-/* TEXT BLOCK */
+/* CONTENT */
 .hero__content {
-  max-width: 540px;
+  max-width: 520px;
 }
 
 /* TITLE */
@@ -26,7 +35,7 @@
   font-weight: $fw-bold;
   line-height: $lh-tight;
 
-  margin-bottom: 24px;
+  margin-bottom: $space-3;
 }
 
 /* HIGHLIGHT */
@@ -36,6 +45,9 @@
   background: linear-gradient(90deg, $color-accent, $color-accent-soft);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+
+  /* glow sutil */
+  text-shadow: 0 10px 30px rgba(108, 92, 231, 0.25);
 }
 
 /* SUBTITLE */
@@ -44,8 +56,10 @@
   font-size: $fs-lg;
   color: $color-text-white-muted;
 
-  margin-bottom: 16px;
+  margin-bottom: $space-3;
   line-height: $lh-normal;
+
+  max-width: 460px;
 }
 
 /* DESCRIPTION */
@@ -53,13 +67,13 @@
   font-size: $fs-sm;
   color: $color-text-muted;
 
-  margin-bottom: 32px;
+  margin-bottom: $space-5;
 }
 
 /* CTA */
 .hero__cta {
   display: flex;
-  gap: 16px;
+  gap: $space-3;
 }
 
 /* VISUAL */
@@ -70,20 +84,39 @@
   img {
     width: 100%;
     max-width: 560px;
-    border-radius: 18px;
+    border-radius: 20px;
 
-    box-shadow: 0 30px 80px rgba(0, 0, 0, 0.6);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+
+    box-shadow:
+      0 40px 120px rgba(0, 0, 0, 0.6),
+      0 0 80px rgba(108, 92, 231, 0.08);
+
+    transition: transform 0.3s ease;
+  }
+
+  img:hover {
+    transform: translateY(-6px);
   }
 }
 
 @media (max-width: 768px) {
+  .hero {
+    padding: $space-8 0;
+  }
+
   .hero__grid {
     grid-template-columns: 1fr;
     text-align: center;
+    gap: $space-6;
   }
 
   .hero__content {
     margin: 0 auto;
+  }
+
+  .hero__subtitle {
+    margin: 0 auto $space-3;
   }
 
   .hero__cta {

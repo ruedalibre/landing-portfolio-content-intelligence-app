@@ -11,7 +11,7 @@ const CoreLoop = () => {
         <div className="core-loop__flow">
           {steps.map((step, index) => (
             <div key={index} className="core-loop__item">
-              <span>{step}</span>
+              <span className="core-loop__pill">{step}</span>
 
               {index < steps.length - 1 && (
                 <div className="core-loop__arrow">→</div>

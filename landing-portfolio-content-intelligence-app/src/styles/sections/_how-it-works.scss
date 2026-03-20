@@ -1,7 +1,7 @@
 @use "../abstracts/variables" as *;
 
 .how {
-  padding: 120px 0;
+  padding: $space-8 0;
   background: $color-surface;
 }
 
@@ -18,42 +18,54 @@
   font-size: $fs-3xl;
   font-weight: $fw-semibold;
 
-  margin-bottom: 60px;
+  margin-bottom: $space-6;
 }
 
 /* GRID */
 .how__grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 24px;
+  gap: $space-4;
 }
 
 /* STEP */
 .how__step {
   text-align: center;
+  padding: $space-3;
+
+  border-radius: 16px;
+  transition: all 0.25s ease;
 
   h3 {
     font-family: $font-sans;
     font-size: $fs-md;
     font-weight: $fw-semibold;
 
-    margin-bottom: 8px;
+    margin-bottom: $space-1;
   }
 
   p {
     font-size: $fs-sm;
     color: $color-text-secondary;
+    line-height: $lh-normal;
+  }
+
+  &:hover {
+    transform: translateY(-4px);
+    background: white;
+
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.04);
   }
 }
 
 /* NUMBER */
 .how__number {
-  width: 42px;
-  height: 42px;
-  margin: 0 auto 16px;
+  width: 44px;
+  height: 44px;
+  margin: 0 auto $space-2;
 
   border-radius: 50%;
-  background: $color-bg-light;
+  background: white;
 
   border: 1px solid $color-border;
 
@@ -62,10 +74,23 @@
   justify-content: center;
 
   font-weight: $fw-semibold;
+
+  transition: all 0.25s ease;
+}
+
+/* hover number */
+.how__step:hover .how__number {
+  border-color: $color-accent;
+  color: $color-accent;
 }
 
 @media (max-width: 768px) {
   .how__grid {
     grid-template-columns: 1fr;
+    gap: $space-4;
+  }
+
+  .how {
+    padding: $space-7 0;
   }
 }

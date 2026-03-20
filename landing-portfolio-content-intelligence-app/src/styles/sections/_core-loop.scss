@@ -1,7 +1,7 @@
 @use "../abstracts/variables" as *;
 
 .core-loop {
-  padding: 120px 0;
+  padding: $space-8 0;
   background: $color-surface;
   text-align: center;
 }
@@ -11,12 +11,13 @@
   margin: 0 auto;
 }
 
+/* TITLE */
 .core-loop__title {
   font-family: $font-serif;
   font-size: $fs-3xl;
   font-weight: $fw-semibold;
 
-  margin-bottom: 60px;
+  margin-bottom: $space-6;
 }
 
 /* FLOW */
@@ -25,33 +26,37 @@
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  gap: 16px;
+  gap: $space-3;
 }
 
 /* ITEM */
 .core-loop__item {
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: $space-2;
+}
 
-  span {
-    padding: 12px 20px;
-    border-radius: 999px;
+/* PILLS */
+.core-loop__pill {
+  padding: 12px 20px;
+  border-radius: 999px;
 
-    background: white;
-    border: 1px solid $color-border;
+  background: white;
+  border: 1px solid $color-border;
 
-    font-family: $font-sans;
-    font-size: $fs-sm;
-    font-weight: $fw-medium;
+  font-family: $font-sans;
+  font-size: $fs-sm;
+  font-weight: $fw-medium;
 
-    transition: all 0.2s ease;
-  }
+  transition: all 0.25s ease;
+}
 
-  &:hover span {
-    border-color: #ccc;
-    transform: translateY(-2px);
-  }
+/* HOVER */
+.core-loop__pill:hover {
+  transform: translateY(-3px);
+  border-color: #ccc;
+
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.06);
 }
 
 /* ARROW */
