@@ -1,0 +1,21 @@
+{
+  "hero": {
+    "title": "Turn your content into a scalable system.",
+    "subtitle": "Understand what works. Reuse ideas. Grow with strategy, not intuition.",
+    "cta_primary": "Request early access",
+    "cta_secondary": "Let’s connect"
+  },
+  "problem": {
+    "title": "Creators publish constantly.",
+    "items": [
+      "They don’t know what actually works",
+      "Content is scattered across platforms",
+      "Ideas are reused randomly",
+      "Strategy is based on intuition"
+    ]
+  },
+  "coreInsight": {
+    "line1": "Most tools analyze posts.",
+    "line2": "We analyze ideas."
+  }
+}

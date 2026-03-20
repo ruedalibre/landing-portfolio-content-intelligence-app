@@ -1,0 +1,21 @@
+{
+  "hero": {
+    "title": "Convierte tu contenido en un sistema escalable.",
+    "subtitle": "Entiende qué funciona. Reutiliza ideas. Crece con estrategia, no con intuición.",
+    "cta_primary": "Solicitar acceso",
+    "cta_secondary": "Conversemos"
+  },
+  "problem": {
+    "title": "Los creadores publican constantemente.",
+    "items": [
+      "No saben qué funciona realmente",
+      "El contenido está disperso",
+      "Las ideas se reutilizan al azar",
+      "La estrategia es intuición"
+    ]
+  },
+  "coreInsight": {
+    "line1": "La mayoría de herramientas analizan posts.",
+    "line2": "Nosotros analizamos ideas."
+  }
+}

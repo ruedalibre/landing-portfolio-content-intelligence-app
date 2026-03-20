@@ -1,6 +1,10 @@
-import heroImage from "../../assets/images/hero-dashboard.png";
+import heroImage from "../../assets/images/dashboard.png";
+import { useTranslation } from "react-i18next";
 
 const Hero = () => {
+  const { t } = useTranslation("landing");
+  console.log(t("hero.subtitle"));
+
   return (
     <section className="hero">
       <div className="container hero__grid">
@@ -8,12 +12,11 @@ const Hero = () => {
         <div className="hero__content">
           <h1 className="hero__title">
             Turn your content into a{" "}
-            <span className="highlight">scalable system</span>
+            <span className="highlight">scalable content systems</span>
           </h1>
 
           <p className="hero__subtitle">
-            Understand what works. Reuse your best ideas. Grow with strategy,
-            not intuition.
+            {t("hero.subtitle")}
           </p>
 
           <p className="hero__description">

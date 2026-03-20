@@ -65,6 +65,12 @@
   color: $color-text-muted;
 }
 
+.core-loop__loop {
+  font-size: 18px;
+  margin-left: $space-2;
+  color: $color-accent;
+}
+
 @media (max-width: 768px) {
   .core-loop__flow {
     flex-direction: column;

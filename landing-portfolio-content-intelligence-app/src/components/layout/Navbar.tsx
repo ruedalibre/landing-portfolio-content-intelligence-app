@@ -1,8 +1,17 @@
+import i18n from "../../i18n";
+
 const Navbar = () => {
+  const currentLang = i18n.language;
+
+  const changeLang = (lang: string) => {
+    i18n.changeLanguage(lang);
+    localStorage.setItem("lang", lang);
+  };
+
   return (
     <nav className="navbar">
       <div className="container navbar__content">
-        {/* LOGO / BRAND */}
+        {/* LOGO */}
         <div className="navbar__logo">
           Content <span>Intelligence</span>
         </div>
@@ -17,6 +26,23 @@ const Navbar = () => {
         {/* CTA */}
         <div className="navbar__actions">
           <button className="btn btn--primary">Request Access</button>
+        </div>
+
+        {/* 🌍 LANGUAGE SWITCH */}
+        <div className="lang-switch">
+          <button
+            onClick={() => changeLang("en")}
+            className={currentLang === "en" ? "active" : ""}
+          >
+            EN
+          </button>
+
+          <button
+            onClick={() => changeLang("es")}
+            className={currentLang === "es" ? "active" : ""}
+          >
+            ES
+          </button>
         </div>
       </div>
     </nav>

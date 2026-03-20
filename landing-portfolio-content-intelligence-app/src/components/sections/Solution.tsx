@@ -2,46 +2,38 @@ const Solution = () => {
   return (
     <section className="solution">
       <div className="container solution__content">
-        {/* TEXT */}
+
         <div className="solution__text">
           <h2 className="solution__title">
-            We turn your content into{" "}
-            <span className="highlight">structured intelligence</span>
+            Turn your ideas into{" "}
+            <span className="highlight">structured systems</span>
           </h2>
 
           <p className="solution__subtitle">
-            Our platform analyzes how you create content — not just how it
-            performs.
+            Our platform understands how your ideas evolve into content — and
+            helps you scale them intentionally.
           </p>
 
           <ul className="solution__list">
-            <li>
-              <strong>Identify</strong> what ideas generate results
-            </li>
-            <li>
-              <strong>Detect</strong> patterns in your content
-            </li>
-            <li>
-              <strong>Understand</strong> what to repeat and what to change
-            </li>
-            <li>
-              <strong>Build</strong> a scalable content strategy
-            </li>
+            <li><strong>Identify</strong> which ideas generate the most content</li>
+            <li><strong>Track</strong> how ideas evolve across formats</li>
+            <li><strong>Detect</strong> patterns in your creative process</li>
+            <li><strong>Scale</strong> what works into repeatable systems</li>
           </ul>
         </div>
 
-        {/* VISUAL */}
         <div className="solution__visual">
           <div className="solution__flow">
+            <span>Ideas</span>
+            <span className="arrow">→</span>
             <span>Content</span>
             <span className="arrow">→</span>
-            <span>Organized</span>
+            <span>Patterns</span>
             <span className="arrow">→</span>
-            <span>Analyzed</span>
-            <span className="arrow">→</span>
-            <span>Insights</span>
+            <span>Systems</span>
           </div>
         </div>
+
       </div>
     </section>
   );

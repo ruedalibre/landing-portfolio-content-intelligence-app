@@ -1,4 +1,11 @@
-const steps = ["Ideas", "Content", "Patterns", "Insights", "Strategy"];
+const steps = [
+  "Ideas",
+  "Content",
+  "Patterns",
+  "Insights",
+  "Strategy",
+  "New Ideas",
+];
 
 const CoreLoop = () => {
   return (
@@ -18,6 +25,8 @@ const CoreLoop = () => {
               )}
             </div>
           ))}
+          {/* loop back */}
+          <div className="core-loop__loop">↺</div>
         </div>
       </div>
     </section>

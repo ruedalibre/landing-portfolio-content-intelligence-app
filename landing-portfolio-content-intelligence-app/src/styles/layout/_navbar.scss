@@ -81,6 +81,26 @@
   display: flex;
 }
 
+.lang-switch {
+  display: flex;
+  gap: 12px;
+
+  button {
+    font-family: $font-sans;
+    font-size: $fs-sm;
+    font-weight: $fw-medium;
+
+    color: $color-text-white-muted;
+    background: none;
+    border: none;
+    cursor: pointer;
+
+    &.active {
+      color: $color-text-white;
+    }
+  }
+}
+
 @media (max-width: 768px) {
   .navbar__links {
     display: none;
