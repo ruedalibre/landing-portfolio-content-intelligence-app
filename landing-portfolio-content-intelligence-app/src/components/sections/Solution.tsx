@@ -1,39 +1,63 @@
+import "../../styles/sections/_solution.scss";
+
+const nodes = [
+  { icon: "💡", title: "Ideas", micro: "Creative inputs" },
+  { icon: "🧩", title: "Content", micro: "Ideas become posts" },
+  { icon: "📊", title: "Patterns", micro: "Detect what works" },
+  { icon: "✨", title: "Insights", micro: "Understand why" },
+  { icon: "🎯", title: "Strategy", micro: "Decide what to scale" },
+  { icon: "🔁", title: "New Ideas", micro: "Start the next cycle" },
+];
+
 const Solution = () => {
   return (
     <section className="solution">
       <div className="container solution__content">
+        <h2 className="solution__title">
+          From ideas to <span>scalable systems</span>
+        </h2>
 
-        <div className="solution__text">
-          <h2 className="solution__title">
-            Turn your ideas into{" "}
-            <span className="highlight">structured systems</span>
-          </h2>
+        <p className="solution__subtitle">
+          Understand what works, how ideas evolve and how to scale them.
+        </p>
 
-          <p className="solution__subtitle">
-            Our platform understands how your ideas evolve into content — and
-            helps you scale them intentionally.
-          </p>
+        {/* PHASE LABELS */}
 
-          <ul className="solution__list">
-            <li><strong>Identify</strong> which ideas generate the most content</li>
-            <li><strong>Track</strong> how ideas evolve across formats</li>
-            <li><strong>Detect</strong> patterns in your creative process</li>
-            <li><strong>Scale</strong> what works into repeatable systems</li>
-          </ul>
+        <div className="solution__phases">
+          <span className="phase-input">INPUT</span>
+
+          <span className="phase-intelligence">INTELLIGENCE</span>
+
+          <span className="phase-output">OUTPUT</span>
         </div>
 
-        <div className="solution__visual">
-          <div className="solution__flow">
-            <span>Ideas</span>
-            <span className="arrow">→</span>
-            <span>Content</span>
-            <span className="arrow">→</span>
-            <span>Patterns</span>
-            <span className="arrow">→</span>
-            <span>Systems</span>
-          </div>
+        {/* LOOP */}
+
+        <div className="solution__loop">
+          {nodes.map((node, i) => (
+            <div className="solution__item" key={i}>
+              <div className="solution__node">
+                <div className="solution__icon">{node.icon}</div>
+
+                <h4>{node.title}</h4>
+
+                <p>{node.micro}</p>
+              </div>
+
+              {i < nodes.length - 1 && <div className="solution__arrow">→</div>}
+
+              {i === nodes.length - 1 && (
+                <div className="solution__arrow-return">↩</div>
+              )}
+            </div>
+          ))}
         </div>
 
+        {/* RESULT */}
+
+        <p className="solution__result">
+          Your content becomes a system that improves over time.
+        </p>
       </div>
     </section>
   );

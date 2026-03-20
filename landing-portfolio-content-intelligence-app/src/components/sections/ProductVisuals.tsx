@@ -1,5 +1,4 @@
 import dashboardImg from "../../assets/images/dashboard.png";
-import insightsImg from "../../assets/images/insights.png";
 import ideasImg from "../../assets/images/ideas-system.png";
 
 const ProductVisuals = () => {
@@ -12,8 +11,8 @@ const ProductVisuals = () => {
           {/* BLOCK 1 */}
           <div className="product-visuals__item">
             <div className="product-visuals__text">
-              <h3>Understand your content at a glance</h3>
-              <p>Track patterns, growth and performance in a single view.</p>
+              <h3>LBL Capture and structure your content</h3>
+              <p>Bring all your content into one place and organize it around ideas and topics.</p>
             </div>
 
             <div className="product-visuals__image">
@@ -24,20 +23,20 @@ const ProductVisuals = () => {
           {/* BLOCK 2 */}
           <div className="product-visuals__item reverse">
             <div className="product-visuals__text">
-              <h3>Turn data into clear insights</h3>
-              <p>Know what works and why — without guessing.</p>
+              <h3>LBL Understand what works</h3>
+              <p>Detect patterns, track performance and understand what drives results.</p>
             </div>
 
             <div className="product-visuals__image">
-              <img src={insightsImg} alt="Insights" />
+              <img src={dashboardImg} alt="Insights" />
             </div>
           </div>
 
           {/* BLOCK 3 */}
           <div className="product-visuals__item">
             <div className="product-visuals__text">
-              <h3>Build reusable content systems</h3>
-              <p>Transform ideas into scalable content structures.</p>
+              <h3>Turn ideas into LBL scalable systems</h3>
+              <p>Identify reusable ideas and turn them into repeatable content systems.</p>
             </div>
 
             <div className="product-visuals__image">

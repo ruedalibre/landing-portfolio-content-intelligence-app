@@ -17,7 +17,14 @@
   font-size: $fs-3xl;
   font-weight: $fw-semibold;
 
-  margin-bottom: $space-6;
+  margin-bottom: $space-2;
+}
+
+.core-loop__subtitle {
+  font-family: $font-sans;
+  font-size: $fs-md;
+  color: $color-text-secondary;
+  margin-bottom: $space-4;
 }
 
 /* FLOW */

@@ -13,11 +13,11 @@ const FinalCTA = () => {
 
         <div className="cta__actions">
           <button className="btn btn--primary">
-            Request Access
+            Get early access
           </button>
 
           <button className="btn btn--secondary">
-            Let’s Connect
+            See how it works
           </button>
         </div>
 

@@ -12,8 +12,11 @@ const CoreLoop = () => {
     <section className="core-loop">
       <div className="container core-loop__content">
         <h2 className="core-loop__title">
-          Turn your creativity into a <span className="highlight">system</span>
+          Turn your creativity into a scalable system
         </h2>
+        <p className="core-loop__subtitle">
+          Your content becomes a system that improves over time
+        </p>
 
         <div className="core-loop__flow">
           {steps.map((step, index) => (

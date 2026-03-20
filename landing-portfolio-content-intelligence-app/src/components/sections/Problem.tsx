@@ -1,8 +1,8 @@
 const problems = [
-  "They don’t know what actually works",
-  "Content is scattered across platforms",
-  "Ideas are reused randomly or not at all",
-  "Strategy is based on intuition, not data",
+  "You don’t know what actually works",
+  "Your content is scattered across platforms",
+  "Your best ideas get lost and never reused",
+  "You’re creating more content, but not better results",
 ];
 
 const Problem = () => {
@@ -12,7 +12,7 @@ const Problem = () => {
         <h2 className="problem__title">Creators publish constantly</h2>
 
         <p className="problem__subtitle">
-          But they lack clarity on what actually drives growth.
+          But their content is fragmented, hard to analyze, and difficult to scale.
         </p>
 
         <div className="problem__grid">

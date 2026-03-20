@@ -4,22 +4,25 @@ const capabilities = [
   {
     title: "Idea Intelligence",
     description:
-      "Understand which ideas generate the most content and results.",
+      "Identify which ideas generate the most content and can be scaled.",
     icon: Brain,
   },
   {
-    title: "Topic Intelligence",
-    description: "Identify dominant topics and detect emerging opportunities.",
+    title: "Content Evolution",
+    description:
+      "Track how your ideas evolve across formats, platforms and executions.",
     icon: Layers,
   },
   {
-    title: "Content DNA",
-    description: "Discover your creative profile across formats and patterns.",
+    title: "Creative DNA",
+    description:
+      "Understand your creative profile — formats, topics and patterns that define your content.",
     icon: Fingerprint,
   },
   {
-    title: "Insights Engine",
-    description: "Turn data into clear, actionable insights.",
+    title: "Pattern Recognition",
+    description:
+      "Detect what works and turn it into repeatable content systems.",
     icon: Sparkles,
   },
 ];

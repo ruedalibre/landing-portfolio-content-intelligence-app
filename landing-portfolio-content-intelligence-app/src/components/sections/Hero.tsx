@@ -11,15 +11,11 @@ const Hero = () => {
         {/* LEFT */}
         <div className="hero__content">
           <h1 className="hero__title">
-            Turn your content into a{" "}
-            <span className="highlight">scalable content systems</span>
+            Turn your content into a scalable system{" "}
+            <span className="highlight">Understand what works. Reuse your best ideas.</span>
           </h1>
 
           <p className="hero__subtitle">
-            {t("hero.subtitle")}
-          </p>
-
-          <p className="hero__description">
             A content intelligence platform for creators and teams.
           </p>
 
