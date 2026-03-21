@@ -1,50 +1,78 @@
 @use "../abstracts/variables" as *;
 
+/* =====================================================
+   SECTION
+===================================================== */
+
 .solution {
-  padding: 120px 0;
+  padding: $space-8 0;
   background: $color-bg-light;
 }
 
 .solution__content {
-  max-width: 1150px;
+  max-width: 1100px;
   margin: 0 auto;
   text-align: center;
 }
 
-/* TITLE */
+/* =====================================================
+   TITLE
+===================================================== */
 
 .solution__title {
   font-family: $font-serif;
   font-size: $fs-3xl;
-  margin-bottom: 12px;
+  font-weight: $fw-semibold;
+  line-height: $lh-tight;
+
+  color: $color-text-primary;
+
+  margin-bottom: $space-1;
 
   span {
-    color: $color-text-primary;
+    color: $color-accent;
   }
 }
 
-/* SUBTITLE */
+/* =====================================================
+   SUBTITLE
+===================================================== */
 
 .solution__subtitle {
+  font-family: $font-sans;
+  font-size: $fs-md;
+  line-height: $lh-normal;
+
   color: $color-text-secondary;
-  margin-bottom: 50px;
+
+  max-width: 620px;
+  margin: 0 auto $space-6 auto;
 }
 
-/* PHASE LABELS */
+/* =====================================================
+   PHASE LABELS
+===================================================== */
 
 .solution__phases {
   display: grid;
   grid-template-columns: repeat(6, 1fr);
 
+  margin-bottom: $space-2;
+
+  font-family: $font-sans;
   font-size: $fs-xs;
+  font-weight: $fw-medium;
+
   letter-spacing: 1px;
+  color: $color-text-muted;
 
-  margin-bottom: 28px;
+  border-bottom: 1px solid $color-border;
+  padding-bottom: $space-1;
 
-  text-align: left;
+  justify-items: center;
 }
 
-/* align with cards */
+/* align labels with nodes */
 
 .phase-input {
   grid-column: 1;
@@ -58,40 +86,39 @@
   grid-column: 6;
 }
 
-/* LOOP */
+/* =====================================================
+   LOOP
+===================================================== */
 
 .solution__loop {
+  position: relative;
+
   display: grid;
+  grid-template-columns: repeat(6, 1fr);
 
-  grid-template-columns: repeat(11, auto);
+  gap: $space-2;
 
-  justify-content: center;
-  align-items: center;
-
-  gap: 14px;
-
-  margin-bottom: 50px;
+  margin-top: $space-4;
+  margin-bottom: $space-6;
 }
 
-/* ITEM */
-
-.solution__item {
-  display: flex;
-  align-items: center;
-  gap: 14px;
-}
-
-/* NODE */
+/* =====================================================
+   NODE
+===================================================== */
 
 .solution__node {
-  width: 150px;
+  position: relative;
+  z-index: 1;
 
-  background: white;
+  background: $color-bg-light;
 
-  border-radius: 14px;
+  border-radius: 12px;
   border: 1px solid $color-border;
 
-  padding: 20px;
+  padding: $space-2;
+
+  min-width: 160px;
+  margin: 0 auto;
 
   display: flex;
   flex-direction: column;
@@ -100,78 +127,117 @@
   transition: all 0.25s ease;
 }
 
+/* hover */
+
 .solution__node:hover {
   transform: translateY(-3px);
-  border-color: $color-text-primary;
-  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.05);
+  border-color: $color-accent;
+
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.05);
 }
 
-/* ICON */
+/* =====================================================
+   ICON
+===================================================== */
 
 .solution__icon {
-  font-size: 24px;
+  font-size: 22px;
 }
 
-/* TEXT */
+/* =====================================================
+   NODE TEXT
+===================================================== */
 
 .solution__node h4 {
-  margin-top: 8px;
+  font-family: $font-sans;
   font-size: $fs-sm;
+  font-weight: $fw-semibold;
+
+  color: $color-text-primary;
+
+  margin-top: $space-1;
 }
 
 .solution__node p {
+  font-family: $font-sans;
   font-size: $fs-xs;
+  line-height: $lh-normal;
+
   color: $color-text-secondary;
 }
 
-/* ARROWS */
+/* =====================================================
+   FLOW ARROWS (between cards only)
+===================================================== */
 
-.solution__arrow {
-  font-size: 20px;
+.solution__node:not(:last-child)::after {
+  content: "→";
 
-  color: $color-text-primary;
+  position: absolute;
 
-  opacity: 0.6;
+  right: -16px;
+  top: 50%;
 
-  animation: flowArrow 2.6s infinite;
-}
+  transform: translateY(-50%);
 
-.solution__arrow-return {
-  font-size: 20px;
+  font-size: 16px;
 
-  color: $color-text-primary;
-
-  margin-left: 6px;
+  color: $color-accent;
 
   opacity: 0.7;
+
+  animation: flowArrow 2.4s infinite;
 }
 
-/* subtle animation */
+/* arrow animation */
 
 @keyframes flowArrow {
   0% {
     opacity: 0.2;
+    transform: translateY(-50%) translateX(-2px);
   }
 
   50% {
     opacity: 1;
+    transform: translateY(-50%) translateX(2px);
   }
 
   100% {
     opacity: 0.2;
+    transform: translateY(-50%) translateX(-2px);
   }
 }
 
-/* RESULT */
+/* =====================================================
+   RESULT TEXT
+===================================================== */
 
 .solution__result {
-  font-weight: 600;
-
-  font-size: $fs-md;
+  font-family: $font-sans;
+  font-size: $fs-lg;
+  font-weight: $fw-semibold;
 
   color: $color-text-primary;
 
   max-width: 520px;
-
   margin: 0 auto;
+}
+
+/* =====================================================
+   RESPONSIVE
+===================================================== */
+
+@media (max-width: 900px) {
+  .solution__phases {
+    display: none;
+  }
+
+  .solution__loop {
+    grid-template-columns: 1fr;
+    gap: $space-2;
+  }
+
+  .solution__node::after {
+    display: none;
+  }
 }

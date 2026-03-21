@@ -24,31 +24,21 @@ const Solution = () => {
         {/* PHASE LABELS */}
 
         <div className="solution__phases">
-          <span className="phase-input">INPUT</span>
-
-          <span className="phase-intelligence">INTELLIGENCE</span>
-
-          <span className="phase-output">OUTPUT</span>
+          <span className="phase-input">INPUT →</span>
+          <span className="phase-intelligence">INTELLIGENCE →</span>
+          <span className="phase-output">OUTPUT →</span>
         </div>
 
         {/* LOOP */}
 
         <div className="solution__loop">
           {nodes.map((node, i) => (
-            <div className="solution__item" key={i}>
-              <div className="solution__node">
-                <div className="solution__icon">{node.icon}</div>
+            <div className="solution__node" key={i}>
+              <div className="solution__icon">{node.icon}</div>
 
-                <h4>{node.title}</h4>
+              <h4>{node.title}</h4>
 
-                <p>{node.micro}</p>
-              </div>
-
-              {i < nodes.length - 1 && <div className="solution__arrow">→</div>}
-
-              {i === nodes.length - 1 && (
-                <div className="solution__arrow-return">↩</div>
-              )}
+              <p>{node.micro}</p>
             </div>
           ))}
         </div>
@@ -56,7 +46,7 @@ const Solution = () => {
         {/* RESULT */}
 
         <p className="solution__result">
-          Your content becomes a system that improves over time.
+          Your content becomes a system that improves over time!
         </p>
       </div>
     </section>
