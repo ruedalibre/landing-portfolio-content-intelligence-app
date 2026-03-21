@@ -1,12 +1,20 @@
 import "../../styles/sections/_solution.scss";
+import {
+  Lightbulb,
+  FileText,
+  BarChart3,
+  Sparkles,
+  Target,
+  RefreshCcw,
+} from "lucide-react";
 
 const nodes = [
-  { icon: "💡", title: "Ideas", micro: "Creative inputs" },
-  { icon: "🧩", title: "Content", micro: "Ideas become posts" },
-  { icon: "📊", title: "Patterns", micro: "Detect what works" },
-  { icon: "✨", title: "Insights", micro: "Understand why" },
-  { icon: "🎯", title: "Strategy", micro: "Decide what to scale" },
-  { icon: "🔁", title: "New Ideas", micro: "Start the next cycle" },
+  { icon: Lightbulb, title: "Ideas", micro: "Creative inputs" },
+  { icon: FileText, title: "Content", micro: "Ideas become posts" },
+  { icon: BarChart3, title: "Patterns", micro: "Detect what works" },
+  { icon: Sparkles, title: "Insights", micro: "Understand why" },
+  { icon: Target, title: "Strategy", micro: "Decide what to scale" },
+  { icon: RefreshCcw, title: "New Ideas", micro: "Start the next cycle" },
 ];
 
 const Solution = () => {
@@ -32,15 +40,21 @@ const Solution = () => {
         {/* LOOP */}
 
         <div className="solution__loop">
-          {nodes.map((node, i) => (
-            <div className="solution__node" key={i}>
-              <div className="solution__icon">{node.icon}</div>
+          {nodes.map((node, i) => {
+            const Icon = node.icon;
 
-              <h4>{node.title}</h4>
+            return (
+              <div className="solution__node" key={i}>
+                <div className="solution__icon">
+                  <Icon size={20} strokeWidth={1.8} />
+                </div>
 
-              <p>{node.micro}</p>
-            </div>
-          ))}
+                <h4>{node.title}</h4>
+
+                <p>{node.micro}</p>
+              </div>
+            );
+          })}
         </div>
 
         {/* RESULT */}

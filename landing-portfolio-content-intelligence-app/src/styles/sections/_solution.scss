@@ -136,12 +136,34 @@
   box-shadow: 0 6px 16px rgba(0, 0, 0, 0.05);
 }
 
+.solution__node:hover .solution__icon {
+  background: rgba($color-accent, 0.08);
+
+  svg {
+    color: $color-accent;
+  }
+}
+
 /* =====================================================
    ICON
 ===================================================== */
 
 .solution__icon {
-  font-size: 22px;
+  width: 42px;
+  height: 42px;
+
+  border-radius: 12px;
+  background: $color-surface;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin-bottom: $space-1;
+
+  svg {
+    color: $color-text-primary;
+  }
 }
 
 /* =====================================================

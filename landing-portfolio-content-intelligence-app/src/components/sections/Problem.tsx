@@ -1,8 +1,22 @@
+import { CircleAlert, Split, LightbulbOff, Flame } from "lucide-react";
+
 const problems = [
-  "You don’t know what actually works",
-  "Your content is scattered across platforms",
-  "Your best ideas get lost and never reused",
-  "You’re creating more content, but not better results",
+  {
+    icon: CircleAlert,
+    text: "You don’t know what actually works",
+  },
+  {
+    icon: Split,
+    text: "Your content is scattered across platforms",
+  },
+  {
+    icon: LightbulbOff,
+    text: "Your best ideas get lost and never reused",
+  },
+  {
+    icon: Flame,
+    text: "You’re creating more content, but not better results",
+  },
 ];
 
 const Problem = () => {
@@ -12,16 +26,24 @@ const Problem = () => {
         <h2 className="problem__title">Creators publish constantly</h2>
 
         <p className="problem__subtitle">
-          But their content is fragmented, hard to analyze, and difficult to scale.
+          But their content is fragmented, hard to analyze, and difficult to
+          scale.
         </p>
 
         <div className="problem__grid">
-          {problems.map((item, index) => (
-            <div key={index} className="problem__card">
-              <span className="problem__icon">✕</span>
-              <p>{item}</p>
-            </div>
-          ))}
+          {problems.map((item, index) => {
+            const Icon = item.icon;
+
+            return (
+              <div key={index} className="problem__card">
+                <span className="problem__icon">
+                  <Icon size={18} strokeWidth={1.8} />
+                </span>
+
+                <p>{item.text}</p>
+              </div>
+            );
+          })}
         </div>
       </div>
     </section>
