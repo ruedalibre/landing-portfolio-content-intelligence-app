@@ -2,7 +2,7 @@
 
 .core-insight {
   padding: $space-9 0;
-  background: $color-bg-light;
+  background: $color-bg-dark;
   text-align: center;
 }
 
@@ -15,7 +15,7 @@
 .core-insight__pre {
   font-family: $font-sans;
   font-size: $fs-md;
-  color: $color-text-secondary;
+  color: $color-text-white;
 
   margin-bottom: $space-2;
 }
@@ -27,7 +27,7 @@
   font-weight: $fw-bold;
   line-height: $lh-tight;
 
-  color: $color-text-primary;
+  color: $color-text-white;
 }
 
 /* HIGHLIGHT */

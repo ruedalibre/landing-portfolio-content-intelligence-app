@@ -3,13 +3,7 @@
 .cta {
   padding: $space-9 0;
   text-align: center;
-
-  background: radial-gradient(
-      circle at center,
-      rgba(108, 92, 231, 0.15),
-      transparent 60%
-    ),
-    $color-bg-dark;
+  background: $color-bg-dark;
 }
 
 .cta__content {

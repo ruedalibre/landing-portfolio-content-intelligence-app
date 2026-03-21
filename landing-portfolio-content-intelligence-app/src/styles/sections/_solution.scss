@@ -6,7 +6,8 @@
 
 .solution {
   padding: $space-8 0;
-  background: $color-bg-light;
+  background: $color-surface;
+  border-top: 1px solid $color-border;
 }
 
 .solution__content {

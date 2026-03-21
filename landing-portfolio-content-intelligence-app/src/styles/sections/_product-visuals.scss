@@ -2,7 +2,8 @@
 
 .product-visuals {
   padding: $space-9 0;
-  background: $color-bg-light;
+  background: $color-surface;
+  border-top: 1px solid $color-border;
 }
 
 .product-visuals__content {
