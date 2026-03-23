@@ -1,18 +1,19 @@
 import heroImage from "../../assets/images/dashboard.png";
-import { useTranslation } from "react-i18next";
+// import { useTranslation } from "react-i18next";
 
 const Hero = () => {
-  const { t } = useTranslation("landing");
-  console.log(t("hero.subtitle"));
+  // const { t } = useTranslation("landing");
 
   return (
-    <section className="hero">
+    <section id="top" className="hero">
       <div className="container hero__grid">
         {/* LEFT */}
         <div className="hero__content">
           <h1 className="hero__title">
             Turn your content into a scalable system{" "}
-            <span className="highlight">Understand what works. Reuse your best ideas.</span>
+            <span className="highlight">
+              Understand what works. Reuse your best ideas.
+            </span>
           </h1>
 
           <p className="hero__subtitle">
@@ -20,9 +21,13 @@ const Hero = () => {
           </p>
 
           <div className="hero__cta">
-            <button className="btn btn--primary">Request early access</button>
+            <a href="#contact" className="btn btn--primary">
+              Request early access
+            </a>
 
-            <button className="btn btn--secondary">Let’s connect</button>
+            <a href="#contact" className="btn btn--secondary">
+              Let’s connect
+            </a>
           </div>
         </div>
 

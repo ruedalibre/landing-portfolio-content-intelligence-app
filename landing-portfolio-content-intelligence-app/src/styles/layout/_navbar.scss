@@ -5,25 +5,26 @@
   top: 0;
   z-index: 100;
 
-  background: rgba(11, 11, 15, 0.7);
+  height: 72px;
+
+  background: rgba(11, 11, 15, 0.6);
   backdrop-filter: blur(10px);
 
-  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-  padding: 20px 0;
-  border-bottom: 1px solid #eee;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
 }
 
+/* CONTAINER INTERNO */
 .navbar__content {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: 72px;
+  height: 100%;
 }
 
-/* 🔤 LOGO / BRANDING */
+/* LOGO */
 .navbar__logo {
   font-family: $font-serif;
-  font-size: $fs-2xl;
+  font-size: $fs-xl;
   font-weight: $fw-semibold;
 
   color: $color-text-white;
@@ -40,10 +41,10 @@
   }
 }
 
-/* 🔗 LINKS */
+/* LINKS DE NAVEGACIÓN */
 .navbar__links {
   display: flex;
-  gap: 28px;
+  gap: 32px;
 
   a {
     font-family: $font-sans;
@@ -54,7 +55,7 @@
     text-decoration: none;
 
     position: relative;
-    transition: all 0.2s ease;
+    transition: color 0.2s ease;
 
     &:hover {
       color: $color-text-white;
@@ -68,7 +69,9 @@
       left: 0;
       width: 0;
       height: 1px;
+
       background: $color-text-white;
+
       transition: width 0.2s ease;
     }
 
@@ -78,14 +81,26 @@
   }
 }
 
-/* 🎯 CTA */
+/* ACCIONES (CTA + LANG) */
 .navbar__actions {
   display: flex;
+  align-items: center;
+  gap: 24px;
 }
 
+/* CTA BUTTON */
+.navbar__actions .btn {
+  text-decoration: none;
+
+  &::after {
+    display: none;
+  }
+}
+
+/* LANGUAGE SWITCH */
 .lang-switch {
   display: flex;
-  gap: 12px;
+  gap: 10px;
 
   button {
     font-family: $font-sans;
@@ -97,12 +112,19 @@
     border: none;
     cursor: pointer;
 
+    transition: color 0.2s ease;
+
+    &:hover {
+      color: $color-text-white;
+    }
+
     &.active {
       color: $color-text-white;
     }
   }
 }
 
+/* RESPONSIVE */
 @media (max-width: 768px) {
   .navbar__links {
     display: none;

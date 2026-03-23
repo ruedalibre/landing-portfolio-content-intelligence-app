@@ -18,31 +18,32 @@ const Navbar = () => {
 
         {/* LINKS */}
         <div className="navbar__links">
-          <a href="#product">Product</a>
-          <a href="#how">How it works</a>
-          <a href="#contact">Contact</a>
+          <a className="nav__link" href="#product">Product</a>
+          <a className="nav__link" href="#how-it-works">How it works</a>
+          <a className="nav__link" href="#contact">Contact</a>
         </div>
 
-        {/* CTA */}
+        {/* ACTIONS */}
         <div className="navbar__actions">
-          <button className="btn btn--primary">Request Access</button>
-        </div>
+          <a href="#contact" className="btn btn--primary">
+            Request Access
+          </a>
 
-        {/* 🌍 LANGUAGE SWITCH */}
-        <div className="lang-switch">
-          <button
-            onClick={() => changeLang("en")}
-            className={currentLang === "en" ? "active" : ""}
-          >
-            EN
-          </button>
+          <div className="lang-switch">
+            <button
+              onClick={() => changeLang("en")}
+              className={currentLang === "en" ? "active" : ""}
+            >
+              EN
+            </button>
 
-          <button
-            onClick={() => changeLang("es")}
-            className={currentLang === "es" ? "active" : ""}
-          >
-            ES
-          </button>
+            <button
+              onClick={() => changeLang("es")}
+              className={currentLang === "es" ? "active" : ""}
+            >
+              ES
+            </button>
+          </div>
         </div>
       </div>
     </nav>
