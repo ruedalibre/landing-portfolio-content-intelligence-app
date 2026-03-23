@@ -1,29 +1,31 @@
 @use "../abstracts/variables" as *;
 
 .core-insight {
-  padding: $space-9 0;
+  padding: $space-9 0 $space-8 0;
   background: $color-bg-dark;
   text-align: center;
 }
 
 .core-insight__content {
-  max-width: 780px;
+  max-width: 840px;
   margin: 0 auto;
 }
 
 /* PRE TEXT */
+
 .core-insight__pre {
   font-family: $font-sans;
   font-size: $fs-md;
   color: $color-text-white;
 
-  margin-bottom: $space-2;
+  margin-bottom: $space-3;
 }
 
 /* TITLE */
+
 .core-insight__title {
   font-family: $font-serif;
-  font-size: 56px;
+  font-size: $fs-4xl;
   font-weight: $fw-bold;
   line-height: $lh-tight;
 
@@ -31,6 +33,7 @@
 }
 
 /* HIGHLIGHT */
+
 .highlight {
   font-family: $font-sans;
 
@@ -42,11 +45,11 @@
 }
 
 @media (max-width: 768px) {
-  .core-insight__title {
-    font-size: 36px;
-  }
-
   .core-insight {
     padding: $space-8 0;
+  }
+
+  .core-insight__title {
+    font-size: 36px;
   }
 }

@@ -1,6 +1,6 @@
 const FinalCTA = () => {
   return (
-    <section className="cta">
+    <section id="contact" className="cta reveal">
       <div className="container cta__content">
 
         <h2 className="cta__title">
@@ -12,12 +12,12 @@ const FinalCTA = () => {
         </p>
 
         <div className="cta__actions">
-          <button className="btn btn--primary">
-            Get early access
+          <button className="btn btn--primary" type="button">
+            <a href="#contact">Get early access</a>
           </button>
 
-          <button className="btn btn--secondary">
-            See how it works
+          <button className="btn btn--secondary" type="button">
+            <a href="#how-it-works">See how it works</a>
           </button>
         </div>
 

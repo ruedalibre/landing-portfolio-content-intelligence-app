@@ -1,6 +1,6 @@
 const Vision = () => {
   return (
-    <section className="vision">
+    <section id="vision" className="vision reveal">
       <div className="container vision__content">
         <p className="vision__eyebrow">Vision</p>
 

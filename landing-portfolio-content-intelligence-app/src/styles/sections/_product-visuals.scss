@@ -1,7 +1,7 @@
 @use "../abstracts/variables" as *;
 
 .product-visuals {
-  padding: $space-9 0;
+  padding: $space-8 0;
   background: $color-surface;
   border-top: 1px solid $color-border;
 }
@@ -19,20 +19,20 @@
   font-size: $fs-3xl;
   font-weight: $fw-semibold;
 
-  margin-bottom: $space-8;
+  margin-bottom: $space-7;
 }
 
 /* LIST */
 .product-visuals__list {
   display: flex;
   flex-direction: column;
-  gap: $space-9; /* más aire entre bloques */
+  gap: $space-8; 
 }
 
 /* ITEM */
 .product-visuals__item {
   display: grid;
-  grid-template-columns: 0.9fr 1.1fr; /* 👈 imagen más grande */
+  grid-template-columns: 0.9fr 1.1fr; 
   gap: $space-8;
   align-items: center;
 }
@@ -93,7 +93,7 @@
 
 /* HOVER */
 .product-visuals__image img:hover {
-  transform: translateY(-8px) scale(1.01);
+  transform: translateY(-6px) scale(1.01);
 }
 
 .product-visuals__image::before {

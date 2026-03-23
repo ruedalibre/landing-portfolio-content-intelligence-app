@@ -1,9 +1,22 @@
 @use "../abstracts/variables" as *;
 
 .cta {
-  padding: $space-9 0;
+  min-height: calc(100vh - 72px);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: $space-8 0;
+
   text-align: center;
-  background: $color-bg-dark;
+  background:
+    radial-gradient(
+      circle at center,
+      rgba(108, 92, 231, 0.12),
+      transparent 60%
+    ),
+    $color-bg-dark;
 }
 
 .cta__content {
@@ -12,15 +25,17 @@
 }
 
 /* TITLE */
+
 .cta__title {
   font-family: $font-serif;
   font-size: $fs-3xl;
   color: white;
 
-  margin-bottom: $space-3;
+  margin-bottom: $space-4;
 }
 
 /* SUBTITLE */
+
 .cta__subtitle {
   font-size: $fs-md;
   color: $color-text-white-muted;
@@ -29,8 +44,26 @@
 }
 
 /* ACTIONS */
+
 .cta__actions {
   display: flex;
   justify-content: center;
   gap: $space-3;
+}
+
+.cta__actions .btn {
+  text-decoration: none;
+}
+
+.cta__actions .btn::after {
+  display: none;
+}
+
+/* MOBILE */
+
+@media (max-width: 768px) {
+  .cta__actions {
+    flex-direction: column;
+    align-items: center;
+  }
 }

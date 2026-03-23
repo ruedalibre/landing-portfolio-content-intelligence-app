@@ -1,6 +1,6 @@
 const WhyItMatters = () => {
   return (
-    <section className="why">
+    <section id="why-it-matters" className="why reveal">
       <div className="container why__content">
         <h2 className="why__title">Content is not random.</h2>
 

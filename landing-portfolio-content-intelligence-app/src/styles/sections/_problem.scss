@@ -1,7 +1,7 @@
 @use "../abstracts/variables" as *;
 
 .problem {
-  padding: $space-8 0;
+  padding: $space-7 0;
   background: $color-bg-light;
   text-align: center;
 }
@@ -29,7 +29,8 @@
   font-size: $fs-md;
   color: $color-text-secondary;
 
-  margin-bottom: $space-6;
+  margin-bottom: $space-5;
+  line-height: $lh-normal;
 }
 
 /* GRID */
@@ -56,7 +57,10 @@
 
   text-align: left;
 
-  transition: all 0.3s ease;
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease,
+    border-color 0.25s ease;
 
   p {
     font-family: $font-sans;
@@ -66,11 +70,11 @@
   }
 
   &:hover {
-    transform: translateY(-5px);
+    transform: translateY(-4px);
 
     border-color: #dcdcdc;
 
-    box-shadow: 0 25px 60px rgba(0, 0, 0, 0.06);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.06);
   }
 }
 
@@ -81,6 +85,7 @@
   height: 42px;
 
   border-radius: 12px;
+
   background: $color-surface;
 
   display: flex;
@@ -89,12 +94,15 @@
 
   flex-shrink: 0;
 
+  transition: background 0.25s ease;
+
   svg {
     color: $color-text-primary;
+    transition: color 0.25s ease;
   }
 }
 
-/* ICON HOVER (MISMO EFECTO QUE CAPABILITIES) */
+/* ICON HOVER */
 
 .problem__card:hover .problem__icon {
   background: rgba($color-accent, 0.08);
@@ -109,9 +117,5 @@
 @media (max-width: 768px) {
   .problem__grid {
     grid-template-columns: 1fr;
-  }
-
-  .problem {
-    padding: $space-7 0;
   }
 }

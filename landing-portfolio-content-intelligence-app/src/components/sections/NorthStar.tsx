@@ -1,6 +1,6 @@
 const NorthStar = () => {
   return (
-    <section className="north-star">
+    <section id="north-star" className="north-star reveal">
       <div className="container north-star__content">
         <p className="north-star__label">North Star</p>
 

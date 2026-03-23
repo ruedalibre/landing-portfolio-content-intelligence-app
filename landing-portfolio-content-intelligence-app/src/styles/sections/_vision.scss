@@ -1,7 +1,7 @@
 @use "../abstracts/variables" as *;
 
 .vision {
-  padding: $space-9 0;
+  padding: $space-9 0 $space-8 0;
   background:
     radial-gradient(
       circle at 50% 20%,
@@ -17,7 +17,7 @@
   text-align: center;
 }
 
-/* small label */
+/* eyebrow */
 
 .vision__eyebrow {
   font-family: $font-sans;
@@ -30,7 +30,7 @@
   margin-bottom: $space-3;
 }
 
-/* main headline */
+/* headline */
 
 .vision__title {
   font-family: $font-serif;
@@ -40,18 +40,18 @@
 
   color: $color-text-primary;
 
-  margin-bottom: $space-4;
+  margin-bottom: $space-5;
 
   span {
     color: $color-accent;
   }
 }
 
-/* manifesto text */
+/* manifesto */
 
 .vision__manifesto {
   font-family: $font-sans;
-  font-size: $fs-lg;
+  font-size: $fs-md;
   line-height: $lh-loose;
 
   color: $color-text-secondary;

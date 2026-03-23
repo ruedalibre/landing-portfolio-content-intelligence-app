@@ -3,7 +3,7 @@ import ideasImg from "../../assets/images/ideas-system.png";
 
 const ProductVisuals = () => {
   return (
-    <section className="product-visuals">
+    <section id="product" className="product-visuals reveal">
       <div className="container product-visuals__content">
         <h2 className="product-visuals__title">See how it works in practice</h2>
 
@@ -11,7 +11,7 @@ const ProductVisuals = () => {
           {/* BLOCK 1 */}
           <div className="product-visuals__item">
             <div className="product-visuals__text">
-              <h3>LBL Capture and structure your content</h3>
+              <h3>Capture and structure your content</h3>
               <p>Bring all your content into one place and organize it around ideas and topics.</p>
             </div>
 
@@ -23,7 +23,7 @@ const ProductVisuals = () => {
           {/* BLOCK 2 */}
           <div className="product-visuals__item reverse">
             <div className="product-visuals__text">
-              <h3>LBL Understand what works</h3>
+              <h3>Understand what works</h3>
               <p>Detect patterns, track performance and understand what drives results.</p>
             </div>
 
@@ -35,7 +35,7 @@ const ProductVisuals = () => {
           {/* BLOCK 3 */}
           <div className="product-visuals__item">
             <div className="product-visuals__text">
-              <h3>Turn ideas into LBL scalable systems</h3>
+              <h3>Turn ideas into scalable systems</h3>
               <p>Identify reusable ideas and turn them into repeatable content systems.</p>
             </div>
 

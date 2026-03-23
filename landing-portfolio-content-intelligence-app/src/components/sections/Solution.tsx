@@ -19,7 +19,7 @@ const nodes = [
 
 const Solution = () => {
   return (
-    <section className="solution">
+    <section id="how-it-works" className="solution reveal">
       <div className="container solution__content">
         <h2 className="solution__title">
           From ideas to <span>scalable systems</span>

@@ -5,7 +5,7 @@
 ===================================================== */
 
 .solution {
-  padding: $space-8 0;
+  padding: $space-7 0;
   background: $color-surface;
   border-top: 1px solid $color-border;
 }
@@ -28,7 +28,7 @@
 
   color: $color-text-primary;
 
-  margin-bottom: $space-1;
+  margin-bottom: $space-2;
 
   span {
     color: $color-accent;
@@ -47,7 +47,7 @@
   color: $color-text-secondary;
 
   max-width: 620px;
-  margin: 0 auto $space-6 auto;
+  margin: 0 auto $space-5 auto;
 }
 
 /* =====================================================
@@ -131,7 +131,7 @@
 /* hover */
 
 .solution__node:hover {
-  transform: translateY(-3px);
+  transform: translateY(-4px);
   border-color: $color-accent;
 
   box-shadow: 0 6px 16px rgba(0, 0, 0, 0.05);

@@ -1,6 +1,9 @@
 @use "../abstracts/variables" as *;
 
 .btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   font-family: $font-sans;
   font-size: $fs-sm;
   font-weight: $fw-medium;
@@ -12,7 +15,13 @@
   border: none;
   transition: all 0.2s ease;
   text-decoration: none;
+  color: inherit;
   appearance: none;
+
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
 }
 
 .btn--primary {

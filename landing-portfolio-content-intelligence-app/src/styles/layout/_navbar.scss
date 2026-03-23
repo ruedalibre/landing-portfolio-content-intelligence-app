@@ -81,6 +81,18 @@
   }
 }
 
+.nav__link {
+  transition: color 0.25s ease;
+}
+
+.nav__link.active {
+  color: $color-text-white;
+}
+
+.nav__link.active::after {
+  width: 100%;
+}
+
 /* ACCIONES (CTA + LANG) */
 .navbar__actions {
   display: flex;

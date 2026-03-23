@@ -1,7 +1,7 @@
 @use "../abstracts/variables" as *;
 
 .north-star {
-  padding: $space-8 0;
+  padding: $space-8 0 $space-7 0;
   background: $color-bg-light;
   text-align: center;
 }
@@ -12,8 +12,9 @@
 }
 
 /* LABEL */
+
 .north-star__label {
-  font-size: $fs-sm;
+  font-size: $fs-xs;
   color: $color-text-muted;
 
   margin-bottom: $space-2;
@@ -23,31 +24,30 @@
 }
 
 /* TITLE */
+
 .north-star__title {
   font-family: $font-serif;
   font-size: $fs-3xl;
   font-weight: $fw-semibold;
 
-  margin-bottom: $space-3;
+  margin-bottom: $space-4;
 
   line-height: $lh-tight;
 }
 
 /* HIGHLIGHT */
+
 .north-star__title .highlight {
   font-family: $font-sans;
 
-  background: linear-gradient(
-    90deg,
-    $color-accent,
-    $color-accent-soft
-  );
+  background: linear-gradient(90deg, $color-accent, $color-accent-soft);
 
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
 /* DESCRIPTION */
+
 .north-star__description {
   font-size: $fs-md;
   color: $color-text-secondary;
@@ -55,5 +55,5 @@
   line-height: $lh-normal;
 
   max-width: 600px;
-  margin: 0 auto;
+  margin: $space-2 auto 0 auto;
 }

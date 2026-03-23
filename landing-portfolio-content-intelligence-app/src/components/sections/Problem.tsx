@@ -21,7 +21,7 @@ const problems = [
 
 const Problem = () => {
   return (
-    <section className="problem">
+    <section id="problem" className="problem reveal">
       <div className="container problem__content">
         <h2 className="problem__title">Creators publish constantly</h2>
 
