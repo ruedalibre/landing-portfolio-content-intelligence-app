@@ -9,9 +9,12 @@ import WhyItMatters from "../components/sections/WhyItMatters.tsx";
 import NorthStar from "../components/sections/NorthStar.tsx";
 import Vision from "../components/sections/Vision.tsx";
 import FinalCTA from "../components/sections/FinalCTA.tsx";
-import { useEffect } from "react";
+import RequestAccessModal from "../components/ui/RequestAccessModal.tsx";
+import { useState, useEffect } from "react";
 
 const Landing = () => {
+  const [isModalOpen, setModalOpen] = useState(false);
+
   useEffect(() => {
     const elements = document.querySelectorAll(".reveal");
 
@@ -63,14 +66,14 @@ const Landing = () => {
 
     return () => observer.disconnect();
   }, []);
-  
+
   return (
     <>
       {/* NAVBAR */}
-      <Navbar />
+      <Navbar onRequestAccess={() => setModalOpen(true)} />
 
       {/* HERO */}
-      <Hero />
+      <Hero onRequestAccess={() => setModalOpen(true)} />
 
       {/* PROBLEM */}
       <Problem />
@@ -97,7 +100,12 @@ const Landing = () => {
       <Vision />
 
       {/* FINAL CTA */}
-      <FinalCTA />
+      <FinalCTA onRequestAccess={() => setModalOpen(true)} />
+
+      <RequestAccessModal
+        isOpen={isModalOpen}
+        onClose={() => setModalOpen(false)}
+      />
     </>
   );
 };

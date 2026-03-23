@@ -1,6 +1,10 @@
 import i18n from "../../i18n";
 
-const Navbar = () => {
+type Props = {
+  onRequestAccess: () => void;
+};
+
+const Navbar = ({ onRequestAccess }: Props) => {
   const currentLang = i18n.language;
 
   const changeLang = (lang: string) => {
@@ -18,16 +22,24 @@ const Navbar = () => {
 
         {/* LINKS */}
         <div className="navbar__links">
-          <a className="nav__link" href="#product">Product</a>
-          <a className="nav__link" href="#how-it-works">How it works</a>
-          <a className="nav__link" href="#contact">Contact</a>
+          <a className="nav__link" href="#product">
+            Product
+          </a>
+
+          <a className="nav__link" href="#how-it-works">
+            How it works
+          </a>
+
+          <a className="nav__link" href="#contact">
+            Contact
+          </a>
         </div>
 
         {/* ACTIONS */}
         <div className="navbar__actions">
-          <a href="#contact" className="btn btn--primary">
+          <button className="btn btn--primary" onClick={onRequestAccess}>
             Request Access
-          </a>
+          </button>
 
           <div className="lang-switch">
             <button

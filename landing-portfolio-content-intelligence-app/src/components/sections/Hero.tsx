@@ -1,7 +1,11 @@
 import heroImage from "../../assets/images/dashboard.png";
 // import { useTranslation } from "react-i18next";
 
-const Hero = () => {
+type Props = {
+  onRequestAccess: () => void;
+};
+
+const Hero = ({ onRequestAccess }: Props) => {
   // const { t } = useTranslation("landing");
 
   return (
@@ -21,9 +25,9 @@ const Hero = () => {
           </p>
 
           <div className="hero__cta">
-            <a href="#contact" className="btn btn--primary">
+            <button className="btn btn--primary" onClick={onRequestAccess}>
               Request early access
-            </a>
+            </button>
 
             <a href="#contact" className="btn btn--secondary">
               Let’s connect

@@ -1,0 +1,148 @@
+@use "../abstracts/variables" as *;
+
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+
+  background: rgba(0, 0, 0, 0.65);
+  backdrop-filter: blur(6px);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: $space-4;
+
+  z-index: 200;
+
+  opacity: 0;
+  animation: modalFade 0.25s ease forwards;
+}
+
+.modal {
+  width: 420px;
+  max-width: 100%;
+
+  background: $color-bg-light;
+
+  border-radius: 16px;
+
+  padding: $space-6;
+
+  position: relative;
+
+  border: 1px solid $color-border;
+
+  box-shadow: 0 40px 120px rgba(0, 0, 0, 0.3);
+
+  transform: scale(0.96);
+  animation: modalScale 0.25s ease forwards;
+}
+
+/* CLOSE BUTTON */
+
+.modal__close {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+
+  border: none;
+  background: none;
+
+  font-size: 20px;
+  line-height: 1;
+
+  color: $color-text-muted;
+
+  cursor: pointer;
+
+  transition: color 0.2s ease;
+
+  &:hover {
+    color: $color-text-primary;
+  }
+}
+
+/* TITLE */
+
+.modal__title {
+  font-family: $font-serif;
+  font-size: $fs-xl;
+  font-weight: $fw-semibold;
+
+  color: $color-text-primary;
+
+  margin-bottom: $space-2;
+}
+
+/* SUBTITLE */
+
+.modal__subtitle {
+  font-family: $font-sans;
+  font-size: $fs-sm;
+
+  color: $color-text-secondary;
+
+  line-height: $lh-normal;
+
+  margin-bottom: $space-4;
+}
+
+/* FORM */
+
+.modal__form {
+  display: flex;
+  flex-direction: column;
+  gap: $space-3;
+}
+
+/* INPUT */
+
+.modal__form input {
+  font-family: $font-sans;
+  font-size: $fs-sm;
+
+  padding: 12px 14px;
+
+  border-radius: 10px;
+
+  border: 1px solid $color-border;
+
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+
+  &:focus {
+    outline: none;
+
+    border-color: $color-accent;
+
+    box-shadow: 0 0 0 3px rgba(108, 92, 231, 0.12);
+  }
+}
+
+/* ANIMATIONS */
+
+@keyframes modalFade {
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes modalScale {
+  to {
+    transform: scale(1);
+  }
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 480px) {
+  .modal {
+    padding: $space-5;
+  }
+
+  .modal__title {
+    font-size: $fs-lg;
+  }
+}
