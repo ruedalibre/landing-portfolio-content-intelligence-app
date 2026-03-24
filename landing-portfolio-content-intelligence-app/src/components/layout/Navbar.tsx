@@ -1,4 +1,5 @@
 import i18n from "../../i18n";
+import { useState, useEffect } from "react";
 
 type Props = {
   onRequestAccess: () => void;
@@ -12,13 +13,27 @@ const Navbar = ({ onRequestAccess }: Props) => {
     localStorage.setItem("lang", lang);
   };
 
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 20);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   return (
-    <nav className="navbar">
+    <nav className={`navbar ${scrolled ? "navbar--scrolled" : ""}`}>
       <div className="container navbar__content">
         {/* LOGO */}
-        <div className="navbar__logo">
+        <a href="#top" className="navbar__logo">
           Content <span>Intelligence</span>
-        </div>
+        </a>
 
         {/* LINKS */}
         <div className="navbar__links">

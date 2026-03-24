@@ -121,6 +121,16 @@
   }
 }
 
+// Modal Success State
+.modal__success {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: $space-4;
+
+  text-align: center;
+}
+
 /* ANIMATIONS */
 
 @keyframes modalFade {
