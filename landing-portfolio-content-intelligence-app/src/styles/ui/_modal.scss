@@ -1,17 +1,18 @@
 @use "../abstracts/variables" as *;
 
+/* ===============================
+MODAL OVERLAY
+================================ */
+
 .modal-overlay {
   position: fixed;
   inset: 0;
 
   background: rgba(0, 0, 0, 0.65);
-  backdrop-filter: blur(6px);
 
   display: flex;
   align-items: center;
   justify-content: center;
-
-  padding: $space-4;
 
   z-index: 200;
 
@@ -19,11 +20,15 @@
   animation: modalFade 0.25s ease forwards;
 }
 
-.modal {
-  width: 420px;
-  max-width: 100%;
+/* ===============================
+MODAL CONTAINER
+================================ */
 
-  background: $color-bg-light;
+.modal {
+  width: 440px;
+  max-width: 92%;
+
+  background: white;
 
   border-radius: 16px;
 
@@ -31,26 +36,25 @@
 
   position: relative;
 
-  border: 1px solid $color-border;
-
   box-shadow: 0 40px 120px rgba(0, 0, 0, 0.3);
 
   transform: scale(0.96);
   animation: modalScale 0.25s ease forwards;
 }
 
-/* CLOSE BUTTON */
+/* ===============================
+CLOSE BUTTON
+================================ */
 
 .modal__close {
   position: absolute;
-  top: 16px;
+  top: 14px;
   right: 16px;
 
-  border: none;
   background: none;
+  border: none;
 
-  font-size: 20px;
-  line-height: 1;
+  font-size: 22px;
 
   color: $color-text-muted;
 
@@ -63,19 +67,25 @@
   }
 }
 
-/* TITLE */
+/* ===============================
+TITLE
+================================ */
 
 .modal__title {
   font-family: $font-serif;
-  font-size: $fs-xl;
+  font-size: $fs-2xl;
   font-weight: $fw-semibold;
 
   color: $color-text-primary;
 
   margin-bottom: $space-2;
+
+  text-align: center;
 }
 
-/* SUBTITLE */
+/* ===============================
+SUBTITLE
+================================ */
 
 .modal__subtitle {
   font-family: $font-sans;
@@ -83,55 +93,177 @@
 
   color: $color-text-secondary;
 
+  text-align: center;
+
   line-height: $lh-normal;
 
-  margin-bottom: $space-4;
+  margin-bottom: $space-5;
 }
 
-/* FORM */
+/* ===============================
+FORM
+================================ */
 
 .modal__form {
   display: flex;
   flex-direction: column;
-  gap: $space-3;
+  gap: $space-4;
 }
 
-/* INPUT */
+/* ===============================
+INPUTS
+================================ */
 
 .modal__form input {
-  font-family: $font-sans;
-  font-size: $fs-sm;
+  width: 100%;
 
   padding: 12px 14px;
 
   border-radius: 10px;
+  border: 1px solid $color-border;
+
+  font-family: $font-sans;
+  font-size: $fs-sm;
+
+  outline: none;
+
+  transition: border 0.2s ease;
+}
+
+.modal__form input:focus {
+  border-color: $color-accent;
+}
+
+/* ===============================
+SECTIONS
+================================ */
+
+.modal__section {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.modal__optional {
+  opacity: 0.9;
+}
+
+/* ===============================
+LABEL
+================================ */
+
+.modal__label {
+  font-family: $font-sans;
+  font-size: $fs-xs;
+
+  color: $color-text-secondary;
+}
+
+/* ===============================
+CHIPS CONTAINER
+================================ */
+
+.modal__chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+/* ===============================
+CHIPS
+================================ */
+
+.chip {
+  padding: 8px 14px;
+
+  font-family: $font-sans;
+  font-size: $fs-sm;
+
+  border-radius: 999px;
 
   border: 1px solid $color-border;
 
-  transition:
-    border-color 0.2s ease,
-    box-shadow 0.2s ease;
+  background: white;
+  color: $color-text-primary;
 
-  &:focus {
-    outline: none;
+  cursor: pointer;
 
-    border-color: $color-accent;
+  transition: all 0.2s ease;
 
-    box-shadow: 0 0 0 3px rgba(108, 92, 231, 0.12);
-  }
+  text-decoration: none;
 }
 
-// Modal Success State
+.chip:hover {
+  border-color: $color-accent;
+}
+
+/* ACTIVE CHIP */
+
+.chip--active {
+  background: linear-gradient(
+    135deg,
+    rgba(108, 92, 231, 0.12),
+    rgba(108, 92, 231, 0.06)
+  );
+
+  border-color: $color-accent;
+
+  color: $color-accent;
+}
+
+/* ===============================
+CTA BUTTON
+================================ */
+
+.modal__cta {
+  margin-top: $space-2;
+
+  width: 100%;
+  justify-content: center;
+
+  text-decoration: none;
+}
+
+/* ===============================
+ERROR
+================================ */
+
+.modal__error {
+  margin-top: $space-2;
+
+  font-family: $font-sans;
+  font-size: $fs-xs;
+
+  color: #d63031;
+
+  text-align: center;
+}
+
+/* ===============================
+SUCCESS STATE
+================================ */
+
 .modal__success {
   display: flex;
   flex-direction: column;
   align-items: center;
+
   gap: $space-4;
 
   text-align: center;
 }
 
-/* ANIMATIONS */
+.modal__success .modal__title {
+  margin-bottom: $space-1;
+}
+
+.modal__success .btn {
+  margin-top: $space-3;
+}
+
+/* ===============================
+ANIMATIONS
+================================ */
 
 @keyframes modalFade {
   to {
@@ -145,14 +277,16 @@
   }
 }
 
-/* RESPONSIVE */
+/* ===============================
+RESPONSIVE
+================================ */
 
-@media (max-width: 480px) {
+@media (max-width: 600px) {
   .modal {
     padding: $space-5;
   }
 
   .modal__title {
-    font-size: $fs-lg;
+    font-size: $fs-xl;
   }
 }

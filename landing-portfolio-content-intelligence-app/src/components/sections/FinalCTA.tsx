@@ -9,12 +9,12 @@ const FinalCTA = ({ onRequestAccess }: Props) => {
         <h2 className="cta__title">Let’s build the future of content</h2>
 
         <p className="cta__subtitle">
-          We’re looking to collaborate with creators, teams and partners.
+          Be among the first creators building scalable content systems.
         </p>
 
         <div className="cta__actions">
           <button className="btn btn--primary" onClick={onRequestAccess}>
-            Get early access
+            Join early access
           </button>
 
           <a href="#how-it-works" className="btn btn--secondary">

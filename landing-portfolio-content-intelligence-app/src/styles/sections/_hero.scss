@@ -97,6 +97,46 @@
   }
 }
 
+.hero__proof {
+  margin-top: $space-3;
+}
+
+.hero__social-proof {
+  font-family: $font-sans;
+  font-size: $fs-sm;
+
+  color: $color-text-white-muted;
+
+  line-height: $lh-normal;
+
+  strong {
+    color: $color-text-white;
+    font-weight: $fw-semibold;
+    text-shadow: 0 0 10px rgba(108, 92, 231, 0.25);
+  }
+}
+
+.count-pulse {
+  animation: countPulse 0.4s ease;
+}
+
+@keyframes countPulse {
+  0% {
+    transform: scale(1);
+    text-shadow: 0 0 0 rgba(108, 92, 231, 0);
+  }
+
+  40% {
+    transform: scale(1.08);
+    text-shadow: 0 0 16px rgba(108, 92, 231, 0.35);
+  }
+
+  100% {
+    transform: scale(1);
+    text-shadow: 0 0 0 rgba(108, 92, 231, 0);
+  }
+}
+
 /* MOBILE */
 @media (max-width: 768px) {
   .hero {

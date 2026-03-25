@@ -53,7 +53,7 @@ const Navbar = ({ onRequestAccess }: Props) => {
         {/* ACTIONS */}
         <div className="navbar__actions">
           <button className="btn btn--primary" onClick={onRequestAccess}>
-            Request Access
+            Join early access
           </button>
 
           <div className="lang-switch">
