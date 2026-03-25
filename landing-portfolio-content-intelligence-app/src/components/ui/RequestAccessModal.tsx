@@ -20,6 +20,8 @@ const RequestAccessModal = ({ isOpen, onClose, source = "landing" }: Props) => {
   const modalRef = useRef<HTMLDivElement>(null);
   const inputRef = useRef<HTMLInputElement>(null);
 
+  const canSubmit = email.trim() !== "" && platform !== null;
+
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
 
@@ -136,20 +138,27 @@ const RequestAccessModal = ({ isOpen, onClose, source = "landing" }: Props) => {
             <form className="modal__form" onSubmit={handleSubmit}>
               {/* EMAIL */}
 
-              <input
-                ref={inputRef}
-                type="email"
-                placeholder="name@email.com"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-                required
-              />
+              <div className="modal__section">
+                <p className="modal__label">
+                  Your email <span className="modal__required">*</span>
+                </p>
+
+                <input
+                  ref={inputRef}
+                  type="email"
+                  placeholder="name@email.com"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                  required
+                />
+              </div>
 
               {/* PLATFORM */}
 
               <div className="modal__section">
                 <p className="modal__label">
                   Where do you publish most of your content?
+                  <span className="modal__required">*</span>
                 </p>
 
                 <div className="modal__chips">
@@ -207,7 +216,7 @@ const RequestAccessModal = ({ isOpen, onClose, source = "landing" }: Props) => {
               <button
                 type="submit"
                 className="btn btn--primary modal__cta"
-                disabled={loading || !platform}
+                disabled={loading || !canSubmit}
               >
                 {loading ? "Joining..." : "Join Early Access"}
               </button>

@@ -224,6 +224,13 @@ CTA BUTTON
   text-decoration: none;
 }
 
+.modal__cta:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+
 /* ===============================
 ERROR
 ================================ */
@@ -259,6 +266,11 @@ SUCCESS STATE
 
 .modal__success .btn {
   margin-top: $space-3;
+}
+
+.modal__required {
+  color: $color-accent;
+  margin-left: 4px;
 }
 
 /* ===============================
