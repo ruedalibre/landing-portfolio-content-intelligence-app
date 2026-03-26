@@ -1,15 +1,18 @@
-import i18n from "../../i18n";
 import { useState, useEffect } from "react";
+import { useTranslation } from "react-i18next";
 
 type Props = {
   onRequestAccess: () => void;
 };
 
 const Navbar = ({ onRequestAccess }: Props) => {
+  const { i18n } = useTranslation(); // ← reactivo
+
   const currentLang = i18n.language;
 
   const changeLang = (lang: string) => {
     i18n.changeLanguage(lang);
+    console.log("changing language to", lang);
     localStorage.setItem("lang", lang);
   };
 
@@ -30,12 +33,10 @@ const Navbar = ({ onRequestAccess }: Props) => {
   return (
     <nav className={`navbar ${scrolled ? "navbar--scrolled" : ""}`}>
       <div className="container navbar__content">
-        {/* LOGO */}
         <a href="#top" className="navbar__logo">
           Content <span>Intelligence</span>
         </a>
 
-        {/* LINKS */}
         <div className="navbar__links">
           <a className="nav__link" href="#product">
             Product
@@ -50,9 +51,12 @@ const Navbar = ({ onRequestAccess }: Props) => {
           </a>
         </div>
 
-        {/* ACTIONS */}
         <div className="navbar__actions">
-          <button className="btn btn--primary" onClick={onRequestAccess}>
+          <button
+            className="btn btn--primary"
+            onClick={onRequestAccess}
+            type="button"
+          >
             Join early access
           </button>
 
@@ -60,6 +64,7 @@ const Navbar = ({ onRequestAccess }: Props) => {
             <button
               onClick={() => changeLang("en")}
               className={currentLang === "en" ? "active" : ""}
+              type="button"
             >
               EN
             </button>
@@ -67,6 +72,7 @@ const Navbar = ({ onRequestAccess }: Props) => {
             <button
               onClick={() => changeLang("es")}
               className={currentLang === "es" ? "active" : ""}
+              type="button"
             >
               ES
             </button>
