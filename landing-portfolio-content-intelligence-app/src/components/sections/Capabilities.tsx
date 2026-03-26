@@ -1,37 +1,25 @@
 import { Brain, Layers, Fingerprint, Sparkles } from "lucide-react";
+import { useTranslation } from "react-i18next";
 
 const capabilities = [
-  {
-    title: "Idea Intelligence",
-    description:
-      "Identify which ideas generate the most content and can be scaled.",
-    icon: Brain,
-  },
-  {
-    title: "Content Evolution",
-    description:
-      "Track how your ideas evolve across formats, platforms and executions.",
-    icon: Layers,
-  },
-  {
-    title: "Creative DNA",
-    description:
-      "Understand your creative profile — formats, topics and patterns that define your content.",
-    icon: Fingerprint,
-  },
-  {
-    title: "Pattern Recognition",
-    description:
-      "Detect what works and turn it into repeatable content systems.",
-    icon: Sparkles,
-  },
+  { icon: Brain },
+  { icon: Layers },
+  { icon: Fingerprint },
+  { icon: Sparkles },
 ];
 
 const Capabilities = () => {
+  const { t } = useTranslation("capabilities");
+
+  const items = t("items", { returnObjects: true }) as {
+    title: string;
+    description: string;
+  }[];
+
   return (
     <section id="capabilities" className="capabilities reveal">
       <div className="container capabilities__content">
-        <h2 className="capabilities__title">What you can do</h2>
+        <h2 className="capabilities__title">{t("title")}</h2>
 
         <div className="capabilities__grid">
           {capabilities.map((item, index) => {
@@ -43,8 +31,8 @@ const Capabilities = () => {
                   <Icon size={20} strokeWidth={1.8} />
                 </div>
 
-                <h3>{item.title}</h3>
-                <p>{item.description}</p>
+                <h3>{items[index].title}</h3>
+                <p>{items[index].description}</p>
               </div>
             );
           })}
