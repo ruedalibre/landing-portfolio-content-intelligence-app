@@ -1,34 +1,24 @@
 import { CircleAlert, Split, LightbulbOff, Flame } from "lucide-react";
+import { useTranslation } from "react-i18next";
 
 const problems = [
-  {
-    icon: CircleAlert,
-    text: "You don’t know what actually works",
-  },
-  {
-    icon: Split,
-    text: "Your content is scattered across platforms",
-  },
-  {
-    icon: LightbulbOff,
-    text: "Your best ideas get lost and never reused",
-  },
-  {
-    icon: Flame,
-    text: "You’re creating more content, but not better results",
-  },
+  { icon: CircleAlert },
+  { icon: Split },
+  { icon: LightbulbOff },
+  { icon: Flame },
 ];
 
 const Problem = () => {
+  const { t } = useTranslation("problem");
+
+  const items = t("items", { returnObjects: true }) as string[];
+
   return (
     <section id="problem" className="problem reveal">
       <div className="container problem__content">
-        <h2 className="problem__title">Creators publish constantly</h2>
+        <h2 className="problem__title">{t("title")}</h2>
 
-        <p className="problem__subtitle">
-          But their content is fragmented, hard to analyze, and difficult to
-          scale.
-        </p>
+        <p className="problem__subtitle">{t("subtitle")}</p>
 
         <div className="problem__grid">
           {problems.map((item, index) => {
@@ -40,7 +30,7 @@ const Problem = () => {
                   <Icon size={18} strokeWidth={1.8} />
                 </span>
 
-                <p>{item.text}</p>
+                <p>{items[index]}</p>
               </div>
             );
           })}
