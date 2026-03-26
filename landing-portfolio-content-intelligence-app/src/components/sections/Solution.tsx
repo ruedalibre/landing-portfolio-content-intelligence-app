@@ -1,4 +1,5 @@
 import "../../styles/sections/_solution.scss";
+import { useTranslation } from "react-i18next";
 import {
   Lightbulb,
   FileText,
@@ -9,35 +10,38 @@ import {
 } from "lucide-react";
 
 const nodes = [
-  { icon: Lightbulb, title: "Ideas", micro: "Creative inputs" },
-  { icon: FileText, title: "Content", micro: "Ideas become posts" },
-  { icon: BarChart3, title: "Patterns", micro: "Detect what works" },
-  { icon: Sparkles, title: "Insights", micro: "Understand why" },
-  { icon: Target, title: "Strategy", micro: "Decide what to scale" },
-  { icon: RefreshCcw, title: "New Ideas", micro: "Start the next cycle" },
+  { icon: Lightbulb },
+  { icon: FileText },
+  { icon: BarChart3 },
+  { icon: Sparkles },
+  { icon: Target },
+  { icon: RefreshCcw },
 ];
 
 const Solution = () => {
+  const { t } = useTranslation("solution");
+
+  const nodesText = t("nodes", { returnObjects: true }) as {
+    title: string;
+    micro: string;
+  }[];
+
   return (
     <section id="how-it-works" className="solution reveal">
       <div className="container solution__content">
         <h2 className="solution__title">
-          From ideas to <span>scalable systems</span>
+          {t("title")} <span>{t("highlight")}</span>
         </h2>
 
-        <p className="solution__subtitle">
-          Understand what works, how ideas evolve and how to scale them.
-        </p>
-
-        {/* PHASE LABELS */}
+        <p className="solution__subtitle">{t("subtitle")}</p>
 
         <div className="solution__phases">
-          <span className="phase-input">INPUT →</span>
-          <span className="phase-intelligence">INTELLIGENCE →</span>
-          <span className="phase-output">OUTPUT →</span>
+          <span className="phase-input">{t("phase_input")} →</span>
+          <span className="phase-intelligence">
+            {t("phase_intelligence")} →
+          </span>
+          <span className="phase-output">{t("phase_output")} →</span>
         </div>
-
-        {/* LOOP */}
 
         <div className="solution__loop">
           {nodes.map((node, i) => {
@@ -49,19 +53,15 @@ const Solution = () => {
                   <Icon size={20} strokeWidth={1.8} />
                 </div>
 
-                <h4>{node.title}</h4>
+                <h4>{nodesText[i].title}</h4>
 
-                <p>{node.micro}</p>
+                <p>{nodesText[i].micro}</p>
               </div>
             );
           })}
         </div>
 
-        {/* RESULT */}
-
-        <p className="solution__result">
-          Your content becomes a system that improves over time!
-        </p>
+        <p className="solution__result">{t("result")}</p>
       </div>
     </section>
   );

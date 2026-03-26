@@ -6,13 +6,12 @@ type Props = {
 };
 
 const Navbar = ({ onRequestAccess }: Props) => {
-  const { i18n } = useTranslation(); // ← reactivo
+  const { t, i18n } = useTranslation("navbar");
 
-  const currentLang = i18n.language;
+  const currentLang = i18n.language.slice(0, 2);
 
   const changeLang = (lang: string) => {
     i18n.changeLanguage(lang);
-    console.log("changing language to", lang);
     localStorage.setItem("lang", lang);
   };
 
@@ -33,31 +32,34 @@ const Navbar = ({ onRequestAccess }: Props) => {
   return (
     <nav className={`navbar ${scrolled ? "navbar--scrolled" : ""}`}>
       <div className="container navbar__content">
+        {/* LOGO */}
         <a href="#top" className="navbar__logo">
           Content <span>Intelligence</span>
         </a>
 
+        {/* LINKS */}
         <div className="navbar__links">
           <a className="nav__link" href="#product">
-            Product
+            {t("product")}
           </a>
 
           <a className="nav__link" href="#how-it-works">
-            How it works
+            {t("how_it_works")}
           </a>
 
           <a className="nav__link" href="#contact">
-            Contact
+            {t("contact")}
           </a>
         </div>
 
+        {/* ACTIONS */}
         <div className="navbar__actions">
           <button
             className="btn btn--primary"
             onClick={onRequestAccess}
             type="button"
           >
-            Join early access
+            {t("cta")}
           </button>
 
           <div className="lang-switch">

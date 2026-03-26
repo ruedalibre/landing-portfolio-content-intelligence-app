@@ -29,6 +29,18 @@ import esWhyItMatters from "./es/why_it_matters.json" with { type: "json" };
 import esFinalCTA from "./es/final_cta.json" with { type: "json" };
 import esEarlyAccessModal from "./es/early_access_modal.json" with { type: "json" };
 
+/* Detect language */
+
+const savedLang = localStorage.getItem("lang");
+const browserLang = navigator.language?.slice(0, 2);
+
+const supportedLangs = ["en", "es"];
+
+const initialLang =
+  (savedLang && supportedLangs.includes(savedLang) && savedLang) ||
+  (browserLang && supportedLangs.includes(browserLang) && browserLang) ||
+  "en";
+
 i18n.use(initReactI18next).init({
   resources: {
     en: {
@@ -63,7 +75,7 @@ i18n.use(initReactI18next).init({
     },
   },
 
-  lng: localStorage.getItem("lang") || "en",
+  lng: initialLang,
   fallbackLng: "en",
 
   ns: [

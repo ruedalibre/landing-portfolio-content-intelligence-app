@@ -1,1 +1,35 @@
-{}
+{
+  "title": "Pasa de ideas a",
+  "highlight": "sistemas escalables",
+  "subtitle": "Entiende qué funciona, cómo evolucionan las ideas y cómo escalarlas.",
+  "phase_input": "ENTRADA",
+  "phase_intelligence": "INTELIGENCIA",
+  "phase_output": "SALIDA",
+  "nodes": [
+    {
+      "title": "Ideas",
+      "micro": "Aportes creativos"
+    },
+    {
+      "title": "Contenido",
+      "micro": "Las ideas se convierten en publicaciones"
+    },
+    {
+      "title": "Patrones",
+      "micro": "Detectar qué funciona"
+    },
+    {
+      "title": "Insights",
+      "micro": "Comprender el porqué"
+    },
+    {
+      "title": "Estrategia",
+      "micro": "Decidir qué escalar"
+    },
+    {
+      "title": "Nuevas ideas",
+      "micro": "Comenzar el siguiente ciclo"
+    }
+  ],
+  "result": "¡Tu contenido se convierte en un sistema que mejora con el tiempo!"
+}
