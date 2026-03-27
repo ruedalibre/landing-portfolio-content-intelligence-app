@@ -1,20 +1,20 @@
+import { useTranslation } from "react-i18next";
+
 const Vision = () => {
+  const { t } = useTranslation("vision");
+
   return (
     <section id="vision" className="vision reveal">
       <div className="container vision__content">
-        <p className="vision__eyebrow">Vision</p>
+        <p className="vision__eyebrow">{t("eyebrow")}</p>
 
         <h2 className="vision__title">
-          The operating system
+          {t("title_line_1")}
           <br />
-          for <span>content creation</span>
+          {t("title_line_2")} <span>{t("highlight")}</span>
         </h2>
 
-        <p className="vision__manifesto">
-          Creators shouldn't guess what works. They should understand their
-          ideas, scale their best concepts, and build systems that grow with
-          them.
-        </p>
+        <p className="vision__manifesto">{t("manifesto")}</p>
       </div>
     </section>
   );

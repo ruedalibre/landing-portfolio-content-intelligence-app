@@ -2,34 +2,37 @@
   "title": "From ideas to",
   "highlight": "scalable systems",
   "subtitle": "Understand what works, how ideas evolve and how to scale them.",
+
   "phase_input": "INPUT",
   "phase_intelligence": "INTELLIGENCE",
   "phase_output": "OUTPUT",
-  "nodes": [
-    {
+
+  "nodes": {
+    "ideas": {
       "title": "Ideas",
       "micro": "Creative inputs"
     },
-    {
+    "content": {
       "title": "Content",
       "micro": "Ideas become posts"
     },
-    {
+    "patterns": {
       "title": "Patterns",
       "micro": "Detect what works"
     },
-    {
+    "insights": {
       "title": "Insights",
       "micro": "Understand why"
     },
-    {
+    "strategy": {
       "title": "Strategy",
       "micro": "Decide what to scale"
     },
-    {
+    "new_ideas": {
       "title": "New Ideas",
       "micro": "Start the next cycle"
     }
-  ],
+  },
+
   "result": "Your content becomes a system that improves over time!"
 }

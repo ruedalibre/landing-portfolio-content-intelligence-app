@@ -1,4 +1,5 @@
 import { useState, useEffect, useRef } from "react";
+import { useTranslation } from "react-i18next";
 import { PLATFORMS, ROLES } from "../../constants/earlyAccessOptions";
 
 type Props = {
@@ -8,6 +9,8 @@ type Props = {
 };
 
 const RequestAccessModal = ({ isOpen, onClose, source = "landing" }: Props) => {
+  const { t } = useTranslation("early_access_modal");
+
   const [email, setEmail] = useState("");
   const [platform, setPlatform] = useState<string | null>(null);
   const [role, setRole] = useState<string | null>(null);
@@ -129,24 +132,22 @@ const RequestAccessModal = ({ isOpen, onClose, source = "landing" }: Props) => {
 
         {!submitted ? (
           <>
-            <h2 className="modal__title">Join Early Access</h2>
+            <h2 className="modal__title">{t("title")}</h2>
 
-            <p className="modal__subtitle">
-              Be among the first creators building scalable content systems.
-            </p>
+            <p className="modal__subtitle">{t("subtitle")}</p>
 
             <form className="modal__form" onSubmit={handleSubmit}>
               {/* EMAIL */}
 
               <div className="modal__section">
                 <p className="modal__label">
-                  Your email <span className="modal__required">*</span>
+                  {t("email_label")} <span className="modal__required">*</span>
                 </p>
 
                 <input
                   ref={inputRef}
                   type="email"
-                  placeholder="name@email.com"
+                  placeholder={t("email_placeholder")}
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
                   required
@@ -157,7 +158,7 @@ const RequestAccessModal = ({ isOpen, onClose, source = "landing" }: Props) => {
 
               <div className="modal__section">
                 <p className="modal__label">
-                  Where do you publish most of your content?
+                  {t("platform_label")}
                   <span className="modal__required">*</span>
                 </p>
 
@@ -180,7 +181,7 @@ const RequestAccessModal = ({ isOpen, onClose, source = "landing" }: Props) => {
               {/* ROLE */}
 
               <div className="modal__section modal__optional">
-                <p className="modal__label">What best describes you?</p>
+                <p className="modal__label">{t("role_label")}</p>
 
                 <div className="modal__chips">
                   {ROLES.map((r) => (
@@ -199,13 +200,11 @@ const RequestAccessModal = ({ isOpen, onClose, source = "landing" }: Props) => {
               {/* CREATOR FOCUS */}
 
               <div className="modal__section modal__optional">
-                <p className="modal__label">
-                  What do you usually create content about?
-                </p>
+                <p className="modal__label">{t("focus_label")}</p>
 
                 <input
                   type="text"
-                  placeholder="AI tutorials, marketing, startups..."
+                  placeholder={t("focus_placeholder")}
                   value={creatorFocus}
                   onChange={(e) => setCreatorFocus(e.target.value)}
                 />
@@ -218,30 +217,24 @@ const RequestAccessModal = ({ isOpen, onClose, source = "landing" }: Props) => {
                 className="btn btn--primary modal__cta"
                 disabled={loading || !canSubmit}
               >
-                {loading ? "Joining..." : "Join Early Access"}
+                {loading ? t("loading") : t("cta")}
               </button>
             </form>
 
-            {error && (
-              <p className="modal__error">
-                Something went wrong. Please try again.
-              </p>
-            )}
+            {error && <p className="modal__error">{t("error")}</p>}
           </>
         ) : (
           <div className="modal__success">
-            <h2 className="modal__title">You're on the list 🎉</h2>
+            <h2 className="modal__title">{t("success_title")}</h2>
 
-            <p className="modal__subtitle">
-              We'll invite early creators as soon as the MVP is ready.
-            </p>
+            <p className="modal__subtitle">{t("success_subtitle")}</p>
 
             <button
               className="btn btn--primary"
               onClick={handleClose}
               type="button"
             >
-              Close
+              {t("close")}
             </button>
           </div>
         )}

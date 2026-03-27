@@ -10,21 +10,16 @@ import {
 } from "lucide-react";
 
 const nodes = [
-  { icon: Lightbulb },
-  { icon: FileText },
-  { icon: BarChart3 },
-  { icon: Sparkles },
-  { icon: Target },
-  { icon: RefreshCcw },
+  { key: "ideas", icon: Lightbulb },
+  { key: "content", icon: FileText },
+  { key: "patterns", icon: BarChart3 },
+  { key: "insights", icon: Sparkles },
+  { key: "strategy", icon: Target },
+  { key: "new_ideas", icon: RefreshCcw },
 ];
 
 const Solution = () => {
   const { t } = useTranslation("solution");
-
-  const nodesText = t("nodes", { returnObjects: true }) as {
-    title: string;
-    micro: string;
-  }[];
 
   return (
     <section id="how-it-works" className="solution reveal">
@@ -44,18 +39,18 @@ const Solution = () => {
         </div>
 
         <div className="solution__loop">
-          {nodes.map((node, i) => {
+          {nodes.map((node) => {
             const Icon = node.icon;
 
             return (
-              <div className="solution__node" key={i}>
+              <div className="solution__node" key={node.key}>
                 <div className="solution__icon">
                   <Icon size={20} strokeWidth={1.8} />
                 </div>
 
-                <h4>{nodesText[i].title}</h4>
+                <h4>{t(`nodes.${node.key}.title`)}</h4>
 
-                <p>{nodesText[i].micro}</p>
+                <p>{t(`nodes.${node.key}.micro`)}</p>
               </div>
             );
           })}

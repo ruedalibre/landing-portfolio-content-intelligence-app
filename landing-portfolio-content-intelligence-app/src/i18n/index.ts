@@ -13,7 +13,7 @@ import enProductVisuals from "./en/product_visuals.json" with { type: "json" };
 import enVision from "./en/vision.json" with { type: "json" };
 import enWhyItMatters from "./en/why_it_matters.json" with { type: "json" };
 import enFinalCTA from "./en/final_cta.json" with { type: "json" };
-import enEarlyAccessModal from "./en/early_access_modal.json" with { type: "json" };
+import enEarlyAccessModal from "./en/request_access_modal.json" with { type: "json" };
 
 import esHero from "./es/hero.json" with { type: "json" };
 import esNavbar from "./es/navbar.json" with { type: "json" };
@@ -27,7 +27,7 @@ import esProductVisuals from "./es/product_visuals.json" with { type: "json" };
 import esVision from "./es/vision.json" with { type: "json" };
 import esWhyItMatters from "./es/why_it_matters.json" with { type: "json" };
 import esFinalCTA from "./es/final_cta.json" with { type: "json" };
-import esEarlyAccessModal from "./es/early_access_modal.json" with { type: "json" };
+import esEarlyAccessModal from "./es/request_access_modal.json" with { type: "json" };
 
 /* Detect language */
 

@@ -40,15 +40,15 @@ const Navbar = ({ onRequestAccess }: Props) => {
         {/* LINKS */}
         <div className="navbar__links">
           <a className="nav__link" href="#product">
-            {t("product")}
+            {t("links.product")}
           </a>
 
           <a className="nav__link" href="#how-it-works">
-            {t("how_it_works")}
+            {t("links.how_it_works")}
           </a>
 
           <a className="nav__link" href="#contact">
-            {t("contact")}
+            {t("links.contact")}
           </a>
         </div>
 
@@ -59,7 +59,7 @@ const Navbar = ({ onRequestAccess }: Props) => {
             onClick={onRequestAccess}
             type="button"
           >
-            {t("cta")}
+            {t("cta.primary")}
           </button>
 
           <div className="lang-switch">

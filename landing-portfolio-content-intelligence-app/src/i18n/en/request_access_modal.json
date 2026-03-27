@@ -1,0 +1,23 @@
+{
+  "title": "Join Early Access",
+  "subtitle": "Be among the first creators building scalable content systems.",
+
+  "email_label": "Your email",
+  "email_placeholder": "name@email.com",
+
+  "platform_label": "Where do you publish most of your content?",
+
+  "role_label": "What best describes you?",
+
+  "focus_label": "What do you usually create content about?",
+  "focus_placeholder": "AI tutorials, marketing, startups...",
+
+  "cta": "Join Early Access",
+  "loading": "Joining...",
+
+  "error": "Something went wrong. Please try again.",
+
+  "success_title": "You're on the list 🎉",
+  "success_subtitle": "We'll invite early creators as soon as the MVP is ready.",
+  "close": "Close"
+}

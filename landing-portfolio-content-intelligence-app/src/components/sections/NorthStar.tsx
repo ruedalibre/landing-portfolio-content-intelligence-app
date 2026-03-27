@@ -1,17 +1,19 @@
+import { useTranslation } from "react-i18next";
+
 const NorthStar = () => {
+  const { t } = useTranslation("north_star");
+
   return (
     <section id="north-star" className="north-star reveal">
       <div className="container north-star__content">
-        <p className="north-star__label">North Star</p>
+        <p className="north-star__label">{t("label")}</p>
 
         <h2 className="north-star__title">
-          Reusable ideas → <span className="highlight">scalable content</span>
+          {t("title_prefix")}{" "}
+          <span className="highlight">{t("highlight")}</span>
         </h2>
 
-        <p className="north-star__description">
-          We measure success by how effectively creators transform ideas into
-          scalable content systems.
-        </p>
+        <p className="north-star__description">{t("description")}</p>
       </div>
     </section>
   );

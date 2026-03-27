@@ -2,8 +2,7 @@ import heroImage from "../../assets/images/dashboard.png";
 import { useEarlyAccessCount } from "../../hooks/useEarlyAccessCoutn.ts";
 import { useAnimatedCount } from "../../hooks/useAnimatedCount.ts";
 import { useEffect, useState } from "react";
-import { useTranslation } from "react-i18next";
-import { Trans } from "react-i18next";
+import { useTranslation, Trans } from "react-i18next";
 
 type Props = {
   onRequestAccess: () => void;
@@ -21,7 +20,7 @@ const Hero = ({ onRequestAccess }: Props) => {
       setPulse(true);
 
       setTimeout(() => setPulse(false), 400);
-    }, 500); // espera a que termine el count animation
+    }, 500);
 
     return () => clearTimeout(timer);
   }, [displayCount]);
@@ -32,15 +31,10 @@ const Hero = ({ onRequestAccess }: Props) => {
         {/* LEFT */}
         <div className="hero__content">
           <h1 className="hero__title">
-            {t("title")}{" "}
-            <span className="highlight">
-              {t("highlight")}
-            </span>
+            {t("title")} <span className="highlight">{t("highlight")}</span>
           </h1>
 
-          <p className="hero__subtitle">
-            {t("value_statement")}
-          </p>
+          <p className="hero__subtitle">{t("value_statement")}</p>
 
           <div className="hero__cta">
             <button
@@ -55,10 +49,12 @@ const Hero = ({ onRequestAccess }: Props) => {
               {t("cta_secondary")}
             </a>
           </div>
+
           <div className="hero__proof">
             <p className="hero__social-proof">
               <Trans
                 i18nKey="social_proof"
+                ns="hero"
                 values={{ count: animatedCount }}
                 components={{
                   strong: <strong className={pulse ? "count-pulse" : ""} />,
@@ -70,7 +66,7 @@ const Hero = ({ onRequestAccess }: Props) => {
 
         {/* RIGHT */}
         <div className="hero__visual">
-          <img src={heroImage} alt="Dashboard preview" />
+          <img src={heroImage} alt={t("image_alt")} />
         </div>
       </div>
     </section>

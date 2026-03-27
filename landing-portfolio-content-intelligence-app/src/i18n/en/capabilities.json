@@ -1,21 +1,21 @@
 {
   "title": "What you can do",
-  "items": [
-    {
+  "items": {
+    "idea_intelligence": {
       "title": "Idea Intelligence",
       "description": "Identify which ideas generate the most content and can be scaled."
     },
-    {
+    "content_evolution": {
       "title": "Content Evolution",
       "description": "Track how your ideas evolve across formats, platforms and executions."
     },
-    {
+    "creative_dna": {
       "title": "Creative DNA",
       "description": "Understand your creative profile — formats, topics and patterns that define your content."
     },
-    {
+    "pattern_recognition": {
       "title": "Pattern Recognition",
       "description": "Detect what works and turn it into repeatable content systems."
     }
-  ]
+  }
 }

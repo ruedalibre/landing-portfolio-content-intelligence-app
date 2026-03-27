@@ -2,16 +2,14 @@ import { CircleAlert, Split, LightbulbOff, Flame } from "lucide-react";
 import { useTranslation } from "react-i18next";
 
 const problems = [
-  { icon: CircleAlert },
-  { icon: Split },
-  { icon: LightbulbOff },
-  { icon: Flame },
+  { key: "no_insight", icon: CircleAlert },
+  { key: "scattered_content", icon: Split },
+  { key: "lost_ideas", icon: LightbulbOff },
+  { key: "more_content_less_results", icon: Flame },
 ];
 
 const Problem = () => {
   const { t } = useTranslation("problem");
-
-  const items = t("items", { returnObjects: true }) as string[];
 
   return (
     <section id="problem" className="problem reveal">
@@ -21,16 +19,16 @@ const Problem = () => {
         <p className="problem__subtitle">{t("subtitle")}</p>
 
         <div className="problem__grid">
-          {problems.map((item, index) => {
+          {problems.map((item) => {
             const Icon = item.icon;
 
             return (
-              <div key={index} className="problem__card">
+              <div key={item.key} className="problem__card">
                 <span className="problem__icon">
                   <Icon size={18} strokeWidth={1.8} />
                 </span>
 
-                <p>{items[index]}</p>
+                <p>{t(`items.${item.key}`)}</p>
               </div>
             );
           })}

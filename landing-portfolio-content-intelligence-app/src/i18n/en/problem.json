@@ -1,10 +1,10 @@
 {
   "title": "Creators publish constantly.",
   "subtitle": "But their content is fragmented, hard to analyze, and difficult to scale.",
-  "items": [
-    "You don’t know what actually works",
-    "Your content is scattered across platforms",
-    "Your best ideas get lost and never reused",
-    "You’re creating more content, but not better results"
-  ]
+  "items": {
+    "no_insight": "You don’t know what actually works",
+    "scattered_content": "Your content is scattered across platforms",
+    "lost_ideas": "Your best ideas get lost and never reused",
+    "more_content_less_results": "You’re creating more content, but not better results"
+  }
 }

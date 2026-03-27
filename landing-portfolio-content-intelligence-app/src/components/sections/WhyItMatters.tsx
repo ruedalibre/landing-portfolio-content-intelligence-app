@@ -1,15 +1,16 @@
+import { useTranslation } from "react-i18next";
+
 const WhyItMatters = () => {
+  const { t } = useTranslation("why_it_matters");
+
   return (
     <section id="why-it-matters" className="why reveal">
       <div className="container why__content">
-        <h2 className="why__title">Content is not random.</h2>
+        <h2 className="why__title">{t("title")}</h2>
 
-        <p className="why__subtitle">It’s a system.</p>
+        <p className="why__subtitle">{t("subtitle")}</p>
 
-        <p className="why__text">
-          The creators who grow faster are not the ones who publish more —
-          they’re the ones who understand what works and scale it.
-        </p>
+        <p className="why__text">{t("text")}</p>
       </div>
     </section>
   );

@@ -1,6 +1,10 @@
 {
-  "product": "Product",
-  "how_it_works": "How it works",
-  "contact": "Contact",
-  "cta": "Join early access"
+  "links": {
+    "product": "Product",
+    "how_it_works": "How it works",
+    "contact": "Contact"
+  },
+  "cta": {
+    "primary": "Join early access"
+  }
 }

@@ -1,10 +1,10 @@
 {
   "title": "Los creadores publican constantemente.",
-  "subtitle": "Pero su contenido está fragmentado, es difícil de analizar y de escalar.",
-  "items": [
-    "No sabes qué funciona realmente",
-    "Tu contenido está disperso en diferentes plataformas",
-    "Tus mejores ideas se pierden y nunca se reutilizan",
-    "Creas más contenido, pero no obtienes mejores resultados"
-  ]
+  "subtitle": "Pero su contenido está fragmentado, es difícil de analizar y complicado de escalar.",
+  "items": {
+    "no_insight": "No sabes realmente qué funciona",
+    "scattered_content": "Tu contenido está disperso en múltiples plataformas",
+    "lost_ideas": "Tus mejores ideas se pierden y nunca se reutilizan",
+    "more_content_less_results": "Estás creando más contenido, pero sin mejores resultados"
+  }
 }

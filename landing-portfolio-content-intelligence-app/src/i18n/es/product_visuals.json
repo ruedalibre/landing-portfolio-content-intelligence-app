@@ -1,1 +1,21 @@
-{}
+{
+  "title": "Mira cómo funciona en la práctica",
+
+  "items": {
+    "capture": {
+      "title": "Captura y estructura tu contenido",
+      "description": "Reúne todo tu contenido en un solo lugar y organízalo alrededor de ideas y temas.",
+      "image_alt": "Tabla de contenidos"
+    },
+    "insights": {
+      "title": "Entiende qué funciona",
+      "description": "Detecta patrones, analiza el rendimiento y entiende qué impulsa los resultados.",
+      "image_alt": "Dashboard"
+    },
+    "systems": {
+      "title": "Convierte ideas en sistemas escalables",
+      "description": "Identifica ideas reutilizables y conviértelas en sistemas de contenido repetibles.",
+      "image_alt": "Sistema de ideas"
+    }
+  }
+}

@@ -1,9 +1,13 @@
 {
-  "title": "Convierte tu contenido en un sistema escalable.",
+  "title": "Convierte tu contenido en un sistema escalable",
   "highlight": "Entiende qué funciona. Reutiliza tus mejores ideas.",
+
   "value_statement": "Una plataforma de inteligencia de contenido para creadores y equipos.",
+
   "cta_primary": "Únete al acceso anticipado",
   "cta_secondary": "Conectemos",
-  "social_proof": "Únete a <strong>{{count}}+</strong> creadores que exploran la inteligencia de contenido.",
-  "image_alt": "Dashboard preview"
+
+  "social_proof": "Únete a <strong>{{count}}+</strong> creadores explorando la inteligencia de contenido",
+
+  "image_alt": "Vista previa dashboard"
 }

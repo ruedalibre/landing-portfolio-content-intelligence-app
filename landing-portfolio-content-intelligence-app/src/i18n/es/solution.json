@@ -5,31 +5,31 @@
   "phase_input": "ENTRADA",
   "phase_intelligence": "INTELIGENCIA",
   "phase_output": "SALIDA",
-  "nodes": [
-    {
+  "nodes": {
+    "ideas": {
       "title": "Ideas",
       "micro": "Aportes creativos"
     },
-    {
+    "content": {
       "title": "Contenido",
       "micro": "Las ideas se convierten en publicaciones"
     },
-    {
+    "patterns": {
       "title": "Patrones",
-      "micro": "Detectar qué funciona"
+      "micro": "Detecta qué funciona"
     },
-    {
+    "insights": {
       "title": "Insights",
-      "micro": "Comprender el porqué"
+      "micro": "Entiende por qué"
     },
-    {
+    "strategy": {
       "title": "Estrategia",
-      "micro": "Decidir qué escalar"
+      "micro": "Decide qué escalar"
     },
-    {
+    "new_ideas": {
       "title": "Nuevas ideas",
-      "micro": "Comenzar el siguiente ciclo"
+      "micro": "Comienza el siguiente ciclo"
     }
-  ],
+  },
   "result": "¡Tu contenido se convierte en un sistema que mejora con el tiempo!"
 }
