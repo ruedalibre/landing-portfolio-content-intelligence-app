@@ -9,7 +9,7 @@ type Props = {
 };
 
 const RequestAccessModal = ({ isOpen, onClose, source = "landing" }: Props) => {
-  const { t } = useTranslation("early_access_modal");
+  const { t, i18n } = useTranslation("early_access_modal");
 
   const [email, setEmail] = useState("");
   const [platform, setPlatform] = useState<string | null>(null);
@@ -33,6 +33,12 @@ const RequestAccessModal = ({ isOpen, onClose, source = "landing" }: Props) => {
     setLoading(true);
     setError(false);
 
+    /* =========================
+    LANGUAGE DETECTION
+    ========================= */
+
+    const language = i18n.language?.startsWith("es") ? "es" : "en";
+
     try {
       const res = await fetch(
         "https://szpdbyuzdeluizxslugd.supabase.co/functions/v1/early-access",
@@ -48,6 +54,7 @@ const RequestAccessModal = ({ isOpen, onClose, source = "landing" }: Props) => {
             role_id: role,
             creator_focus: creatorFocus,
             source,
+            language, // ← NEW FIELD
           }),
         },
       );
