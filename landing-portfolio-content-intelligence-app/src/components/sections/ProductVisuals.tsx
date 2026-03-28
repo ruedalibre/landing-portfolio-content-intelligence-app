@@ -1,9 +1,10 @@
 import dashboardImg from "../../assets/images/dashboard.png";
-import ideasImg from "../../assets/images/ideas-system.png";
+import ideasImg from "../../assets/images/ideas.png";
+import contentsImg from "../../assets/images/contents.png";
 import { useTranslation } from "react-i18next";
 
 const visuals = [
-  { key: "capture", image: dashboardImg, reverse: false },
+  { key: "capture", image: contentsImg, reverse: false },
   { key: "insights", image: dashboardImg, reverse: true },
   { key: "systems", image: ideasImg, reverse: false },
 ];
