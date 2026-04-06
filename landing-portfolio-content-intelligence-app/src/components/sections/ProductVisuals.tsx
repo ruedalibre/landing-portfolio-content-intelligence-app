@@ -1,12 +1,12 @@
-import dashboardImg from "../../assets/images/dashboard.png";
-import ideasImg from "../../assets/images/ideas.png";
-import contentsImg from "../../assets/images/contents.png";
+import dashboardImage from "../../assets/images/dashboardImage.png";
+import ideasImage from "../../assets/images/ideasImage.png";
+import contentsImage from "../../assets/images/contentsImage.png";
 import { useTranslation } from "react-i18next";
 
 const visuals = [
-  { key: "capture", image: contentsImg, reverse: false },
-  { key: "insights", image: dashboardImg, reverse: true },
-  { key: "systems", image: ideasImg, reverse: false },
+  { key: "capture", image: contentsImage, reverse: false },
+  { key: "insights", image: dashboardImage, reverse: true },
+  { key: "systems", image: ideasImage, reverse: false },
 ];
 
 const ProductVisuals = () => {
