@@ -41,7 +41,7 @@ const RequestAccessModal = ({ isOpen, onClose, source = "landing" }: Props) => {
 
     try {
       const res = await fetch(
-        "https://szpdbyuzdeluizxslugd.supabase.co/functions/v1/early-access",
+        `${import.meta.env.VITE_SUPABASE_URL}/functions/v1/early-access`,
         {
           method: "POST",
           headers: {
