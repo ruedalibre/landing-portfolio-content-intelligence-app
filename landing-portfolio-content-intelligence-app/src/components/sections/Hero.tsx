@@ -1,5 +1,5 @@
 import heroImage from "../../assets/images/heroImage.png";
-import { useEarlyAccessCount } from "../../hooks/useEarlyAccessCoutn.ts";
+import { useEarlyAccessCount } from "../../hooks/useEarlyAccessCount.ts";
 import { useAnimatedCount } from "../../hooks/useAnimatedCount.ts";
 import { useEffect, useState } from "react";
 import { useTranslation, Trans } from "react-i18next";
