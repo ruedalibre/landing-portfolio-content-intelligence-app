@@ -1,13 +1,11 @@
 // abstracts
 @use "./abstracts/variables" as *;
-@use "./abstracts/mixins" as *;
 
 // base
 @use "./base/reset";
 @use "./base/typography";
 
 // layout
-@use "./layout/container";
 @use "./layout/navbar";
 @use "./layout/section";
 
@@ -25,9 +23,7 @@
 @use "./sections/why-it-matters";
 
 // ui
-@use "./ui/badge";
 @use "./ui/button";
-@use "./ui/card";
 
 // modal
 @use "./ui/modal";
