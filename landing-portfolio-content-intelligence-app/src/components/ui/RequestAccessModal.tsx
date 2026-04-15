@@ -46,7 +46,7 @@ const RequestAccessModal = ({ isOpen, onClose, source = "landing" }: Props) => {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
-            apikey: import.meta.env.VITE_SUPABASE_ANON_KEY,
+            // apikey removido — no es necesario en Edge Functions
           },
           body: JSON.stringify({
             email,
@@ -54,7 +54,7 @@ const RequestAccessModal = ({ isOpen, onClose, source = "landing" }: Props) => {
             role_id: role,
             creator_focus: creatorFocus,
             source,
-            language, // ← NEW FIELD
+            language,
           }),
         },
       );
@@ -90,15 +90,19 @@ const RequestAccessModal = ({ isOpen, onClose, source = "landing" }: Props) => {
     }
   };
 
-  /* scroll lock */
+  /* scroll lock — incluye fix para iOS Safari */
 
   useEffect(() => {
     if (!isOpen) return;
 
     document.body.style.overflow = "hidden";
+    document.body.style.position = "fixed";
+    document.body.style.width = "100%";
 
     return () => {
       document.body.style.overflow = "auto";
+      document.body.style.position = "";
+      document.body.style.width = "";
     };
   }, [isOpen]);
 

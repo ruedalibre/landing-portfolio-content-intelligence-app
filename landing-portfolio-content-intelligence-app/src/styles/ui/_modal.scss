@@ -18,6 +18,9 @@ MODAL OVERLAY
 
   opacity: 0;
   animation: modalFade 0.25s ease forwards;
+
+  /* padding para que el modal no toque los bordes en mobile */
+  padding: 16px;
 }
 
 /* ===============================
@@ -26,7 +29,7 @@ MODAL CONTAINER
 
 .modal {
   width: 440px;
-  max-width: 92%;
+  max-width: 100%;
 
   background: white;
 
@@ -40,6 +43,10 @@ MODAL CONTAINER
 
   transform: scale(0.96);
   animation: modalScale 0.25s ease forwards;
+
+  /* evita que se corte verticalmente en pantallas pequeñas */
+  max-height: 90vh;
+  overflow-y: auto;
 }
 
 /* ===============================
@@ -290,15 +297,33 @@ ANIMATIONS
 }
 
 /* ===============================
-RESPONSIVE
+RESPONSIVE — MOBILE
 ================================ */
 
 @media (max-width: 600px) {
   .modal {
-    padding: $space-5;
+    padding: $space-3; // 24px — más compacto sin perder respiración
+    max-height: 85vh; // un poco menos en mobile para que no tape la barra del browser
   }
 
   .modal__title {
-    font-size: $fs-xl;
+    font-size: $fs-xl; // 24px
+  }
+
+  .modal__subtitle {
+    margin-bottom: $space-3; // reducir espacio vertical
+  }
+
+  .modal__form {
+    gap: $space-2; // reducir gap entre secciones del formulario
+  }
+
+  .modal__chips {
+    gap: 8px;
+  }
+
+  .chip {
+    padding: 7px 12px;
+    font-size: $fs-xs; // 12px — caben más chips por línea
   }
 }
