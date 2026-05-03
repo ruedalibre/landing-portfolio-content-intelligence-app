@@ -59,6 +59,31 @@
   display: none;
 }
 
+/* LEGAL LINKS */
+
+.cta__legal {
+  margin-top: $space-5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+
+  a {
+    font-size: 12px;
+    color: rgba(255, 255, 255, 0.35);
+    text-decoration: none;
+
+    &:hover {
+      color: rgba(255, 255, 255, 0.6);
+    }
+  }
+
+  span {
+    font-size: 12px;
+    color: rgba(255, 255, 255, 0.2);
+  }
+}
+
 /* MOBILE */
 
 @media (max-width: 768px) {
