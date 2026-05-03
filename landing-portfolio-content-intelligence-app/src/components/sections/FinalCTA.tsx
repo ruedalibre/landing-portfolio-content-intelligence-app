@@ -23,6 +23,16 @@ const FinalCTA = ({ onRequestAccess }: Props) => {
             {t("cta_secondary")}
           </a>
         </div>
+
+        <div className="cta__legal">
+          <a href="/terms" target="_blank" rel="noopener noreferrer">
+            Terms of Service
+          </a>
+          <span>·</span>
+          <a href="/privacy" target="_blank" rel="noopener noreferrer">
+            Privacy Policy
+          </a>
+        </div>
       </div>
     </section>
   );
