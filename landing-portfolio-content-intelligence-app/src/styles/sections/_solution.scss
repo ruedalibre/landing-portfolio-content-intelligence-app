@@ -105,7 +105,7 @@
 .sol-edge {
   animation: sol-dash 1.8s linear infinite;
 
-  &--delay {
+  &--d2 {
     animation-delay: 0.45s;
   }
 }
@@ -121,7 +121,7 @@
 .sol-list__item {
   background: var(--bg-elevated);
   border: 1px solid var(--border);
-  border-left-width: 3px;
+  border-left-width: 4px;
   border-radius: var(--r-5);
   padding: var(--s-4) var(--s-5) var(--s-4) calc(var(--s-5) + 3px);
   transition: box-shadow var(--transition-base);
