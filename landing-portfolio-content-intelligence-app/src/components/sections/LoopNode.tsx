@@ -1,11 +1,11 @@
-import { Handle, Position } from '@xyflow/react';
+import { Handle, Position } from "@xyflow/react";
 
 type LoopNodeData = {
   phase: string;
   title: string;
   line1: string;
   line2: string;
-  accent: 'terracota' | 'slate';
+  accent: "terracota" | "slate";
 };
 
 const LoopNode = ({ data }: { data: LoopNodeData }) => {
