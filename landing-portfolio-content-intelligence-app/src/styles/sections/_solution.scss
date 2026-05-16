@@ -1,4 +1,4 @@
-// Solution section — React Flow diagram layout
+// Solution section — React Flow loop diagram
 
 .solution {
   background: var(--bg-canvas);
@@ -17,7 +17,7 @@
   margin-bottom: var(--s-9);
 }
 
-/* Section eyebrow label — shared utility class */
+/* Section eyebrow label — shared utility */
 
 .section-label {
   display: inline-flex;
@@ -53,14 +53,18 @@
   color: var(--text);
   margin-bottom: var(--s-4);
 
-  .highlight {
-    color: var(--primary);
-    font-style: italic;
-  }
-
   @media (max-width: 768px) {
     font-size: var(--fs-28);
   }
+}
+
+/* Highlight word — ocre (#b8893d), same display font as title */
+
+.solution__highlight {
+  color: #b8893d;
+  font-family: var(--font-display);
+  font-style: italic;
+  font-weight: 500;
 }
 
 /* Subtitle */
@@ -85,17 +89,27 @@
   background: var(--bg-surface);
   border: 1px solid var(--border-subtle);
 
-  // React Flow overrides — keep coherent with design system
+  // React Flow overrides — scoped so they don't affect the rest of the app
   .react-flow__renderer {
     background: transparent;
   }
 
   .react-flow__background {
-    opacity: 0.6;
+    opacity: 0.5;
+  }
+
+  // Hide React Flow branding panel
+  .react-flow__panel {
+    display: none;
+  }
+
+  // Let each node control its own width — prevents React Flow from collapsing nodes
+  .react-flow__node {
+    width: auto;
   }
 
   @media (max-width: 768px) {
-    height: 780px;
+    height: 860px;
   }
 }
 
@@ -103,7 +117,8 @@
 
 .loop-node {
   display: flex;
-  width: 240px;
+  width: 260px;
+  min-width: 260px;
   background: var(--bg-elevated);
   border: 1px solid var(--border);
   border-radius: var(--r-6);
@@ -167,4 +182,3 @@
   line-height: var(--lh-normal);
   margin: 0;
 }
-
