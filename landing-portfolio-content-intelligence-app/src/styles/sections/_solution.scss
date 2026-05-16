@@ -1,4 +1,4 @@
-// Solution section — design system tokens, loop visual layout
+// Solution section — React Flow diagram layout
 
 .solution {
   background: var(--bg-canvas);
@@ -6,18 +6,18 @@
 }
 
 .solution__content {
-  max-width: 900px;
+  max-width: 960px;
   margin: 0 auto;
 }
 
-/* HEADER */
+/* ── HEADER ── */
 
 .solution__header {
   text-align: center;
   margin-bottom: var(--s-9);
 }
 
-/* Section eyebrow label */
+/* Section eyebrow label — shared utility class */
 
 .section-label {
   display: inline-flex;
@@ -41,7 +41,7 @@
   }
 }
 
-/* TITLE */
+/* Title */
 
 .solution__title {
   font-family: var(--font-display);
@@ -53,13 +53,17 @@
   color: var(--text);
   margin-bottom: var(--s-4);
 
-  span.highlight {
+  .highlight {
     color: var(--primary);
     font-style: italic;
   }
+
+  @media (max-width: 768px) {
+    font-size: var(--fs-28);
+  }
 }
 
-/* SUBTITLE */
+/* Subtitle */
 
 .solution__subtitle {
   font-family: var(--font-sans);
@@ -71,51 +75,72 @@
   margin: 0 auto;
 }
 
-/* ── LOOP LAYOUT ── */
+/* ── DIAGRAM CONTAINER ── */
 
-.solution__loop {
+.solution__diagram {
+  width: 100%;
+  height: 520px;
+  border-radius: var(--r-6);
+  overflow: hidden;
+  background: var(--bg-surface);
+  border: 1px solid var(--border-subtle);
+
+  // React Flow overrides — keep coherent with design system
+  .react-flow__renderer {
+    background: transparent;
+  }
+
+  .react-flow__background {
+    opacity: 0.6;
+  }
+
+  @media (max-width: 768px) {
+    height: 900px;
+  }
+}
+
+/* ── LOOP NODE ── */
+
+.loop-node {
   display: flex;
-  flex-direction: column;
-  gap: 0;
-}
-
-/* Rows */
-
-.solution__row {
-  display: grid;
-  grid-template-columns: 1fr 40px 1fr;
-  align-items: center;
-  gap: 0;
-}
-
-/* Steps */
-
-.solution__step {
+  width: 240px;
   background: var(--bg-elevated);
   border: 1px solid var(--border);
   border-radius: var(--r-6);
-  padding: var(--s-6) var(--s-7);
-  transition:
-    box-shadow var(--transition-base),
-    transform var(--transition-base);
+  overflow: hidden;
+  transition: box-shadow var(--transition-base);
 
   &:hover {
     box-shadow: var(--shadow-md);
-    transform: translateY(-2px);
   }
 
-  // Acento superior: entrada/producción
-  &--teal {
-    border-top: 2px solid var(--accent);
+  &--terracota {
+    border-color: rgba(196, 120, 89, 0.4);
+
+    .loop-node__bar {
+      background: #c47859;
+    }
   }
 
-  // Acento superior: inteligencia/evolución
-  &--purple {
-    border-top: 2px solid var(--primary);
+  &--slate {
+    border-color: rgba(54, 73, 101, 0.35);
+
+    .loop-node__bar {
+      background: var(--primary);
+    }
   }
 }
 
-.solution__phase {
+.loop-node__bar {
+  width: 3px;
+  flex-shrink: 0;
+}
+
+.loop-node__content {
+  padding: var(--s-4) var(--s-5);
+}
+
+.loop-node__phase {
   display: block;
   font-size: var(--fs-12);
   font-weight: 500;
@@ -125,117 +150,58 @@
   margin-bottom: var(--s-2);
 }
 
-.solution__step h4 {
+.loop-node__title {
   font-family: var(--font-sans);
-  font-size: var(--fs-16);
+  font-size: var(--fs-14);
   font-weight: 500;
   color: var(--text);
-  margin-bottom: var(--s-2);
+  margin-bottom: var(--s-1);
   line-height: var(--lh-snug);
 }
 
-.solution__step p {
+.loop-node__body {
   font-family: var(--font-sans);
-  font-size: var(--fs-14);
+  font-size: var(--fs-13);
   font-weight: 300;
   color: var(--text-secondary);
   line-height: var(--lh-normal);
   margin: 0;
 }
 
-/* Arrows */
+/* ── LOOP CENTER NODE ── */
 
-.solution__arrow {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: var(--fs-18);
-  color: var(--text-faint);
-  font-weight: 300;
-}
-
-.solution__arrows-sides {
-  display: grid;
-  grid-template-columns: 1fr 40px 1fr;
-  padding: var(--s-3) 0;
-}
-
-.solution__arrow-spacer {
-  // placeholder para alinear la flecha al lado correcto
-}
-
-/* Loop center badge */
-
-.solution__loop-center {
-  display: flex;
-  justify-content: center;
-  padding: var(--s-3) 0;
-}
-
-.solution__loop-badge {
+.loop-center {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   gap: 2px;
+  width: 160px;
+  padding: var(--s-4);
   border: 1px dashed var(--border);
   border-radius: var(--r-5);
-  padding: var(--s-4) var(--s-6);
-  width: 160px;
+  background: var(--bg-surface);
+  text-align: center;
 }
 
-.solution__loop-title {
+.loop-center__title {
   font-family: var(--font-sans);
   font-size: var(--fs-12);
   font-weight: 500;
   color: var(--text-secondary);
-  text-align: center;
   line-height: 1.3;
 }
 
-.solution__loop-subtitle {
+.loop-center__sub {
   font-family: var(--font-sans);
   font-size: var(--fs-12);
   font-weight: 300;
   color: var(--text-faint);
-  text-align: center;
   line-height: 1.3;
 }
 
-.solution__loop-icon {
+.loop-center__icon {
   font-size: var(--fs-16);
   color: var(--text-faint);
-  margin-top: 2px;
-}
-
-/* MOBILE */
-
-@media (max-width: 768px) {
-  .solution__title {
-    font-size: var(--fs-28);
-  }
-
-  .solution__row,
-  .solution__arrows-sides {
-    grid-template-columns: 1fr;
-  }
-
-  .solution__arrow--right,
-  .solution__arrow--left {
-    transform: rotate(90deg);
-    justify-self: center;
-  }
-
-  .solution__arrow--up,
-  .solution__arrow--down {
-    justify-self: center;
-  }
-
-  .solution__arrow-spacer {
-    display: none;
-  }
-
-  .solution__row--reverse {
-    direction: ltr;
-  }
+  margin-top: var(--s-1);
 }
