@@ -26,47 +26,41 @@ const Hero = ({ onRequestAccess }: Props) => {
   }, [displayCount]);
 
   return (
-    <section id="top" className="hero">
-      <div className="container hero__grid">
-        {/* LEFT */}
-        <div className="hero__content">
-          <h1 className="hero__title">
-            {t("title")} <span className="highlight">{t("highlight")}</span>
-          </h1>
+    <section
+      id="top"
+      className="hero"
+      style={{ backgroundImage: `url(${heroImage})` }}
+    >
+      <div className="container hero__content">
+        <h1 className="hero__title">{t("title")}</h1>
 
-          <p className="hero__subtitle">{t("value_statement")}</p>
+        <p className="hero__subtitle">{t("value_statement")}</p>
 
-          <div className="hero__cta">
-            <button
-              className="btn btn--primary"
-              onClick={onRequestAccess}
-              type="button"
-            >
-              {t("cta_primary")}
-            </button>
+        <div className="hero__cta">
+          <button
+            className="btn btn--primary"
+            onClick={onRequestAccess}
+            type="button"
+          >
+            {t("cta_primary")}
+          </button>
 
-            <a href="#contact" className="btn btn--secondary">
-              {t("cta_secondary")}
-            </a>
-          </div>
-
-          <div className="hero__proof">
-            <p className="hero__social-proof">
-              <Trans
-                i18nKey="social_proof"
-                ns="hero"
-                values={{ count: animatedCount }}
-                components={{
-                  strong: <strong className={pulse ? "count-pulse" : ""} />,
-                }}
-              />
-            </p>
-          </div>
+          <a href="#contact" className="btn btn--secondary">
+            {t("cta_secondary")}
+          </a>
         </div>
 
-        {/* RIGHT */}
-        <div className="hero__visual">
-          <img src={heroImage} alt={t("image_alt")} />
+        <div className="hero__proof">
+          <p className="hero__social-proof">
+            <Trans
+              i18nKey="social_proof"
+              ns="hero"
+              values={{ count: animatedCount }}
+              components={{
+                strong: <strong className={pulse ? "count-pulse" : ""} />,
+              }}
+            />
+          </p>
         </div>
       </div>
     </section>
