@@ -1,5 +1,3 @@
-// Solution section — React Flow diagram layout
-
 .solution {
   background: var(--bg-canvas);
   padding: var(--s-10) 0;
@@ -10,38 +8,10 @@
   margin: 0 auto;
 }
 
-/* ── HEADER ── */
-
 .solution__header {
   text-align: center;
   margin-bottom: var(--s-9);
 }
-
-/* Section eyebrow label — shared utility class */
-
-.section-label {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  font-family: var(--font-sans);
-  font-size: var(--fs-12);
-  font-weight: 500;
-  text-transform: uppercase;
-  letter-spacing: 0.12em;
-  color: var(--accent);
-  margin-bottom: var(--s-4);
-
-  &::before {
-    content: "";
-    display: inline-block;
-    width: 18px;
-    height: 1px;
-    background: currentColor;
-    opacity: 0.6;
-  }
-}
-
-/* Title */
 
 .solution__title {
   font-family: var(--font-display);
@@ -53,17 +23,17 @@
   color: var(--text);
   margin-bottom: var(--s-4);
 
-  .highlight {
-    color: var(--primary);
-    font-style: italic;
-  }
-
   @media (max-width: 768px) {
     font-size: var(--fs-28);
   }
 }
 
-/* Subtitle */
+.solution__highlight {
+  color: #b8893d; // ocre — mismo token que --warning
+  font-family: var(--font-display);
+  font-style: italic;
+  font-weight: 500;
+}
 
 .solution__subtitle {
   font-family: var(--font-sans);
@@ -75,8 +45,7 @@
   margin: 0 auto;
 }
 
-/* ── DIAGRAM CONTAINER ── */
-
+// Contenedor del diagrama
 .solution__diagram {
   width: 100%;
   height: 520px;
@@ -85,25 +54,27 @@
   background: var(--bg-surface);
   border: 1px solid var(--border-subtle);
 
-  // React Flow overrides — keep coherent with design system
   .react-flow__renderer {
     background: transparent;
   }
-
   .react-flow__background {
-    opacity: 0.6;
+    opacity: 0.5;
+  }
+
+  // Eliminar el panel de controles de React Flow
+  .react-flow__panel {
+    display: none;
   }
 
   @media (max-width: 768px) {
-    height: 780px;
+    height: 860px;
   }
 }
 
-/* ── LOOP NODE ── */
-
+// Nodo
 .loop-node {
   display: flex;
-  width: 240px;
+  width: 220px;
   background: var(--bg-elevated);
   border: 1px solid var(--border);
   border-radius: var(--r-6);
@@ -116,7 +87,6 @@
 
   &--terracota {
     border-color: rgba(196, 120, 89, 0.4);
-
     .loop-node__bar {
       background: #c47859;
     }
@@ -124,7 +94,6 @@
 
   &--slate {
     border-color: rgba(54, 73, 101, 0.35);
-
     .loop-node__bar {
       background: var(--primary);
     }
@@ -167,4 +136,3 @@
   line-height: var(--lh-normal);
   margin: 0;
 }
-
