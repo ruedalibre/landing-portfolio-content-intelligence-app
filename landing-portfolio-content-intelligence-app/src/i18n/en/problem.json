@@ -1,6 +1,6 @@
 {
   "title": "You have ideas. The problem is what happens next.",
-  "subtitle": "Most creators don't have an inspiration problem. They have a system problem — and that makes every post feel like starting from scratch.",
+  "subtitle": "Most creators don't have an inspiration problem. They have a system problem. Every post feel like starting from scratch.",
   "items": {
     "lost_ideas": {
       "title": "Ideas that slip away",
@@ -8,7 +8,7 @@
     },
     "no_criteria": {
       "title": "You don't know what's worth publishing",
-      "description": "You have ideas, but no criteria. Is this one good? Did I use it already? Where do I start?"
+      "description": "You have ideas, but it's difficult to make decisions. Is this one good? Did I use it already? Where do I start?"
     },
     "always_zero": {
       "title": "Always starting from scratch",
