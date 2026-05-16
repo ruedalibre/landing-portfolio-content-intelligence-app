@@ -5,28 +5,35 @@
   "subtitle": "Content Intelligence no te dice qué crear. Te muestra cómo sacar mejor provecho de lo que ya tienes, descubrir tus patrones creativos y abrir posibilidades que no habías visto.",
   "steps": {
     "capture": {
-      "phase": "Captura",
-      "title": "Captura tus ideas",
-      "line1": "En el momento en que aparecen.",
-      "line2": "Sin fricción. Sin estructura forzada."
+      "phase": "CAPTURA",
+      "title_line1": "Captura",
+      "title_line2": "tus ideas",
+      "body1": "En el momento",
+      "body2": "en que aparecen.",
+      "body3": "Sin fricción.",
+      "body4": "Sin estructura",
+      "body5": "forzada."
     },
     "convert": {
-      "phase": "Producción",
+      "phase": "PRODUCCIÓN",
       "title": "Convierte tu idea en contenido",
-      "line1": "Elige una idea, define para quién y dónde.",
-      "line2": "Recibe un brief para producir sin empezar desde cero."
+      "body": "Elige, define para quién. Recibe un brief."
     },
     "insights": {
-      "phase": "Inteligencia",
-      "title": "Insights y tu ADN creativo",
-      "line1": "Descubre oportunidades para evolucionar tu contenido",
-      "line2": "con base en los temas, formatos y ritmos que funcionan mejor para ti."
+      "phase": "INTELIGENCIA",
+      "title_line1": "Insights y tu",
+      "title_line2": "ADN creativo",
+      "body1": "Descubre",
+      "body2": "oportunidades para",
+      "body3": "evolucionar con",
+      "body4": "tus propios",
+      "body5": "patrones."
     },
     "grow": {
-      "phase": "Evolución",
+      "phase": "EVOLUCIÓN",
       "title": "La plataforma crece contigo",
-      "line1": "Mientras más creas, mejor te conoce.",
-      "line2": "Más provecho. Menos esfuerzo."
+      "body1": "Mientras más creas, mejor te conoce.",
+      "body2": "Más provecho. Menos esfuerzo."
     }
   },
   "loop_title": "Un loop que mejora",

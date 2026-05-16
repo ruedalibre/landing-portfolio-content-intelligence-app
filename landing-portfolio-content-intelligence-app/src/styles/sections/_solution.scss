@@ -1,4 +1,4 @@
-// Solution section — SVG inline loop diagram
+// Solution section — SVG inline lateral loop diagram
 
 .solution {
   background: var(--bg-canvas);
@@ -79,39 +79,46 @@
   margin: 0 auto;
 }
 
-/* ── SVG DIAGRAM ── */
+/* ── SVG DIAGRAM (desktop) ── */
 
 .sol-diagram {
-  position: relative;
   width: 100%;
   background: var(--bg-surface);
   border: 1px solid var(--border-subtle);
   border-radius: var(--r-6);
+  padding: var(--s-5);
   overflow: hidden;
-  padding: var(--s-6);
+
+  svg {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
 }
 
-/* SVG reserves vertical space via aspect ratio (viewBox 900×440 ≈ 2.05) */
+/* ── EDGE ANIMATION ── */
 
-.sol-diagram__svg {
-  width: 100%;
-  height: auto;
-  display: block;
+@keyframes sol-dash {
+  to { stroke-dashoffset: -18; }
 }
 
-/* Cards layer — absolute on top of the SVG */
+.sol-edge {
+  animation: sol-dash 1.8s linear infinite;
 
-.sol-diagram__cards {
-  position: absolute;
-  inset: 0;
-  padding: var(--s-6);
+  &--delay {
+    animation-delay: 0.45s;
+  }
 }
 
-/* ── CARDS ── */
+/* ── MOBILE LIST (fallback) ── */
 
-.sol-card {
-  position: absolute;
-  width: calc(50% - 3rem);
+.sol-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--s-4);
+}
+
+.sol-list__item {
   background: var(--bg-elevated);
   border: 1px solid var(--border);
   border-left-width: 3px;
@@ -123,77 +130,34 @@
     box-shadow: var(--shadow-md);
   }
 
-  /* 2×2 grid positions */
-  &--tl { top: 8%;    left: var(--s-6); }
-  &--tr { top: 8%;    right: var(--s-6); }
-  &--br { bottom: 8%; right: var(--s-6); }
-  &--bl { bottom: 8%; left: var(--s-6); }
-
-  /* Accent colors */
   &--terracota { border-left-color: #c47859; }
   &--slate     { border-left-color: var(--primary); }
 }
 
-.sol-card__phase {
+.sol-list__phase {
   display: block;
   font-size: var(--fs-12);
   font-weight: 500;
   letter-spacing: 0.1em;
   text-transform: uppercase;
   color: var(--text-faint);
-  margin-bottom: var(--s-2);
+  margin-bottom: var(--s-1);
 }
 
-.sol-card__title {
+.sol-list__title {
   font-family: var(--font-sans);
   font-size: var(--fs-15);
   font-weight: 500;
   color: var(--text);
   margin-bottom: var(--s-2);
   line-height: var(--lh-snug);
-  white-space: nowrap;
 }
 
-.sol-card__body {
+.sol-list__body {
   font-family: var(--font-sans);
   font-size: var(--fs-13);
   font-weight: 300;
   color: var(--text-secondary);
   line-height: var(--lh-normal);
   margin: 0;
-}
-
-/* ── EDGE ANIMATION ── */
-
-@keyframes sol-dash {
-  to { stroke-dashoffset: -20; }
-}
-
-.sol-edge {
-  animation: sol-dash 1.8s linear infinite;
-}
-
-/* ── MOBILE — vertical stack ── */
-
-@media (max-width: 768px) {
-  .sol-diagram {
-    padding: var(--s-4);
-  }
-
-  .sol-diagram__svg {
-    display: none; // hide SVG lines in mobile — cards stack naturally
-  }
-
-  .sol-diagram__cards {
-    position: static;
-    display: flex;
-    flex-direction: column;
-    gap: var(--s-4);
-    padding: 0;
-  }
-
-  .sol-card {
-    position: static;
-    width: 100%;
-  }
 }

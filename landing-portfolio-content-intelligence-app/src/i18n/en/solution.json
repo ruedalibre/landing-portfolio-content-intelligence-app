@@ -5,28 +5,35 @@
   "subtitle": "Content Intelligence doesn't tell you what to create. It shows you how to get more from what you already have, discover your creative patterns, and open possibilities you hadn't seen.",
   "steps": {
     "capture": {
-      "phase": "Capture",
-      "title": "Capture your ideas",
-      "line1": "The moment they appear.",
-      "line2": "No friction. No forced structure."
+      "phase": "CAPTURE",
+      "title_line1": "Capture",
+      "title_line2": "your ideas",
+      "body1": "The moment",
+      "body2": "they appear.",
+      "body3": "No friction.",
+      "body4": "No forced",
+      "body5": "structure."
     },
     "convert": {
-      "phase": "Production",
+      "phase": "PRODUCTION",
       "title": "Turn your idea into content",
-      "line1": "Choose an idea, define who it's for and where.",
-      "line2": "Get a brief so you can produce without starting from scratch."
+      "body": "Choose, define for whom. Get a brief."
     },
     "insights": {
-      "phase": "Intelligence",
-      "title": "Insights and your creative DNA",
-      "line1": "Discover opportunities to evolve your content",
-      "line2": "based on the topics, formats and rhythms that work best for you."
+      "phase": "INTELLIGENCE",
+      "title_line1": "Insights and your",
+      "title_line2": "creative DNA",
+      "body1": "Discover",
+      "body2": "opportunities to",
+      "body3": "evolve with",
+      "body4": "your own",
+      "body5": "patterns."
     },
     "grow": {
-      "phase": "Evolution",
+      "phase": "EVOLUTION",
       "title": "The platform grows with you",
-      "line1": "The more you create, the better it knows you.",
-      "line2": "More output. Less effort."
+      "body1": "The more you create, the better it knows you.",
+      "body2": "More output. Less effort."
     }
   },
   "loop_title": "A loop that improves",
