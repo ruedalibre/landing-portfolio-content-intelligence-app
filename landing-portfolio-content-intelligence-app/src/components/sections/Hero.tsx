@@ -1,4 +1,4 @@
-import heroImage from "../../assets/images/heroImage.png";
+import heroImage from "../../assets/images/heroImage.jpg";
 import { useEarlyAccessCount } from "../../hooks/useEarlyAccessCount.ts";
 import { useAnimatedCount } from "../../hooks/useAnimatedCount.ts";
 import { useEffect, useState } from "react";
@@ -26,11 +26,10 @@ const Hero = ({ onRequestAccess }: Props) => {
   }, [displayCount]);
 
   return (
-    <section
-      id="top"
-      className="hero"
-      style={{ backgroundImage: `url(${heroImage})` }}
-    >
+    <section id="top" className="hero">
+      <div className="hero__bg" style={{ backgroundImage: `url(${heroImage})` }} />
+      <div className="hero__overlay" />
+
       <div className="container hero__content">
         <h1 className="hero__title">{t("title")}</h1>
 
