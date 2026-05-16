@@ -3,6 +3,10 @@
 :root {
   --font-display: "Cormorant Garamond", "Iowan Old Style", Georgia, serif;
   --font-sans: "DM Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --accent: #698f7a;
+  --accent-hover: #587a66;
+  --r-pill: 999px;
+  --transition-base: 180ms cubic-bezier(0.2, 0, 0, 1);
 }
 
 body {
