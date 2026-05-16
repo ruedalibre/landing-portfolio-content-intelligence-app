@@ -1,16 +1,61 @@
+import { useState, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
+
+type StepKey = 'capture' | 'convert' | 'insights' | 'grow';
+
+const STEP_KEYS: StepKey[] = ['capture', 'convert', 'insights', 'grow'];
 
 const SolutionDiagram = () => {
   const { t } = useTranslation('solution');
+  const [isMobile, setIsMobile] = useState(() => window.innerWidth < 768);
 
+  useEffect(() => {
+    const handleResize = () => setIsMobile(window.innerWidth < 768);
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
+  // capture and insights use title_line1 + title_line2; convert and grow use title
+  const getTitle = (key: StepKey) =>
+    key === 'capture' || key === 'insights'
+      ? `${t(`steps.${key}.title_line1`)} ${t(`steps.${key}.title_line2`)}`
+      : t(`steps.${key}.title`);
+
+  // ── Mobile: vertical card list ──────────────────────────────────────────────
+  if (isMobile) {
+    return (
+      <div className="sol-list">
+        {STEP_KEYS.map((key, i) => (
+          <div
+            key={key}
+            className={`sol-list__item sol-list__item--${i < 2 ? 'terracota' : 'slate'}`}
+          >
+            <span className="sol-list__phase">{t(`steps.${key}.phase`)}</span>
+            <h4 className="sol-list__title">{getTitle(key)}</h4>
+            <p className="sol-list__body">
+              {t(`steps.${key}.body1`)} {t(`steps.${key}.body2`)}
+            </p>
+          </div>
+        ))}
+      </div>
+    );
+  }
+
+  // ── Desktop: inline SVG loop diagram ───────────────────────────────────────
   return (
-    <div className="sol-diagram" aria-label="Diagrama del loop creativo de Content Intelligence">
+    <div className="sol-diagram">
       <svg
-        className="sol-diagram__svg"
-        viewBox="0 0 900 440"
-        preserveAspectRatio="xMidYMid meet"
-        aria-hidden="true"
+        width="100%"
+        viewBox="0 0 680 380"
+        role="img"
+        aria-label="Diagrama del loop creativo de Content Intelligence"
       >
+        <title>Loop creativo de Content Intelligence</title>
+        <desc>
+          Cuatro nodos en ciclo: Captura a la izquierda, Producción arriba,
+          Inteligencia a la derecha, Evolución abajo.
+        </desc>
+
         <defs>
           <marker id="arr-t" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="5" markerHeight="5" orient="auto">
             <path d="M2 1L8 5L2 9" fill="none" stroke="#c47859" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
@@ -20,96 +65,87 @@ const SolutionDiagram = () => {
           </marker>
         </defs>
 
-        {/*
-          Layout (viewBox 900×440):
-          Nodo 1 (Captura)      — x:60,  y:40,  w:340, h:140  → centro y:110
-          Nodo 2 (Producción)   — x:500, y:40,  w:340, h:140  → centro y:110
-          Nodo 3 (Inteligencia) — x:500, y:280, w:340, h:140  → centro y:350
-          Nodo 4 (Evolución)    — x:60,  y:280, w:340, h:140  → centro y:350
+        {/* ── NODO IZQUIERDO — Captura (x:20, y:80, w:168, h:210) ── */}
+        <rect x="20" y="80" width="168" height="210" rx="12"
+          fill="var(--bg-elevated)" stroke="rgba(196,120,89,0.4)" strokeWidth="1" />
+        <rect x="20" y="80" width="3" height="210" rx="1.5" fill="#c47859" />
+        <text x="38" y="118" fontFamily="var(--font-sans)" fontSize="10" fontWeight="500" letterSpacing="0.08em" fill="var(--text-faint)">{t('steps.capture.phase')}</text>
+        <text x="38" y="142" fontFamily="var(--font-sans)" fontSize="14" fontWeight="500" fill="var(--text)">{t('steps.capture.title_line1')}</text>
+        <text x="38" y="160" fontFamily="var(--font-sans)" fontSize="14" fontWeight="500" fill="var(--text)">{t('steps.capture.title_line2')}</text>
+        <text x="38" y="186" fontFamily="var(--font-sans)" fontSize="12" fontWeight="300" fill="var(--text-secondary)">{t('steps.capture.body1')}</text>
+        <text x="38" y="202" fontFamily="var(--font-sans)" fontSize="12" fontWeight="300" fill="var(--text-secondary)">{t('steps.capture.body2')}</text>
+        <text x="38" y="218" fontFamily="var(--font-sans)" fontSize="12" fontWeight="300" fill="var(--text-secondary)">{t('steps.capture.body3')}</text>
+        <text x="38" y="234" fontFamily="var(--font-sans)" fontSize="12" fontWeight="300" fill="var(--text-secondary)">{t('steps.capture.body4')}</text>
+        <text x="38" y="250" fontFamily="var(--font-sans)" fontSize="12" fontWeight="300" fill="var(--text-secondary)">{t('steps.capture.body5')}</text>
 
-          Rutas perimetrales:
-          1→2 (terracota): horizontal top     — y=110, x: 400→500
-          2→3 (terracota): vertical exterior  — x=870, y: 110→350
-          3→4 (slate):     horizontal bottom  — y=350, x: 500→400
-          4→1 (slate):     vertical exterior  — x=30,  y: 350→110
-        */}
+        {/* ── NODO DERECHO — Inteligencia (x:492, y:80, w:168, h:210) ── */}
+        <rect x="492" y="80" width="168" height="210" rx="12"
+          fill="var(--bg-elevated)" stroke="rgba(54,73,101,0.35)" strokeWidth="1" />
+        <rect x="492" y="80" width="3" height="210" rx="1.5" fill="#364965" />
+        <text x="510" y="118" fontFamily="var(--font-sans)" fontSize="10" fontWeight="500" letterSpacing="0.08em" fill="var(--text-faint)">{t('steps.insights.phase')}</text>
+        <text x="510" y="142" fontFamily="var(--font-sans)" fontSize="14" fontWeight="500" fill="var(--text)">{t('steps.insights.title_line1')}</text>
+        <text x="510" y="160" fontFamily="var(--font-sans)" fontSize="14" fontWeight="500" fill="var(--text)">{t('steps.insights.title_line2')}</text>
+        <text x="510" y="186" fontFamily="var(--font-sans)" fontSize="12" fontWeight="300" fill="var(--text-secondary)">{t('steps.insights.body1')}</text>
+        <text x="510" y="202" fontFamily="var(--font-sans)" fontSize="12" fontWeight="300" fill="var(--text-secondary)">{t('steps.insights.body2')}</text>
+        <text x="510" y="218" fontFamily="var(--font-sans)" fontSize="12" fontWeight="300" fill="var(--text-secondary)">{t('steps.insights.body3')}</text>
+        <text x="510" y="234" fontFamily="var(--font-sans)" fontSize="12" fontWeight="300" fill="var(--text-secondary)">{t('steps.insights.body4')}</text>
+        <text x="510" y="250" fontFamily="var(--font-sans)" fontSize="12" fontWeight="300" fill="var(--text-secondary)">{t('steps.insights.body5')}</text>
 
-        {/* EDGE 1→2 — top horizontal — terracota */}
-        <line
-          x1="400" y1="110"
-          x2="494" y2="110"
-          stroke="#c47859" strokeWidth="1.5"
+        {/* ── NODO SUPERIOR — Producción (x:224, y:20, w:232, h:90) ── */}
+        <rect x="224" y="20" width="232" height="90" rx="12"
+          fill="var(--bg-elevated)" stroke="rgba(196,120,89,0.4)" strokeWidth="1" />
+        <rect x="224" y="20" width="3" height="90" rx="1.5" fill="#c47859" />
+        <text x="242" y="48" fontFamily="var(--font-sans)" fontSize="10" fontWeight="500" letterSpacing="0.08em" fill="var(--text-faint)">{t('steps.convert.phase')}</text>
+        <text x="242" y="68" fontFamily="var(--font-sans)" fontSize="13" fontWeight="500" fill="var(--text)">{t('steps.convert.title')}</text>
+        <text x="242" y="86" fontFamily="var(--font-sans)" fontSize="11" fontWeight="300" fill="var(--text-secondary)">{t('steps.convert.body')}</text>
+
+        {/* ── NODO INFERIOR — Evolución (x:224, y:260, w:232, h:100) ── */}
+        <rect x="224" y="260" width="232" height="100" rx="12"
+          fill="var(--bg-elevated)" stroke="rgba(54,73,101,0.35)" strokeWidth="1" />
+        <rect x="224" y="260" width="3" height="100" rx="1.5" fill="#364965" />
+        <text x="242" y="288" fontFamily="var(--font-sans)" fontSize="10" fontWeight="500" letterSpacing="0.08em" fill="var(--text-faint)">{t('steps.grow.phase')}</text>
+        <text x="242" y="308" fontFamily="var(--font-sans)" fontSize="13" fontWeight="500" fill="var(--text)">{t('steps.grow.title')}</text>
+        <text x="242" y="326" fontFamily="var(--font-sans)" fontSize="11" fontWeight="300" fill="var(--text-secondary)">{t('steps.grow.body1')}</text>
+        <text x="242" y="342" fontFamily="var(--font-sans)" fontSize="11" fontWeight="300" fill="var(--text-secondary)">{t('steps.grow.body2')}</text>
+
+        {/* ── EDGES — perímetro rectangular exacto ── */}
+
+        {/* 1→2: Captura top → Producción left (terracota) */}
+        <path
+          d="M 104 80 L 104 36 L 222 36"
+          fill="none" stroke="#c47859" strokeWidth="1.5"
           strokeDasharray="6 4"
           markerEnd="url(#arr-t)"
           className="sol-edge sol-edge--t"
         />
 
-        {/* EDGE 2→3 — right vertical exterior — terracota */}
-        <polyline
-          points="840,110 870,110 870,350 846,350"
-          fill="none"
-          stroke="#c47859" strokeWidth="1.5"
+        {/* 2→3: Producción right → Inteligencia top (terracota) */}
+        <path
+          d="M 456 65 L 576 65 L 576 78"
+          fill="none" stroke="#c47859" strokeWidth="1.5"
           strokeDasharray="6 4"
           markerEnd="url(#arr-t)"
-          className="sol-edge sol-edge--t"
-          style={{ animationDelay: '0.6s' }}
+          className="sol-edge sol-edge--t sol-edge--delay"
         />
 
-        {/* EDGE 3→4 — bottom horizontal — slate */}
-        <line
-          x1="500" y1="350"
-          x2="406" y2="350"
-          stroke="#364965" strokeWidth="1.5"
+        {/* 3→4: Inteligencia bottom → Evolución right (slate) */}
+        <path
+          d="M 576 290 L 576 310 L 458 310"
+          fill="none" stroke="#364965" strokeWidth="1.5"
           strokeDasharray="6 4"
           markerEnd="url(#arr-s)"
           className="sol-edge sol-edge--s"
-          style={{ animationDelay: '1.2s' }}
         />
 
-        {/* EDGE 4→1 — left vertical exterior — slate */}
-        <polyline
-          points="60,350 30,350 30,110 54,110"
-          fill="none"
-          stroke="#364965" strokeWidth="1.5"
+        {/* 4→1: Evolución left → Captura bottom (slate) */}
+        <path
+          d="M 222 310 L 104 310 L 104 292"
+          fill="none" stroke="#364965" strokeWidth="1.5"
           strokeDasharray="6 4"
           markerEnd="url(#arr-s)"
-          className="sol-edge sol-edge--s"
-          style={{ animationDelay: '1.8s' }}
+          className="sol-edge sol-edge--s sol-edge--delay"
         />
       </svg>
-
-      {/* Cards HTML — posicionadas absolutamente sobre el SVG */}
-      <div className="sol-diagram__cards">
-
-        {/* Nodo 1 — top left */}
-        <div className="sol-card sol-card--terracota sol-card--tl">
-          <span className="sol-card__phase">{t('steps.capture.phase')}</span>
-          <h4 className="sol-card__title">{t('steps.capture.title')}</h4>
-          <p className="sol-card__body">{t('steps.capture.line1')} {t('steps.capture.line2')}</p>
-        </div>
-
-        {/* Nodo 2 — top right */}
-        <div className="sol-card sol-card--terracota sol-card--tr">
-          <span className="sol-card__phase">{t('steps.convert.phase')}</span>
-          <h4 className="sol-card__title">{t('steps.convert.title')}</h4>
-          <p className="sol-card__body">{t('steps.convert.line1')} {t('steps.convert.line2')}</p>
-        </div>
-
-        {/* Nodo 3 — bottom right */}
-        <div className="sol-card sol-card--slate sol-card--br">
-          <span className="sol-card__phase">{t('steps.insights.phase')}</span>
-          <h4 className="sol-card__title">{t('steps.insights.title')}</h4>
-          <p className="sol-card__body">{t('steps.insights.line1')} {t('steps.insights.line2')}</p>
-        </div>
-
-        {/* Nodo 4 — bottom left */}
-        <div className="sol-card sol-card--slate sol-card--bl">
-          <span className="sol-card__phase">{t('steps.grow.phase')}</span>
-          <h4 className="sol-card__title">{t('steps.grow.title')}</h4>
-          <p className="sol-card__body">{t('steps.grow.line1')} {t('steps.grow.line2')}</p>
-        </div>
-
-      </div>
     </div>
   );
 };
