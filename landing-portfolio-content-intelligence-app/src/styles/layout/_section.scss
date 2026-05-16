@@ -12,5 +12,5 @@
 }
 
 section {
-  scroll-margin-top: 72px;
+  scroll-margin-top: var(--navbar-h, 64px);
 }
