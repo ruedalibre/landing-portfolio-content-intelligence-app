@@ -1,22 +1,22 @@
 {
   "title": "Tienes ideas. El problema es lo que pasa después.",
-  "subtitle": "La mayoría de los creadores no tienen un problema de inspiración. Tienen un problema de sistema — y eso hace que cada publicación se sienta como empezar desde cero.",
+  "subtitle": "La mayoría de los creadores no tienen un problema de inspiración. Tienen un problema de sistema. Cada publicación se siente como empezar desde cero.",
   "items": {
     "lost_ideas": {
       "title": "Las ideas se quedan en el camino",
-      "description": "Pantallazos, notas dispersas, mensajes a ti mismo. Llegan — y desaparecen."
+      "description": "Pantallazos, notas dispersas, mensajes a ti mismo. Llegan y desaparecen."
     },
     "no_criteria": {
       "title": "No sabes qué vale la pena publicar",
-      "description": "Tienes ideas, pero no tienes criterio. ¿Esta es buena? ¿Ya la usé? ¿Por dónde empiezo?"
+      "description": "Tienes ideas, pero te cuesta tomar decisiones. ¿Esta es buena? ¿Ya la usé? ¿Por dónde empiezo?"
     },
     "always_zero": {
       "title": "Siempre empiezas desde cero",
-      "description": "Tendencias, IA genérica, inspiración que no llega. Sin sistema que aprenda de lo que ya hiciste."
+      "description": "Tendencias, IA genérica, inspiración aleatoria. Sin sistema que aprenda de lo que ya hiciste."
     },
     "no_path": {
       "title": "Una idea, pero sin camino",
-      "description": "Sabes qué quieres decir. No sabes cómo convertirlo en contenido que se sostenga."
+      "description": "Sabes qué quieres decir, pero no sabes cómo convertirlo en un contenido que pueda evolucionar y escalar."
     }
   }
 }
