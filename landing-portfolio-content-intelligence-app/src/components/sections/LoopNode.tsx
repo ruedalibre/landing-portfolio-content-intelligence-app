@@ -18,10 +18,18 @@ const LoopNode = ({ data }: { data: LoopNodeData }) => {
         <p className="loop-node__body">{data.line1}</p>
         <p className="loop-node__body">{data.line2}</p>
       </div>
-      <Handle type="source" position={Position.Right} style={{ opacity: 0 }} />
-      <Handle type="target" position={Position.Left} style={{ opacity: 0 }} />
-      <Handle type="source" position={Position.Bottom} style={{ opacity: 0 }} />
-      <Handle type="target" position={Position.Top} style={{ opacity: 0 }} />
+
+      {/* Source handles — all 4 sides so step edges can exit in any direction */}
+      <Handle type="source" position={Position.Right}  id="src-right"  style={{ opacity: 0 }} />
+      <Handle type="source" position={Position.Bottom} id="src-bottom" style={{ opacity: 0 }} />
+      <Handle type="source" position={Position.Left}   id="src-left"   style={{ opacity: 0 }} />
+      <Handle type="source" position={Position.Top}    id="src-top"    style={{ opacity: 0 }} />
+
+      {/* Target handles — all 4 sides so step edges can enter from any direction */}
+      <Handle type="target" position={Position.Left}   id="tgt-left"   style={{ opacity: 0 }} />
+      <Handle type="target" position={Position.Top}    id="tgt-top"    style={{ opacity: 0 }} />
+      <Handle type="target" position={Position.Right}  id="tgt-right"  style={{ opacity: 0 }} />
+      <Handle type="target" position={Position.Bottom} id="tgt-bottom" style={{ opacity: 0 }} />
     </div>
   );
 };
