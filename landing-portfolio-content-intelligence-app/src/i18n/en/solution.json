@@ -1,38 +1,34 @@
 {
-  "title": "From ideas to",
-  "highlight": "scalable systems",
-  "subtitle": "Understand what works, how ideas evolve and how to scale them.",
-
-  "phase_input": "INPUT",
-  "phase_intelligence": "INTELLIGENCE",
-  "phase_output": "OUTPUT",
-
-  "nodes": {
-    "ideas": {
-      "title": "Ideas",
-      "micro": "Creative inputs"
+  "label": "How it works",
+  "title": "Your creative process,",
+  "highlight": "finally visible.",
+  "subtitle": "Content Intelligence doesn't tell you what to create. It shows you how to get more from what you already have, discover your creative patterns, and open possibilities you hadn't seen.",
+  "steps": {
+    "capture": {
+      "phase": "Capture",
+      "title": "Capture your ideas",
+      "line1": "The moment they appear.",
+      "line2": "No friction. No forced structure."
     },
-    "content": {
-      "title": "Content",
-      "micro": "Ideas become posts"
-    },
-    "patterns": {
-      "title": "Patterns",
-      "micro": "Detect what works"
+    "convert": {
+      "phase": "Production",
+      "title": "Turn your idea into content",
+      "line1": "Choose an idea, define who it's for and where.",
+      "line2": "Get a brief so you can produce without starting from scratch."
     },
     "insights": {
-      "title": "Insights",
-      "micro": "Understand why"
+      "phase": "Intelligence",
+      "title": "Insights and your creative DNA",
+      "line1": "Discover opportunities to evolve your content",
+      "line2": "based on the topics, formats and rhythms that work best for you."
     },
-    "strategy": {
-      "title": "Strategy",
-      "micro": "Decide what to scale"
-    },
-    "new_ideas": {
-      "title": "New Ideas",
-      "micro": "Start the next cycle"
+    "grow": {
+      "phase": "Evolution",
+      "title": "The platform grows with you",
+      "line1": "The more you create, the better it knows you.",
+      "line2": "More output. Less effort."
     }
   },
-
-  "result": "Your content becomes a system that improves over time!"
+  "loop_title": "A loop that improves",
+  "loop_subtitle": "with every idea you register"
 }

@@ -1,35 +1,34 @@
 {
-  "title": "Pasa de ideas a",
-  "highlight": "sistemas escalables",
-  "subtitle": "Entiende qué funciona, cómo evolucionan las ideas y cómo escalarlas.",
-  "phase_input": "ENTRADA",
-  "phase_intelligence": "INTELIGENCIA",
-  "phase_output": "SALIDA",
-  "nodes": {
-    "ideas": {
-      "title": "Ideas",
-      "micro": "Aportes creativos"
+  "label": "Cómo funciona",
+  "title": "Tu proceso creativo,",
+  "highlight": "por fin visible.",
+  "subtitle": "Content Intelligence no te dice qué crear. Te muestra cómo sacar mejor provecho de lo que ya tienes, descubrir tus patrones creativos y abrir posibilidades que no habías visto.",
+  "steps": {
+    "capture": {
+      "phase": "Captura",
+      "title": "Captura tus ideas",
+      "line1": "En el momento en que aparecen.",
+      "line2": "Sin fricción. Sin estructura forzada."
     },
-    "content": {
-      "title": "Contenido",
-      "micro": "Las ideas se convierten en publicaciones"
-    },
-    "patterns": {
-      "title": "Patrones",
-      "micro": "Detecta qué funciona"
+    "convert": {
+      "phase": "Producción",
+      "title": "Convierte tu idea en contenido",
+      "line1": "Elige una idea, define para quién y dónde.",
+      "line2": "Recibe un brief para producir sin empezar desde cero."
     },
     "insights": {
-      "title": "Insights",
-      "micro": "Entiende por qué"
+      "phase": "Inteligencia",
+      "title": "Insights y tu ADN creativo",
+      "line1": "Descubre oportunidades para evolucionar tu contenido",
+      "line2": "con base en los temas, formatos y ritmos que funcionan mejor para ti."
     },
-    "strategy": {
-      "title": "Estrategia",
-      "micro": "Decide qué escalar"
-    },
-    "new_ideas": {
-      "title": "Nuevas ideas",
-      "micro": "Comienza el siguiente ciclo"
+    "grow": {
+      "phase": "Evolución",
+      "title": "La plataforma crece contigo",
+      "line1": "Mientras más creas, mejor te conoce.",
+      "line2": "Más provecho. Menos esfuerzo."
     }
   },
-  "result": "¡Tu contenido se convierte en un sistema que mejora con el tiempo!"
+  "loop_title": "Un loop que mejora",
+  "loop_subtitle": "con cada idea que registras"
 }

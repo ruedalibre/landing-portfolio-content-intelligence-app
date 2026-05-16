@@ -1,267 +1,241 @@
-@use "../abstracts/variables" as *;
-
-/* =====================================================
-   SECTION
-===================================================== */
+// Solution section — design system tokens, loop visual layout
 
 .solution {
-  padding: $space-9 0;
-  background: $color-surface;
-  border-top: 1px solid $color-border;
+  background: var(--bg-canvas);
+  padding: var(--s-10) 0;
 }
 
 .solution__content {
-  max-width: 1300px;
+  max-width: 900px;
   margin: 0 auto;
-  text-align: center;
 }
 
-/* =====================================================
-   TITLE
-===================================================== */
+/* HEADER */
+
+.solution__header {
+  text-align: center;
+  margin-bottom: var(--s-9);
+}
+
+/* Section eyebrow label */
+
+.section-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--font-sans);
+  font-size: var(--fs-12);
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--accent);
+  margin-bottom: var(--s-4);
+
+  &::before {
+    content: "";
+    display: inline-block;
+    width: 18px;
+    height: 1px;
+    background: currentColor;
+    opacity: 0.6;
+  }
+}
+
+/* TITLE */
 
 .solution__title {
-  font-family: $font-serif;
-  font-size: $fs-3xl;
-  font-weight: $fw-semibold;
-  line-height: $lh-tight;
+  font-family: var(--font-display);
+  font-size: var(--fs-40);
+  font-weight: 500;
+  font-style: italic;
+  line-height: var(--lh-tight);
+  letter-spacing: var(--tracking-tight);
+  color: var(--text);
+  margin-bottom: var(--s-4);
 
-  color: $color-text-primary;
-
-  margin-bottom: $space-2;
-
-  span {
-    color: $color-accent;
+  span.highlight {
+    color: var(--primary);
+    font-style: italic;
   }
 }
 
-/* =====================================================
-   SUBTITLE
-===================================================== */
+/* SUBTITLE */
 
 .solution__subtitle {
-  font-family: $font-sans;
-  font-size: $fs-md;
-  line-height: $lh-normal;
-
-  color: $color-text-secondary;
-
-  max-width: 620px;
-  margin: 0 auto $space-5 auto;
+  font-family: var(--font-sans);
+  font-size: var(--fs-16);
+  font-weight: 300;
+  color: var(--text-secondary);
+  line-height: var(--lh-loose);
+  max-width: 600px;
+  margin: 0 auto;
 }
 
-/* =====================================================
-   PHASE LABELS
-===================================================== */
-
-.solution__phases {
-  display: grid;
-  grid-template-columns: repeat(6, 1fr);
-
-  margin-bottom: $space-2;
-
-  font-family: $font-sans;
-  font-size: $fs-xs;
-  font-weight: $fw-medium;
-
-  letter-spacing: 1px;
-  color: $color-text-muted;
-
-  border-bottom: 1px solid $color-border;
-  padding-bottom: $space-1;
-
-  justify-items: center;
-}
-
-/* align labels with nodes */
-
-.phase-input {
-  grid-column: 1;
-}
-
-.phase-intelligence {
-  grid-column: 3;
-}
-
-.phase-output {
-  grid-column: 6;
-}
-
-/* =====================================================
-   LOOP
-===================================================== */
+/* ── LOOP LAYOUT ── */
 
 .solution__loop {
-  position: relative;
-
-  display: grid;
-  grid-template-columns: repeat(6, 1fr);
-
-  gap: $space-2;
-
-  margin-top: $space-4;
-  margin-bottom: $space-6;
-}
-
-/* =====================================================
-   NODE
-===================================================== */
-
-.solution__node {
-  position: relative;
-  z-index: 1;
-
-  background: $color-bg-light;
-
-  border-radius: 12px;
-  border: 1px solid $color-border;
-
-  padding: $space-2;
-
-  min-width: 180px;
-  max-width: 420px;
-  margin: 0 auto;
-
   display: flex;
   flex-direction: column;
+  gap: 0;
+}
+
+/* Rows */
+
+.solution__row {
+  display: grid;
+  grid-template-columns: 1fr 40px 1fr;
   align-items: center;
-
-  transition: all 0.25s ease;
+  gap: 0;
 }
 
-/* hover */
+/* Steps */
 
-.solution__node:hover {
-  transform: translateY(-4px);
-  border-color: $color-accent;
+.solution__step {
+  background: var(--bg-elevated);
+  border: 1px solid var(--border);
+  border-radius: var(--r-6);
+  padding: var(--s-6) var(--s-7);
+  transition:
+    box-shadow var(--transition-base),
+    transform var(--transition-base);
 
-  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.05);
-}
+  &:hover {
+    box-shadow: var(--shadow-md);
+    transform: translateY(-2px);
+  }
 
-.solution__node:hover .solution__icon {
-  background: rgba($color-accent, 0.08);
+  // Acento superior: entrada/producción
+  &--teal {
+    border-top: 2px solid var(--accent);
+  }
 
-  svg {
-    color: $color-accent;
+  // Acento superior: inteligencia/evolución
+  &--purple {
+    border-top: 2px solid var(--primary);
   }
 }
 
-/* =====================================================
-   ICON
-===================================================== */
+.solution__phase {
+  display: block;
+  font-size: var(--fs-12);
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--text-faint);
+  margin-bottom: var(--s-2);
+}
 
-.solution__icon {
-  width: 42px;
-  height: 42px;
+.solution__step h4 {
+  font-family: var(--font-sans);
+  font-size: var(--fs-16);
+  font-weight: 500;
+  color: var(--text);
+  margin-bottom: var(--s-2);
+  line-height: var(--lh-snug);
+}
 
-  border-radius: 12px;
-  background: $color-surface;
+.solution__step p {
+  font-family: var(--font-sans);
+  font-size: var(--fs-14);
+  font-weight: 300;
+  color: var(--text-secondary);
+  line-height: var(--lh-normal);
+  margin: 0;
+}
 
+/* Arrows */
+
+.solution__arrow {
   display: flex;
   align-items: center;
   justify-content: center;
-
-  margin-bottom: $space-1;
-
-  svg {
-    color: $color-text-primary;
-  }
+  font-size: var(--fs-18);
+  color: var(--text-faint);
+  font-weight: 300;
 }
 
-/* =====================================================
-   NODE TEXT
-===================================================== */
-
-.solution__node h4 {
-  font-family: $font-sans;
-  font-size: $fs-sm;
-  font-weight: $fw-semibold;
-
-  color: $color-text-primary;
-
-  margin-top: $space-1;
+.solution__arrows-sides {
+  display: grid;
+  grid-template-columns: 1fr 40px 1fr;
+  padding: var(--s-3) 0;
 }
 
-.solution__node p {
-  font-family: $font-sans;
-  font-size: $fs-xs;
-  line-height: $lh-normal;
-
-  color: $color-text-secondary;
+.solution__arrow-spacer {
+  // placeholder para alinear la flecha al lado correcto
 }
 
-/* =====================================================
-   FLOW ARROWS (between cards only)
-===================================================== */
+/* Loop center badge */
 
-.solution__node:not(:last-child)::after {
-  content: "→";
-
-  position: absolute;
-
-  right: -16px;
-  top: 50%;
-
-  transform: translateY(-50%);
-
-  font-size: 16px;
-
-  color: $color-accent;
-
-  opacity: 0.7;
-
-  animation: flowArrow 2.4s infinite;
+.solution__loop-center {
+  display: flex;
+  justify-content: center;
+  padding: var(--s-3) 0;
 }
 
-/* arrow animation */
-
-@keyframes flowArrow {
-  0% {
-    opacity: 0.2;
-    transform: translateY(-50%) translateX(-2px);
-  }
-
-  50% {
-    opacity: 1;
-    transform: translateY(-50%) translateX(2px);
-  }
-
-  100% {
-    opacity: 0.2;
-    transform: translateY(-50%) translateX(-2px);
-  }
+.solution__loop-badge {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2px;
+  border: 1px dashed var(--border);
+  border-radius: var(--r-5);
+  padding: var(--s-4) var(--s-6);
+  width: 160px;
 }
 
-/* =====================================================
-   RESULT TEXT
-===================================================== */
-
-.solution__result {
-  font-family: $font-sans;
-  font-size: $fs-lg;
-  font-weight: $fw-semibold;
-
-  color: $color-text-primary;
-
-  max-width: 100%;
-  margin: 0 auto;
+.solution__loop-title {
+  font-family: var(--font-sans);
+  font-size: var(--fs-12);
+  font-weight: 500;
+  color: var(--text-secondary);
+  text-align: center;
+  line-height: 1.3;
 }
 
-/* =====================================================
-   RESPONSIVE
-===================================================== */
+.solution__loop-subtitle {
+  font-family: var(--font-sans);
+  font-size: var(--fs-12);
+  font-weight: 300;
+  color: var(--text-faint);
+  text-align: center;
+  line-height: 1.3;
+}
 
-@media (max-width: 1280px) {
-  .solution__phases {
-    display: none;
+.solution__loop-icon {
+  font-size: var(--fs-16);
+  color: var(--text-faint);
+  margin-top: 2px;
+}
+
+/* MOBILE */
+
+@media (max-width: 768px) {
+  .solution__title {
+    font-size: var(--fs-28);
   }
 
-  .solution__loop {
+  .solution__row,
+  .solution__arrows-sides {
     grid-template-columns: 1fr;
-    gap: $space-2;
   }
 
-  .solution__node::after {
+  .solution__arrow--right,
+  .solution__arrow--left {
+    transform: rotate(90deg);
+    justify-self: center;
+  }
+
+  .solution__arrow--up,
+  .solution__arrow--down {
+    justify-self: center;
+  }
+
+  .solution__arrow-spacer {
     display: none;
+  }
+
+  .solution__row--reverse {
+    direction: ltr;
   }
 }
