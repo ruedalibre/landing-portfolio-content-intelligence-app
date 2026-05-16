@@ -1,10 +1,22 @@
 {
-  "title": "Creators publish constantly.",
-  "subtitle": "But their content is fragmented, hard to analyze, and difficult to scale.",
+  "title": "You have ideas. The problem is what happens next.",
+  "subtitle": "Most creators don't have an inspiration problem. They have a system problem — and that makes every post feel like starting from scratch.",
   "items": {
-    "no_insight": "You don’t know what actually works",
-    "scattered_content": "Your content is scattered across platforms",
-    "lost_ideas": "Your best ideas get lost and never reused",
-    "more_content_less_results": "You’re creating more content, but not better results"
+    "lost_ideas": {
+      "title": "Ideas that slip away",
+      "description": "Screenshots, scattered notes, messages to yourself. They arrive — and disappear."
+    },
+    "no_criteria": {
+      "title": "You don't know what's worth publishing",
+      "description": "You have ideas, but no criteria. Is this one good? Did I use it already? Where do I start?"
+    },
+    "always_zero": {
+      "title": "Always starting from scratch",
+      "description": "Trends, generic AI, inspiration that never comes. No system that learns from what you've already done."
+    },
+    "no_path": {
+      "title": "An idea, but no clear path",
+      "description": "You know what you want to say. You don't know how to turn it into content that lasts."
+    }
   }
 }
