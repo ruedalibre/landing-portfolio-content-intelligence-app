@@ -10,11 +10,9 @@ import {
 import '@xyflow/react/dist/style.css';
 import { useTranslation } from 'react-i18next';
 import LoopNode from './LoopNode';
-import LoopCenter from './LoopCenter';
 
 const nodeTypes = {
   loopNode: LoopNode,
-  loopCenter: LoopCenter,
 };
 
 const desktopPositions: Record<string, { x: number; y: number }> = {
@@ -22,15 +20,13 @@ const desktopPositions: Record<string, { x: number; y: number }> = {
   '2': { x: 420, y: 0 },
   '3': { x: 420, y: 280 },
   '4': { x: 0, y: 280 },
-  center: { x: 168, y: 108 },
 };
 
 const mobilePositions: Record<string, { x: number; y: number }> = {
   '1': { x: 0, y: 0 },
-  '2': { x: 0, y: 200 },
-  '3': { x: 0, y: 400 },
-  '4': { x: 0, y: 600 },
-  center: { x: 60, y: 820 },
+  '2': { x: 0, y: 220 },
+  '3': { x: 0, y: 440 },
+  '4': { x: 0, y: 660 },
 };
 
 const EDGES = [
@@ -122,12 +118,6 @@ const SolutionDiagram = () => {
           line2: t('steps.grow.line2'),
           accent: 'slate',
         },
-      },
-      {
-        id: 'center',
-        type: 'loopCenter',
-        position: mobile ? mobilePositions['center'] : desktopPositions['center'],
-        data: {},
       },
     ],
     [t]
