@@ -273,6 +273,65 @@
   to { transform: scale(1); }
 }
 
+// ── Validation styles ──
+
+// Input en estado de error
+.modal-field__input--error {
+  border-color: var(--danger, #b65a48);
+  box-shadow: 0 0 0 3px var(--danger-soft, rgba(182, 90, 72, 0.12));
+
+  &:focus {
+    border-color: var(--danger, #b65a48);
+    box-shadow: 0 0 0 3px var(--danger-soft, rgba(182, 90, 72, 0.12));
+  }
+}
+
+// Mensaje de error de campo
+.modal-field__error {
+  font-size: var(--fs-12);
+  font-weight: 400;
+  color: var(--danger, #b65a48);
+  margin-top: 5px;
+  line-height: 1.4;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+
+  &::before {
+    content: '·';
+    font-size: 16px;
+    line-height: 1;
+    margin-top: -1px;
+  }
+}
+
+// Contador de caracteres
+.modal-field__counter {
+  font-size: var(--fs-12);
+  font-weight: 300;
+  color: var(--text-faint);
+  text-align: right;
+  margin-top: 4px;
+  transition: color var(--transition-base);
+}
+
+.modal-field__counter--limit {
+  color: var(--danger, #b65a48);
+  font-weight: 500;
+}
+
+// Botón desactivado (override más específico)
+.modal-submit:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+  transform: none;
+
+  &:hover {
+    background: var(--primary);
+    transform: none;
+  }
+}
+
 // Mobile
 @media (max-width: 480px) {
   .modal {
