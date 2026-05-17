@@ -1,6 +1,13 @@
 {
-  "title": "Construyamos el futuro del contenido",
-  "subtitle": "Sé parte de los primeros creadores que construyen sistemas de contenido escalables.",
-  "cta_primary": "Únete al acceso anticipado",
-  "cta_secondary": "Mira cómo funciona"
+  "eyebrow": "Early Access",
+  "title": "Convierte tus ideas en un",
+  "highlight": "sistema creativo personal.",
+  "subtitle": "Captura tus ideas, descubre tus patrones y produce contenido con más intención.",
+  "subtitle_strong": "Sin empezar desde cero cada vez.",
+  "social_proof": "Únete a <strong>{{count}}+</strong> creadores que ya reservaron su lugar",
+  "cta_primary": "Solicitar acceso anticipado →",
+  "cta_secondary": "Ver cómo funciona",
+  "guarantee_1": "Sin tarjeta de crédito",
+  "guarantee_2": "Acceso antes del lanzamiento",
+  "guarantee_3": "Precio especial early adopter"
 }
