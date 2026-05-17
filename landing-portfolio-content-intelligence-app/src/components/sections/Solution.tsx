@@ -2,36 +2,8 @@ import { useState, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 import SolutionDiagram from './SolutionDiagram';
 
-const MOBILE_STEPS = [
-  {
-    num: '1',
-    phase: 'Captura',
-    title: 'Captura tus ideas',
-    body: 'En el momento en que aparecen. Sin fricciones. Sin estructura forzada.',
-    accent: 'terracota',
-  },
-  {
-    num: '2',
-    phase: 'Producción',
-    title: 'Convierte tu idea en contenido',
-    body: 'Elige una idea, define para quién y dónde. La plataforma genera un brief adaptado a ti para que puedas producir sin empezar desde cero.',
-    accent: 'terracota',
-  },
-  {
-    num: '3',
-    phase: 'Inteligencia',
-    title: 'Insights y tu ADN creativo',
-    body: 'Descubre oportunidades para evolucionar con los temas, formatos y ritmos que funcionan mejor para ti.',
-    accent: 'slate',
-  },
-  {
-    num: '4',
-    phase: 'Evolución',
-    title: 'La plataforma crece contigo',
-    body: 'Mientras más creas, mejor te conoce. Sacas más provecho de tu contenido con menos esfuerzo.',
-    accent: 'slate',
-  },
-] as const;
+type NodeKey = 'n1' | 'n2' | 'n3' | 'n4';
+const NODE_KEYS: NodeKey[] = ['n1', 'n2', 'n3', 'n4'];
 
 const Solution = () => {
   const { t } = useTranslation('solution');
@@ -57,11 +29,14 @@ const Solution = () => {
 
         {isMobile ? (
           <div className="sol-list">
-            {MOBILE_STEPS.map((item) => (
-              <div key={item.num} className={`sol-list__item sol-list__item--${item.accent}`}>
-                <span className="sol-list__phase">{item.num} · {item.phase}</span>
-                <h4 className="sol-list__title">{item.title}</h4>
-                <p className="sol-list__body">{item.body}</p>
+            {NODE_KEYS.map((key, i) => (
+              <div key={key} className={`sol-list__item sol-list__item--${i < 2 ? 'terracota' : 'slate'}`}>
+                <h4 className="sol-list__title">{t(`nodes.${key}.title`)}</h4>
+                <p className="sol-list__body">
+                  {t(`nodes.${key}.desc1`)}{' '}
+                  {t(`nodes.${key}.desc2`)}{' '}
+                  {t(`nodes.${key}.desc3`, '')}
+                </p>
               </div>
             ))}
           </div>

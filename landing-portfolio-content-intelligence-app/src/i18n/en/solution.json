@@ -3,39 +3,29 @@
   "title": "Your creative process,",
   "highlight": "finally visible.",
   "subtitle": "Content Intelligence doesn't tell you what to create. It shows you how to get more from what you already have, discover your creative patterns, and open possibilities you hadn't seen.",
-  "steps": {
-    "capture": {
-      "phase": "CAPTURE",
-      "title_line1": "Capture",
-      "title_line2": "your ideas",
-      "body1": "The moment",
-      "body2": "they appear.",
-      "body3": "No friction.",
-      "body4": "No forced",
-      "body5": "structure."
+  "nodes": {
+    "n1": {
+      "title": "1. Capture your ideas",
+      "desc1": "The moment they appear.",
+      "desc2": "No friction. No forced structure."
     },
-    "convert": {
-      "phase": "PRODUCTION",
-      "title": "Turn your idea into content",
-      "body": "Choose, define for whom. Get a brief."
+    "n2": {
+      "title": "2. Turn your idea into content",
+      "desc1": "Choose platform, format, and other details",
+      "desc2": "to get a personalized brief and produce",
+      "desc3": "your creative material."
     },
-    "insights": {
-      "phase": "INTELLIGENCE",
-      "title_line1": "Insights and your",
-      "title_line2": "creative DNA",
-      "body1": "Discover",
-      "body2": "opportunities to",
-      "body3": "evolve with",
-      "body4": "your own",
-      "body5": "patterns."
+    "n3": {
+      "title": "3. Get strategic insights",
+      "desc1": "Discover opportunities to improve your content",
+      "desc2": "based on your creative history",
+      "desc3": "and patterns."
     },
-    "grow": {
-      "phase": "EVOLUTION",
-      "title": "The platform grows with you",
-      "body1": "The more you create, the better it knows you.",
-      "body2": "More output. Less effort."
+    "n4": {
+      "title": "4. The platform evolves with you",
+      "desc1": "The more you use it, the more it knows you.",
+      "desc2": "The information becomes more valuable",
+      "desc3": "and you do more with less."
     }
-  },
-  "loop_title": "A loop that improves",
-  "loop_subtitle": "with every idea you register"
+  }
 }
