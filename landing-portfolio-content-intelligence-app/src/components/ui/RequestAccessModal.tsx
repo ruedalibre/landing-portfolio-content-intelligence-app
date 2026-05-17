@@ -8,23 +8,31 @@ type Props = {
   source?: string;
 };
 
+// Map role label → i18n key (labels are in English in the constants)
+const ROLE_KEY: Record<string, string> = {
+  Creator: "independent_creator",
+  Agency:  "agency",
+  Brand:   "brand",
+};
+
 const RequestAccessModal = ({ isOpen, onClose, source = "landing" }: Props) => {
   const { t, i18n } = useTranslation("early_access_modal");
 
-  const [email, setEmail] = useState("");
-  const [platform, setPlatform] = useState<string | null>(null);
-  const [role, setRole] = useState<string | null>(null);
+  const [email, setEmail]               = useState("");
+  const [platform, setPlatform]         = useState<string | null>(null);
+  const [role, setRole]                 = useState<string | null>(null);
   const [creatorFocus, setCreatorFocus] = useState("");
 
   const [submitted, setSubmitted] = useState(false);
-  const [loading, setLoading] = useState(false);
-  const [error, setError] = useState(false);
+  const [loading, setLoading]     = useState(false);
+  const [error, setError]         = useState(false);
 
   const modalRef = useRef<HTMLDivElement>(null);
   const inputRef = useRef<HTMLInputElement>(null);
 
   const canSubmit = email.trim() !== "" && platform !== null;
 
+  // ── handleSubmit — sin cambios ──────────────────────────────────────
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
 
@@ -33,10 +41,6 @@ const RequestAccessModal = ({ isOpen, onClose, source = "landing" }: Props) => {
     setLoading(true);
     setError(false);
 
-    /* =========================
-    LANGUAGE DETECTION
-    ========================= */
-
     const language = i18n.language?.startsWith("es") ? "es" : "en";
 
     try {
@@ -44,14 +48,11 @@ const RequestAccessModal = ({ isOpen, onClose, source = "landing" }: Props) => {
         `${import.meta.env.VITE_SUPABASE_URL}/functions/v1/early-access`,
         {
           method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-            // apikey removido — no es necesario en Edge Functions
-          },
+          headers: { "Content-Type": "application/json" },
           body: JSON.stringify({
             email,
-            platform_id: platform,
-            role_id: role,
+            platform_id:   platform,
+            role_id:       role,
             creator_focus: creatorFocus,
             source,
             language,
@@ -61,9 +62,7 @@ const RequestAccessModal = ({ isOpen, onClose, source = "landing" }: Props) => {
 
       const data = await res.json();
 
-      if (!res.ok) {
-        throw new Error(data.error || "Request failed");
-      }
+      if (!res.ok) throw new Error(data.error || "Request failed");
 
       setSubmitted(true);
     } catch (err) {
@@ -90,163 +89,173 @@ const RequestAccessModal = ({ isOpen, onClose, source = "landing" }: Props) => {
     }
   };
 
-  /* scroll lock — incluye fix para iOS Safari */
-
+  // Scroll lock — incluye fix iOS Safari
   useEffect(() => {
     if (!isOpen) return;
-
-    document.body.style.overflow = "hidden";
-    document.body.style.position = "fixed";
-    document.body.style.width = "100%";
-
+    document.body.style.overflow  = "hidden";
+    document.body.style.position  = "fixed";
+    document.body.style.width     = "100%";
     return () => {
-      document.body.style.overflow = "auto";
-      document.body.style.position = "";
-      document.body.style.width = "";
+      document.body.style.overflow  = "auto";
+      document.body.style.position  = "";
+      document.body.style.width     = "";
     };
   }, [isOpen]);
 
-  /* ESC close */
-
+  // ESC close
   useEffect(() => {
     if (!isOpen) return;
-
-    const handleEsc = (e: KeyboardEvent) => {
-      if (e.key === "Escape") {
-        handleClose();
-      }
-    };
-
+    const handleEsc = (e: KeyboardEvent) => { if (e.key === "Escape") handleClose(); };
     window.addEventListener("keydown", handleEsc);
-
-    return () => {
-      window.removeEventListener("keydown", handleEsc);
-    };
+    return () => window.removeEventListener("keydown", handleEsc);
   }, [isOpen]);
 
-  /* autofocus */
-
+  // Autofocus
   useEffect(() => {
-    if (isOpen) {
-      inputRef.current?.focus();
-    }
+    if (isOpen) inputRef.current?.focus();
   }, [isOpen]);
 
   if (!isOpen) return null;
 
   return (
     <div className="modal-overlay" onClick={handleOverlayClick}>
-      <div className="modal" ref={modalRef}>
-        <button className="modal__close" onClick={handleClose} type="button">
-          ×
+      <div
+        className="modal"
+        ref={modalRef}
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="modal-title"
+      >
+        <button
+          className="modal__close"
+          onClick={handleClose}
+          type="button"
+          aria-label="Cerrar"
+        >
+          ✕
         </button>
 
         {!submitted ? (
           <>
-            <h2 className="modal__title">{t("title")}</h2>
+            <p className="modal__eyebrow">{t("eyebrow")}</p>
+            <h2 className="modal__title" id="modal-title">{t("title")}</h2>
 
-            <p className="modal__subtitle">{t("subtitle")}</p>
+            <form onSubmit={handleSubmit} noValidate>
 
-            <form className="modal__form" onSubmit={handleSubmit}>
-              {/* EMAIL */}
-
-              <div className="modal__section">
-                <p className="modal__label">
-                  {t("email_label")} <span className="modal__required">*</span>
-                </p>
-
+              {/* Email */}
+              <div className="modal-field">
+                <label htmlFor="modal-email" className="modal-field__label">
+                  {t("email_label")}{" "}
+                  <span className="modal-field__required">*</span>
+                </label>
                 <input
+                  id="modal-email"
                   ref={inputRef}
                   type="email"
-                  placeholder={t("email_placeholder")}
+                  className="modal-field__input"
+                  placeholder="tú@ejemplo.com"
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
                   required
+                  autoComplete="email"
                 />
               </div>
 
-              {/* PLATFORM */}
+              <div className="modal-divider" aria-hidden="true" />
 
-              <div className="modal__section">
-                <p className="modal__label">
-                  {t("platform_label")}
-                  <span className="modal__required">*</span>
-                </p>
-
-                <div className="modal__chips">
+              {/* Plataforma */}
+              <div className="modal-field">
+                <label className="modal-field__label">
+                  {t("platform_label")}{" "}
+                  <span className="modal-field__required">*</span>
+                </label>
+                <div className="modal-chips">
                   {PLATFORMS.map((p) => (
                     <button
                       key={p.id}
                       type="button"
-                      className={`chip ${
-                        platform === p.id ? "chip--active" : ""
-                      }`}
+                      className={`modal-chip${platform === p.id ? " modal-chip--active-t" : ""}`}
                       onClick={() => setPlatform(p.id)}
+                      aria-pressed={platform === p.id}
                     >
-                      {p.label}
+                      {t(`platforms.${p.label.toLowerCase()}`)}
                     </button>
                   ))}
                 </div>
               </div>
 
-              {/* ROLE */}
-
-              <div className="modal__section modal__optional">
-                <p className="modal__label">{t("role_label")}</p>
-
-                <div className="modal__chips">
+              {/* Rol */}
+              <div className="modal-field">
+                <label className="modal-field__label">
+                  {t("role_label")}{" "}
+                  <span className="modal-field__optional">{t("role_optional")}</span>
+                </label>
+                <div className="modal-chips">
                   {ROLES.map((r) => (
                     <button
                       key={r.id}
                       type="button"
-                      className={`chip ${role === r.id ? "chip--active" : ""}`}
+                      className={`modal-chip${role === r.id ? " modal-chip--active-s" : ""}`}
                       onClick={() => setRole(r.id)}
+                      aria-pressed={role === r.id}
                     >
-                      {r.label}
+                      {t(`roles.${ROLE_KEY[r.label] ?? r.label.toLowerCase()}`)}
                     </button>
                   ))}
                 </div>
               </div>
 
-              {/* CREATOR FOCUS */}
+              <div className="modal-divider" aria-hidden="true" />
 
-              <div className="modal__section modal__optional">
-                <p className="modal__label">{t("focus_label")}</p>
-
+              {/* Focus */}
+              <div className="modal-field modal-field--last">
+                <label htmlFor="modal-focus" className="modal-field__label">
+                  {t("focus_label")}{" "}
+                  <span className="modal-field__optional">{t("focus_optional")}</span>
+                </label>
                 <input
+                  id="modal-focus"
                   type="text"
+                  className="modal-field__input"
                   placeholder={t("focus_placeholder")}
                   value={creatorFocus}
                   onChange={(e) => setCreatorFocus(e.target.value)}
+                  autoComplete="off"
                 />
               </div>
 
-              {/* CTA */}
-
               <button
                 type="submit"
-                className="btn btn--primary modal__cta"
+                className="modal-submit"
                 disabled={loading || !canSubmit}
               >
-                {loading ? t("loading") : t("cta")}
+                {loading ? t("loading") : t("submit")}
               </button>
+
             </form>
 
-            {error && <p className="modal__error">{t("error")}</p>}
+            {error && (
+              <p className="modal-error">{t("error")}</p>
+            )}
+
+            <p className="modal-legal">
+              {t("legal")}{" "}
+              <a href="/terms" target="_blank" rel="noopener noreferrer">
+                {t("legal_terms")}
+              </a>
+              {" "}{t("legal_and")}{" "}
+              <a href="/privacy" target="_blank" rel="noopener noreferrer">
+                {t("legal_privacy")}
+              </a>
+            </p>
           </>
         ) : (
-          <div className="modal__success">
-            <h2 className="modal__title">{t("success_title")}</h2>
-
-            <p className="modal__subtitle">{t("success_subtitle")}</p>
-
-            <button
-              className="btn btn--primary"
-              onClick={handleClose}
-              type="button"
-            >
-              {t("close")}
-            </button>
+          <div className="modal-success">
+            <div className="modal-success__icon">🌱</div>
+            <h3 className="modal-success__title">Tu lugar está reservado.</h3>
+            <p className="modal-success__body">
+              Te avisaremos cuando sea tu momento de entrar.
+            </p>
           </div>
         )}
       </div>
