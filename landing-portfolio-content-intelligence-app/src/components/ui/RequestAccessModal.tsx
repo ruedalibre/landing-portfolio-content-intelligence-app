@@ -15,28 +15,73 @@ const ROLE_KEY: Record<string, string> = {
   Brand:   "brand",
 };
 
+// Validation constants
+const EMAIL_REGEX = /^[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}$/;
+const FOCUS_MAX_CHARS = 120;
+
 const RequestAccessModal = ({ isOpen, onClose, source = "landing" }: Props) => {
   const { t, i18n } = useTranslation("early_access_modal");
 
+  // Form state
   const [email, setEmail]               = useState("");
   const [platform, setPlatform]         = useState<string | null>(null);
   const [role, setRole]                 = useState<string | null>(null);
   const [creatorFocus, setCreatorFocus] = useState("");
 
+  // Submit state
   const [submitted, setSubmitted] = useState(false);
   const [loading, setLoading]     = useState(false);
   const [error, setError]         = useState(false);
 
+  // Touched state — show errors only after field interaction
+  const [emailTouched, setEmailTouched]       = useState(false);
+  const [platformTouched, setPlatformTouched] = useState(false);
+  const [roleTouched, setRoleTouched]         = useState(false);
+
   const modalRef = useRef<HTMLDivElement>(null);
   const inputRef = useRef<HTMLInputElement>(null);
 
-  const canSubmit = email.trim() !== "" && platform !== null;
+  // Derived validation
+  const isEmailValid    = EMAIL_REGEX.test(email);
+  const isPlatformValid = platform !== null;
+  const isRoleValid     = role !== null;
+  const isFormValid     = isEmailValid && isPlatformValid && isRoleValid;
 
-  // ── handleSubmit — sin cambios ──────────────────────────────────────
+  // Show errors only when touched
+  const showEmailError    = emailTouched    && !isEmailValid;
+  const showPlatformError = platformTouched && !isPlatformValid;
+  const showRoleError     = roleTouched     && !isRoleValid;
+
+  // ── Handlers ─────────────────────────────────────────────────────────
+
+  const handleEmailBlur = () => setEmailTouched(true);
+
+  const handlePlatformSelect = (id: string) => {
+    setPlatform(id);
+    setPlatformTouched(true);
+  };
+
+  const handleRoleSelect = (id: string) => {
+    setRole(id);
+    setRoleTouched(true);
+  };
+
+  const handleFocusChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    if (e.target.value.length <= FOCUS_MAX_CHARS) {
+      setCreatorFocus(e.target.value);
+    }
+  };
+
+  // ── handleSubmit — lógica de submit intacta ───────────────────────────
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
 
-    if (!email || !platform) return;
+    // Mark all fields as touched to surface any pending errors
+    setEmailTouched(true);
+    setPlatformTouched(true);
+    setRoleTouched(true);
+
+    if (!isFormValid) return;
 
     setLoading(true);
     setError(false);
@@ -80,6 +125,9 @@ const RequestAccessModal = ({ isOpen, onClose, source = "landing" }: Props) => {
     setRole(null);
     setCreatorFocus("");
     setError(false);
+    setEmailTouched(false);
+    setPlatformTouched(false);
+    setRoleTouched(false);
     onClose();
   };
 
@@ -152,13 +200,19 @@ const RequestAccessModal = ({ isOpen, onClose, source = "landing" }: Props) => {
                   id="modal-email"
                   ref={inputRef}
                   type="email"
-                  className="modal-field__input"
+                  className={`modal-field__input${showEmailError ? " modal-field__input--error" : ""}`}
                   placeholder="tú@ejemplo.com"
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
+                  onBlur={handleEmailBlur}
                   required
                   autoComplete="email"
                 />
+                {showEmailError && (
+                  <p className="modal-field__error" role="alert">
+                    {t("error_email")}
+                  </p>
+                )}
               </div>
 
               <div className="modal-divider" aria-hidden="true" />
@@ -175,20 +229,25 @@ const RequestAccessModal = ({ isOpen, onClose, source = "landing" }: Props) => {
                       key={p.id}
                       type="button"
                       className={`modal-chip${platform === p.id ? " modal-chip--active-t" : ""}`}
-                      onClick={() => setPlatform(p.id)}
+                      onClick={() => handlePlatformSelect(p.id)}
                       aria-pressed={platform === p.id}
                     >
                       {t(`platforms.${p.label.toLowerCase()}`)}
                     </button>
                   ))}
                 </div>
+                {showPlatformError && (
+                  <p className="modal-field__error" role="alert">
+                    {t("error_platform")}
+                  </p>
+                )}
               </div>
 
               {/* Rol */}
               <div className="modal-field">
                 <label className="modal-field__label">
                   {t("role_label")}{" "}
-                  <span className="modal-field__optional">{t("role_optional")}</span>
+                  <span className="modal-field__required">*</span>
                 </label>
                 <div className="modal-chips">
                   {ROLES.map((r) => (
@@ -196,13 +255,18 @@ const RequestAccessModal = ({ isOpen, onClose, source = "landing" }: Props) => {
                       key={r.id}
                       type="button"
                       className={`modal-chip${role === r.id ? " modal-chip--active-s" : ""}`}
-                      onClick={() => setRole(r.id)}
+                      onClick={() => handleRoleSelect(r.id)}
                       aria-pressed={role === r.id}
                     >
                       {t(`roles.${ROLE_KEY[r.label] ?? r.label.toLowerCase()}`)}
                     </button>
                   ))}
                 </div>
+                {showRoleError && (
+                  <p className="modal-field__error" role="alert">
+                    {t("error_role")}
+                  </p>
+                )}
               </div>
 
               <div className="modal-divider" aria-hidden="true" />
@@ -219,15 +283,22 @@ const RequestAccessModal = ({ isOpen, onClose, source = "landing" }: Props) => {
                   className="modal-field__input"
                   placeholder={t("focus_placeholder")}
                   value={creatorFocus}
-                  onChange={(e) => setCreatorFocus(e.target.value)}
+                  onChange={handleFocusChange}
                   autoComplete="off"
+                  maxLength={FOCUS_MAX_CHARS}
                 />
+                <div className="modal-field__counter">
+                  <span className={creatorFocus.length >= FOCUS_MAX_CHARS ? "modal-field__counter--limit" : ""}>
+                    {creatorFocus.length}
+                  </span>
+                  /{FOCUS_MAX_CHARS}
+                </div>
               </div>
 
               <button
                 type="submit"
                 className="modal-submit"
-                disabled={loading || !canSubmit}
+                disabled={loading || !isFormValid}
               >
                 {loading ? t("loading") : t("submit")}
               </button>
@@ -235,7 +306,7 @@ const RequestAccessModal = ({ isOpen, onClose, source = "landing" }: Props) => {
             </form>
 
             {error && (
-              <p className="modal-error">{t("error")}</p>
+              <p className="modal-error" role="alert">{t("error")}</p>
             )}
 
             <p className="modal-legal">
