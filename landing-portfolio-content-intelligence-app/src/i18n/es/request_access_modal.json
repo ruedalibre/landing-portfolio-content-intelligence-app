@@ -15,6 +15,9 @@
   "legal_terms": "Términos",
   "legal_and": "y",
   "legal_privacy": "Política de privacidad",
+  "error_email": "Ingresa un correo electrónico válido",
+  "error_platform": "Selecciona al menos una plataforma",
+  "error_role": "Selecciona una opción",
   "platforms": {
     "linkedin": "LinkedIn",
     "instagram": "Instagram",
