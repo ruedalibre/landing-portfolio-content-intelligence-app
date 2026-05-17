@@ -106,7 +106,15 @@
   animation: sol-dash 1.8s linear infinite;
 
   &--d2 {
-    animation-delay: 0.45s;
+    animation-delay: 0.9s;
+  }
+}
+
+/* ── SVG hidden on mobile (list renders instead via React) ── */
+
+@media (max-width: 768px) {
+  .sol-diagram svg {
+    display: none;
   }
 }
 
