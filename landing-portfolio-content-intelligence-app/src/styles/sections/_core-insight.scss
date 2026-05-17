@@ -1,55 +1,100 @@
-@use "../abstracts/variables" as *;
+// CoreInsight — dark contrast section between Solution and Capabilities
 
 .core-insight {
-  padding: $space-9 0 $space-8 0;
-  background: $color-bg-dark;
+  position: relative;
+  background: var(--bg-canvas); // fallback
+  background: #1a1f27;          // fondo oscuro fijo — dark del sistema
+  padding: var(--s-11) 0;
+  overflow: hidden;
   text-align: center;
 }
 
-.core-insight__content {
-  max-width: 840px;
+// Gradientes de textura — terracota izquierda, slate derecha
+.core-insight__bg {
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse at 15% 50%, rgba(196, 120, 89, 0.06) 0%, transparent 60%),
+    radial-gradient(ellipse at 85% 50%, rgba(54, 73, 101, 0.12) 0%, transparent 60%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.core-insight__inner {
+  position: relative;
+  z-index: 1;
+  max-width: 720px;
   margin: 0 auto;
+  text-align: center;
 }
 
-/* PRE TEXT */
-
+// Label superior con líneas decorativas
 .core-insight__pre {
-  font-family: $font-sans;
-  font-size: $fs-md;
-  color: $color-text-white;
+  font-family: var(--font-sans);
+  font-size: var(--fs-12);
+  font-weight: 500;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #c47859;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: var(--s-7);
 
-  margin-bottom: $space-3;
-}
-
-/* TITLE */
-
-.core-insight__title {
-  font-family: $font-serif;
-  font-size: $fs-4xl;
-  font-weight: $fw-bold;
-  line-height: $lh-tight;
-
-  color: $color-text-white;
-}
-
-/* HIGHLIGHT */
-
-.highlight {
-  font-family: $font-sans;
-
-  background: linear-gradient(90deg, $color-accent, $color-accent-soft);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-
-  text-shadow: 0 12px 40px rgba(108, 92, 231, 0.2);
-}
-
-@media (max-width: 768px) {
-  .core-insight {
-    padding: $space-8 0;
+  &::before,
+  &::after {
+    content: '';
+    width: 32px;
+    height: 1px;
+    background: #c47859;
+    opacity: 0.5;
   }
+}
 
-  .core-insight__title {
-    font-size: 36px;
+// Cita principal — Cormorant cursiva grande
+.core-insight__quote {
+  font-family: var(--font-display);
+  font-size: clamp(28px, 4vw, 46px);
+  font-weight: 500;
+  font-style: italic;
+  line-height: 1.2;
+  letter-spacing: var(--tracking-tight);
+  color: #f5f0e8;
+  margin-bottom: var(--s-6);
+
+  @media (max-width: 768px) {
+    font-size: var(--fs-28);
+  }
+}
+
+// Palabra destacada — terracota, sin cursiva, bold
+.core-insight__highlight {
+  font-style: normal;
+  font-weight: 600;
+  color: #c47859;
+}
+
+// Línea divisora sutil
+.core-insight__divider {
+  width: 40px;
+  height: 1px;
+  background: rgba(245, 240, 232, 0.2);
+  margin: 0 auto var(--s-6);
+}
+
+// Subtítulo — DM Sans light, semitransparente
+.core-insight__sub {
+  font-family: var(--font-sans);
+  font-size: var(--fs-16);
+  font-weight: 300;
+  color: rgba(245, 240, 232, 0.6);
+  line-height: var(--lh-loose);
+  max-width: 520px;
+  margin: 0 auto;
+
+  strong {
+    color: rgba(245, 240, 232, 0.9);
+    font-weight: 400;
   }
 }
