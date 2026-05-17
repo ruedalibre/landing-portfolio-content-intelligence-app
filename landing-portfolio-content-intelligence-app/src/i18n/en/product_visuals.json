@@ -1,21 +1,28 @@
 {
-  "title": "See how it works in practice",
-
+  "label": "The product in action",
+  "title": "Three moments that",
+  "highlight": "change your process.",
   "items": {
     "capture": {
-      "title": "Capture and structure your content",
-      "description": "Bring all your content into one place and organize it around ideas and topics.",
-      "image_alt": "Contents table"
+      "num": "01 · Capture",
+      "title": "The idea takes shape before it slips away",
+      "body": "Register each idea with the context it needs — platform, format, topic and role.",
+      "body_strong": "No rigid structure.",
+      "body_end": "Nothing important gets lost."
+    },
+    "brief": {
+      "num": "02 · Production",
+      "title": "A brief made for you, not for the average",
+      "body": "The system generates a brief adapted to your voice and history.",
+      "body_strong": "If it doesn't feel right, ask for an alternative.",
+      "body_end": "The starting point is always yours."
     },
     "insights": {
-      "title": "Understand what works",
-      "description": "Detect patterns, track performance and understand what drives results.",
-      "image_alt": "Dashboard"
-    },
-    "systems": {
-      "title": "Turn ideas into scalable systems",
-      "description": "Identify reusable ideas and turn them into repeatable content systems.",
-      "image_alt": "Ideas system"
+      "num": "03 · Intelligence",
+      "title": "Your creative process, visible for the first time",
+      "body": "Discover which topics you dominate, which formats work for you and",
+      "body_strong": "which angles you haven't explored yet.",
+      "body_end": "Not trends — your patterns."
     }
   }
 }
