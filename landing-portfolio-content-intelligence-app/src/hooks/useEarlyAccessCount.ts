@@ -1,18 +1,17 @@
-import { useEffect, useState } from "react";
-import { supabase } from "../lib/supabase";
+import { useEffect, useState } from 'react';
+import { supabase } from '../lib/supabase';
 
-export function useEarlyAccessCount() {
+export const useEarlyAccessCount = () => {
   const [count, setCount] = useState<number | null>(null);
 
   useEffect(() => {
     const fetchCount = async () => {
       const { count, error } = await supabase
-        .from("early_access_requests")
-        .select("*", { count: "exact", head: true })
-        .eq("status", "pending");
+        .from('early_access_requests')
+        .select('*', { count: 'exact', head: true });
 
-      if (!error) {
-        setCount(count || 0);
+      if (!error && count !== null) {
+        setCount(count);
       }
     };
 
@@ -20,4 +19,4 @@ export function useEarlyAccessCount() {
   }, []);
 
   return count;
-}
+};
