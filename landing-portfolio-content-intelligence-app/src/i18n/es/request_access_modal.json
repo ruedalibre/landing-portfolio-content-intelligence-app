@@ -1,23 +1,31 @@
 {
-  "title": "Únete al acceso anticipado",
-  "subtitle": "Sé parte de los primeros creadores que construyen sistemas de contenido escalables.",
-
-  "email_label": "Tu correo electrónico",
-  "email_placeholder": "nombre@email.com",
-
-  "platform_label": "¿Dónde publicas la mayor parte de tu contenido?",
-
-  "role_label": "¿Qué te describe mejor?",
-
-  "focus_label": "¿Sobre qué sueles crear contenido?",
-  "focus_placeholder": "Tutoriales de IA, marketing, startups...",
-
-  "cta": "Únete al acceso anticipado",
-  "loading": "Uniéndote...",
-
-  "error": "Algo salió mal. Inténtalo nuevamente.",
-
-  "success_title": "Estás en la lista 🎉",
-  "success_subtitle": "Invitaremos a los primeros creadores tan pronto como el MVP esté listo.",
-  "close": "Cerrar"
+  "eyebrow": "Early Access",
+  "title": "Reserva tu lugar",
+  "email_label": "Correo electrónico",
+  "platform_label": "¿Dónde publicas principalmente?",
+  "role_label": "¿Cómo te describes?",
+  "role_optional": "(opcional)",
+  "focus_label": "¿Sobre qué creas contenido?",
+  "focus_optional": "(opcional)",
+  "focus_placeholder": "Gastronomía, viajes, marketing...",
+  "submit": "Reservar mi lugar →",
+  "loading": "...",
+  "error": "Algo salió mal. Inténtalo de nuevo.",
+  "legal": "Al registrarte aceptas nuestros",
+  "legal_terms": "Términos",
+  "legal_and": "y",
+  "legal_privacy": "Política de privacidad",
+  "platforms": {
+    "linkedin": "LinkedIn",
+    "instagram": "Instagram",
+    "youtube": "YouTube",
+    "tiktok": "TikTok",
+    "x": "X",
+    "other": "Otro"
+  },
+  "roles": {
+    "independent_creator": "Creador independiente",
+    "agency": "Agencia",
+    "brand": "Marca"
+  }
 }
