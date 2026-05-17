@@ -4,9 +4,6 @@ import Problem from "../components/sections/Problem.tsx";
 import Solution from "../components/sections/Solution.tsx";
 import CoreInsight from "../components/sections/CoreInsight.tsx";
 import ProductVisuals from "../components/sections/ProductVisuals.tsx";
-import WhyItMatters from "../components/sections/WhyItMatters.tsx";
-import NorthStar from "../components/sections/NorthStar.tsx";
-import Vision from "../components/sections/Vision.tsx";
 import FinalCTA from "../components/sections/FinalCTA.tsx";
 import RequestAccessModal from "../components/ui/RequestAccessModal.tsx";
 import { useState, useEffect } from "react";
@@ -80,20 +77,11 @@ const Landing = () => {
       {/* SOLUTION */}
       <Solution />
 
-      {/* CORE INSIGHT (MIC DROP) */}
+      {/* CORE INSIGHT */}
       <CoreInsight />
 
-      {/* PRODUCT VISUALS (CRÍTICO) */}
+      {/* PRODUCT VISUALS */}
       <ProductVisuals />
-
-      {/* WHY IT MATTERS */}
-      <WhyItMatters />
-
-      {/* NORTH STAR */}
-      <NorthStar />
-
-      {/* VISION */}
-      <Vision />
 
       {/* FINAL CTA */}
       <FinalCTA onRequestAccess={() => setModalOpen(true)} />

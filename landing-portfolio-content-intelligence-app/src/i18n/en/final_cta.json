@@ -1,6 +1,13 @@
 {
-  "title": "Let’s build the future of content",
-  "subtitle": "Be among the first creators building scalable content systems.",
-  "cta_primary": "Join early access",
-  "cta_secondary": "See how it works"
+  "eyebrow": "Early Access",
+  "title": "Turn your ideas into a",
+  "highlight": "personal creative system.",
+  "subtitle": "Capture your ideas, discover your patterns and produce content with more intention.",
+  "subtitle_strong": "Without starting from scratch every time.",
+  "social_proof": "Join <strong>{{count}}+</strong> creators who already reserved their spot",
+  "cta_primary": "Request early access →",
+  "cta_secondary": "See how it works",
+  "guarantee_1": "No credit card required",
+  "guarantee_2": "Access before launch",
+  "guarantee_3": "Special early adopter price"
 }
