@@ -27,5 +27,12 @@
       "desc2": "The information becomes more valuable",
       "desc3": "and you do more with less."
     }
+  },
+  "caps_label": "The system also allows you to:",
+  "caps": {
+    "c1": "Create content series from a single idea",
+    "c2": "Measure the impact of each idea",
+    "c3": "Rate briefs and request alternatives",
+    "c4": "Discover your creative DNA"
   }
 }

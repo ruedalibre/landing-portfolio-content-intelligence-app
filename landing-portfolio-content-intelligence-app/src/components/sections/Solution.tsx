@@ -1,19 +1,13 @@
-import { useState, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 import SolutionDiagram from './SolutionDiagram';
 
-type NodeKey = 'n1' | 'n2' | 'n3' | 'n4';
-const NODE_KEYS: NodeKey[] = ['n1', 'n2', 'n3', 'n4'];
+const caps = ['c1', 'c2', 'c3', 'c4'] as const;
+
+// Colores por posición — terracota top row, slate bottom row
+const dotColor = (index: number) => index < 2 ? '#c47859' : '#364965';
 
 const Solution = () => {
   const { t } = useTranslation('solution');
-  const [isMobile, setIsMobile] = useState(() => window.innerWidth < 768);
-
-  useEffect(() => {
-    const handleResize = () => setIsMobile(window.innerWidth < 768);
-    window.addEventListener('resize', handleResize);
-    return () => window.removeEventListener('resize', handleResize);
-  }, []);
 
   return (
     <section id="how-it-works" className="solution reveal">
@@ -27,22 +21,24 @@ const Solution = () => {
           <p className="solution__subtitle">{t('subtitle')}</p>
         </div>
 
-        {isMobile ? (
-          <div className="sol-list">
-            {NODE_KEYS.map((key, i) => (
-              <div key={key} className={`sol-list__item sol-list__item--${i < 2 ? 'terracota' : 'slate'}`}>
-                <h4 className="sol-list__title">{t(`nodes.${key}.title`)}</h4>
-                <p className="sol-list__body">
-                  {t(`nodes.${key}.desc1`)}{' '}
-                  {t(`nodes.${key}.desc2`)}{' '}
-                  {t(`nodes.${key}.desc3`, '')}
-                </p>
+        <SolutionDiagram />
+
+        {/* ── Franja de capabilities ── */}
+        <div className="sol-caps">
+          <span className="sol-caps__label">{t('caps_label')}</span>
+          <div className="sol-caps__grid">
+            {caps.map((key, i) => (
+              <div key={key} className="sol-caps__pill">
+                <span
+                  className="sol-caps__dot"
+                  style={{ background: dotColor(i) }}
+                  aria-hidden="true"
+                />
+                {t(`caps.${key}`)}
               </div>
             ))}
           </div>
-        ) : (
-          <SolutionDiagram />
-        )}
+        </div>
 
       </div>
     </section>
