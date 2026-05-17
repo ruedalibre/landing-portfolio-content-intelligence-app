@@ -3,7 +3,6 @@ import Hero from "../components/sections/Hero.tsx";
 import Problem from "../components/sections/Problem.tsx";
 import Solution from "../components/sections/Solution.tsx";
 import CoreInsight from "../components/sections/CoreInsight.tsx";
-import Capabilities from "../components/sections/Capabilities.tsx";
 import ProductVisuals from "../components/sections/ProductVisuals.tsx";
 import WhyItMatters from "../components/sections/WhyItMatters.tsx";
 import NorthStar from "../components/sections/NorthStar.tsx";
@@ -83,9 +82,6 @@ const Landing = () => {
 
       {/* CORE INSIGHT (MIC DROP) */}
       <CoreInsight />
-
-      {/* CAPABILITIES */}
-      <Capabilities />
 
       {/* PRODUCT VISUALS (CRÍTICO) */}
       <ProductVisuals />

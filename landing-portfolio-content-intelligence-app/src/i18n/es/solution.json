@@ -27,5 +27,12 @@
       "desc2": "La información se vuelve más valiosa",
       "desc3": "y haces más con menos."
     }
+  },
+  "caps_label": "El sistema también permite:",
+  "caps": {
+    "c1": "Crear series de contenidos a partir de una idea",
+    "c2": "Medir el impacto de una idea",
+    "c3": "Calificar los brief y solicitar alternativas",
+    "c4": "Descubrir tu ADN creativo"
   }
 }
