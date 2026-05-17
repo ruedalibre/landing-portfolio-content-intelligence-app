@@ -1,21 +1,28 @@
 {
-  "title": "Mira cómo funciona en la práctica",
-
+  "label": "El producto en acción",
+  "title": "Tres momentos que",
+  "highlight": "cambian tu proceso.",
   "items": {
     "capture": {
-      "title": "Captura y estructura tu contenido",
-      "description": "Reúne todo tu contenido en un solo lugar y organízalo alrededor de ideas y temas.",
-      "image_alt": "Tabla de contenidos"
+      "num": "01 · Captura",
+      "title": "La idea toma forma antes de que se escape",
+      "body": "Registra cada idea con el contexto que necesita — plataforma, formato, tema y rol.",
+      "body_strong": "Sin estructura rígida.",
+      "body_end": "Sin perder lo que importa."
+    },
+    "brief": {
+      "num": "02 · Producción",
+      "title": "Un brief hecho para ti, no para el promedio",
+      "body": "El sistema genera un brief adaptado a tu voz y tu historial.",
+      "body_strong": "Si no te convence, pide otra alternativa.",
+      "body_end": "El punto de partida siempre es tuyo."
     },
     "insights": {
-      "title": "Entiende qué funciona",
-      "description": "Detecta patrones, analiza el rendimiento y entiende qué impulsa los resultados.",
-      "image_alt": "Dashboard"
-    },
-    "systems": {
-      "title": "Convierte ideas en sistemas escalables",
-      "description": "Identifica ideas reutilizables y conviértelas en sistemas de contenido repetibles.",
-      "image_alt": "Sistema de ideas"
+      "num": "03 · Inteligencia",
+      "title": "Tu proceso creativo, visible por primera vez",
+      "body": "Descubre qué temas dominas, qué formatos funcionan para ti y",
+      "body_strong": "qué ángulos todavía no has explorado.",
+      "body_end": "No son tendencias — son tus patrones."
     }
   }
 }
