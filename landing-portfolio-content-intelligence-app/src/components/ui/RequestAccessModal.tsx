@@ -243,7 +243,7 @@ const RequestAccessModal = ({ isOpen, onClose, source = "landing" }: Props) => {
                         onClick={() => handlePlatformSelect(p.id)}
                         aria-pressed={platform === p.id}
                       >
-                        {p.label}
+                        {t(`platforms.${p.value}`, { defaultValue: p.label })}
                       </button>
                     ))}
                   </div>
@@ -283,7 +283,7 @@ const RequestAccessModal = ({ isOpen, onClose, source = "landing" }: Props) => {
                         onClick={() => handleRoleSelect(r.id)}
                         aria-pressed={role === r.id}
                       >
-                        {r.label}
+                        {t(`roles.${r.value}`, { defaultValue: r.label })}
                       </button>
                     ))}
                   </div>

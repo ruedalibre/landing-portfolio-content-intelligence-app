@@ -11,6 +11,24 @@
 import { useEffect, useState } from "react";
 import { supabase } from "../lib/supabase";
 
+// Desired display order for platform chips in the modal.
+// Slugs not found in this list are appended at the end (alphabetically stable).
+const PLATFORM_ORDER = [
+  "instagram",
+  "youtube",
+  "tiktok",
+  "linkedin",
+  "x",
+  "facebook",
+  "pinterest",
+  "threads",
+  "snapchat",
+  "twitch",
+  "telegram",
+  "discord",
+  "unknown",
+];
+
 export type EarlyAccessOption = {
   id: string;    // UUID — sent to the edge function as platform_id / role_id
   label: string; // Display name shown in the chip (e.g. "LinkedIn", "Creator")
@@ -56,13 +74,17 @@ export const useEarlyAccessOptions = (): EarlyAccessOptions => {
         if (platformError) throw platformError;
         if (roleError)     throw roleError;
 
-        setPlatforms(
-          (platformData ?? []).map((p) => ({
-            id:    p.id,
-            label: p.name,
-            value: p.slug,   // confirmed: "slug" column exists
-          }))
-        );
+        const mapped = (platformData ?? []).map((p) => ({
+          id:    p.id,
+          label: p.name,
+          value: p.slug,   // confirmed: "slug" column exists
+        }));
+        const sorted = [...mapped].sort((a, b) => {
+          const ia = PLATFORM_ORDER.indexOf(a.value.toLowerCase());
+          const ib = PLATFORM_ORDER.indexOf(b.value.toLowerCase());
+          return (ia === -1 ? 999 : ia) - (ib === -1 ? 999 : ib);
+        });
+        setPlatforms(sorted);
         setRoles(
           (roleData ?? []).map((r) => ({
             id:    r.id,
