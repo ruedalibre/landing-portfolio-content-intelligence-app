@@ -110,8 +110,7 @@ const RequestAccessModal = ({ isOpen, onClose, source = "landing" }: Props) => {
       if (!res.ok) throw new Error(data.error || "Request failed");
 
       setSubmitted(true);
-    } catch (err) {
-      console.error("Early access request error:", err);
+    } catch (_err) {
       setError(true);
     } finally {
       setLoading(false);
