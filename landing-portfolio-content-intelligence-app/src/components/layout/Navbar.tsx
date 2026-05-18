@@ -55,7 +55,7 @@ const Navbar = ({ onRequestAccess }: Props) => {
         {/* ACTIONS */}
         <div className="navbar__actions">
           <button
-            className="btn btn--primary"
+            className="navbar__cta btn btn--primary"
             onClick={onRequestAccess}
             type="button"
           >
