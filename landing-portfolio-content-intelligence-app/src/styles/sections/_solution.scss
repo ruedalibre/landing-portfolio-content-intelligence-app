@@ -110,21 +110,22 @@
   }
 }
 
-/* ── SVG hidden on mobile (list renders instead via React) ── */
+/* ── Visibility switch: diagram ↔ list ── */
+
+.sol-diagram { display: block; } // visible desktop
+.sol-list    { display: none;  } // hidden desktop
 
 @media (max-width: 768px) {
-  .sol-diagram svg {
-    display: none;
+  .sol-diagram { display: none; } // hide full container (not just svg)
+  .sol-list {
+    display: flex;
+    flex-direction: column;
+    gap: var(--s-4);
+    margin-top: var(--s-5);
   }
 }
 
-/* ── MOBILE LIST (fallback) ── */
-
-.sol-list {
-  display: flex;
-  flex-direction: column;
-  gap: var(--s-4);
-}
+/* ── MOBILE LIST ── */
 
 .sol-list__item {
   background: var(--bg-elevated);
