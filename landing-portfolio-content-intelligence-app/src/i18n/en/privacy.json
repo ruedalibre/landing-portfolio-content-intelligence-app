@@ -1,0 +1,69 @@
+{
+  "page_title": "Privacy Policy",
+  "last_updated": "Last updated: May 3, 2026",
+  "back": "← Back to Content Intelligence",
+
+  "s1_title": "1. Who We Are",
+  "s1_p1": "Content Intelligence App is operated by Andrés Pérez Díaz, a Colombian citizen. We are committed to protecting your personal information and being transparent about how we use it.",
+  "s1_contact": "Contact:",
+
+  "s2_title": "2. Information We Collect",
+  "s2_direct_title": "Information you provide directly:",
+  "s2_direct_li1": "Email address — used for account creation and communications",
+  "s2_direct_li2": "Password — stored securely and encrypted by our authentication provider",
+  "s2_direct_li3": "Content data — ideas, topics, content records, and descriptions you create in the App",
+  "s2_direct_li4": "Profile information — optional fields provided during onboarding",
+  "s2_auto_title": "Information collected automatically:",
+  "s2_auto_li1": "Usage data — which features you use, how often you generate briefs or reports, download events",
+  "s2_auto_li2": "Session data — login timestamps and session information",
+  "s2_not_title": "Information we do not collect:",
+  "s2_not_li1": "Payment or financial information (the Service is currently free)",
+  "s2_not_li2": "Precise location data",
+  "s2_not_li3": "Device identifiers or advertising IDs",
+  "s2_not_li4": "Data from minors (the Service is restricted to users 18 and older)",
+
+  "s3_title": "3. How We Use Your Information",
+  "s3_intro": "We use your information to:",
+  "s3_li1": "Provide and improve the Service",
+  "s3_li2": "Generate AI-powered creative briefs and reports personalized to your content patterns",
+  "s3_li3": "Send account-related communications",
+  "s3_li4": "Analyze aggregated, anonymized usage trends to improve the platform",
+  "s3_li5": "Maintain the security and integrity of the Service",
+  "s3_not_intro": "We do not use your information to:",
+  "s3_not_li1": "Sell or share with third-party advertisers",
+  "s3_not_li2": "Train AI models",
+  "s3_not_li3": "Create individual profiles for advertising purposes",
+
+  "s4_title": "4. Third-Party Services",
+  "s4_intro": "We use the following trusted third-party services:",
+  "s4_li1": "Supabase — Database, authentication, and backend infrastructure",
+  "s4_li2": "Anthropic (Claude API) — AI-powered brief and report generation",
+  "s4_li3": "Resend — Transactional email delivery",
+  "s4_note": "Your data is not shared with any other third parties.",
+
+  "s5_title": "5. AI Processing",
+  "s5_p1": "When you generate a brief or creative report, your content patterns are sent to Anthropic's Claude API to generate a personalized response. This data is processed in real time and is not retained by Anthropic for training purposes under their standard API terms.",
+
+  "s6_title": "6. Data Storage and Security",
+  "s6_p1": "Your data is stored in Supabase's infrastructure with Row Level Security (RLS), encrypted connections (HTTPS/TLS), and hashed passwords. We implement reasonable security measures but cannot guarantee absolute security.",
+
+  "s7_title": "7. Data Retention",
+  "s7_p1": "We retain your data for as long as your account is active. If you delete your account, your personal profile and content data will be deleted within 30 days. Anonymized, aggregated data may be retained for platform analytics.",
+
+  "s8_title": "8. Your Rights",
+  "s8_p1": "Under Colombian data protection law (Ley 1581 de 2012), you have the right to access, correct, delete, and export your personal data, and to object to specific uses. Contact us at",
+  "s8_p2": "and we will respond within 15 business days.",
+
+  "s9_title": "9. Cookies",
+  "s9_p1": "The App uses only essential session cookies necessary for authentication. We do not use advertising cookies, tracking pixels, or third-party analytics cookies.",
+
+  "s10_title": "10. Children's Privacy",
+  "s10_p1": "This Service is not directed to individuals under 18 years of age. We do not knowingly collect personal information from minors.",
+
+  "s11_title": "11. Changes to This Policy",
+  "s11_p1": "We may update this Privacy Policy from time to time. We will notify registered users by email of any significant changes.",
+
+  "s12_title": "12. Contact",
+  "s12_name": "Andrés Pérez Díaz",
+  "s12_country": "Colombia"
+}
