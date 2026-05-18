@@ -66,29 +66,22 @@ const Landing = () => {
 
   return (
     <>
-      {/* NAVBAR */}
       <Navbar onRequestAccess={() => setModalOpen(true)} />
+      <main>
+        <Hero onRequestAccess={() => setModalOpen(true)} />
 
-      {/* HERO */}
-      <Hero onRequestAccess={() => setModalOpen(true)} />
+        <Problem />
 
-      {/* PROBLEM */}
-      <Problem />
+        <Solution />
 
-      {/* SOLUTION */}
-      <Solution />
+        <CoreInsight />
 
-      {/* CORE INSIGHT */}
-      <CoreInsight />
+        <ProductVisuals />
 
-      {/* PRODUCT VISUALS */}
-      <ProductVisuals />
+        <Manifesto />
 
-      {/* MANIFESTO */}
-      <Manifesto />
-
-      {/* FINAL CTA */}
-      <FinalCTA onRequestAccess={() => setModalOpen(true)} />
+        <FinalCTA onRequestAccess={() => setModalOpen(true)} />
+      </main>
 
       <RequestAccessModal
         isOpen={isModalOpen}
