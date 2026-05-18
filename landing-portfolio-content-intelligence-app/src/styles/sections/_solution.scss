@@ -61,7 +61,7 @@
 /* Highlight word — ocre */
 
 .solution__highlight {
-  color: #b8893d;
+  color: var(--accent-warm);
   font-family: var(--font-display);
   font-style: italic;
   font-weight: 500;
@@ -138,7 +138,7 @@
     box-shadow: var(--shadow-md);
   }
 
-  &--terracota { border-left-color: #c47859; }
+  &--terracota { border-left-color: var(--accent); }
   &--slate     { border-left-color: var(--primary); }
 }
 
@@ -218,7 +218,7 @@
     color var(--transition-base);
 
   &:hover {
-    border-color: #c47859;
+    border-color: var(--accent);
     color: var(--text);
   }
 }

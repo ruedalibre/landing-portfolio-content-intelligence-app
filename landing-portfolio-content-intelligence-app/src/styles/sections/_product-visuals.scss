@@ -31,7 +31,7 @@
 }
 
 .product-visuals__highlight {
-  color: #b8893d;
+  color: var(--accent-warm);
   font-family: var(--font-display);
   font-style: italic;
   font-weight: 500;
@@ -77,7 +77,7 @@
   font-weight: 500;
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  color: #c47859;
+  color: var(--accent);
 }
 
 .pv-item__title {
@@ -192,7 +192,7 @@
 
   &--terracota {
     background: rgba(196, 120, 89, 0.12);
-    color: #c47859;
+    color: var(--accent);
   }
 
   &--neutral {
@@ -265,8 +265,8 @@
 
   &--primary {
     background: transparent;
-    border: 1px solid #c47859;
-    color: #c47859;
+    border: 1px solid var(--accent);
+    color: var(--accent);
 
     &:hover { background: rgba(196, 120, 89, 0.08); }
   }
