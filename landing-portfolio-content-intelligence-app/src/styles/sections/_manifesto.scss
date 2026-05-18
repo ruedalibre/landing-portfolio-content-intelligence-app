@@ -1,0 +1,164 @@
+// Manifesto section
+
+.manifesto {
+  position: relative;
+  background: #1a1f27;
+  padding: var(--s-11) 0;
+  overflow: hidden;
+  text-align: center;
+}
+
+// Gradientes de textura
+.manifesto__bg {
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse at 10% 20%, rgba(196, 120, 89, 0.07) 0%, transparent 50%),
+    radial-gradient(ellipse at 90% 80%, rgba(54, 73, 101, 0.12) 0%, transparent 50%);
+  pointer-events: none;
+}
+
+.manifesto__inner {
+  position: relative;
+  z-index: 1;
+  max-width: 720px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+// Eyebrow
+.manifesto__eyebrow {
+  font-family: var(--font-sans);
+  font-size: var(--fs-12);
+  font-weight: 500;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #c47859;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: var(--s-7);
+
+  &::before,
+  &::after {
+    content: '';
+    width: 28px;
+    height: 1px;
+    background: #c47859;
+    opacity: 0.5;
+  }
+}
+
+// Título
+.manifesto__title {
+  font-family: var(--font-display);
+  font-size: clamp(32px, 4.5vw, 52px);
+  font-weight: 500;
+  font-style: italic;
+  line-height: 1.15;
+  letter-spacing: var(--tracking-tight);
+  color: #f5f0e8;
+  margin-bottom: var(--s-9);
+
+  @media (max-width: 768px) {
+    font-size: var(--fs-32);
+  }
+}
+
+.manifesto__highlight {
+  color: #c47859;
+  font-style: normal;
+  font-weight: 600;
+  font-family: var(--font-display);
+}
+
+// Principios
+.manifesto__principles {
+  display: flex;
+  flex-direction: column;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  margin-bottom: var(--s-9);
+  text-align: left;
+}
+
+.manifesto__principle {
+  display: grid;
+  grid-template-columns: 48px 1fr;
+  gap: var(--s-5);
+  align-items: start;
+  padding: var(--s-6) 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.manifesto__num {
+  font-family: var(--font-display);
+  font-size: 22px;
+  font-weight: 400;
+  font-style: italic;
+  color: rgba(196, 120, 89, 0.5);
+  line-height: 1.4;
+  flex-shrink: 0;
+}
+
+.manifesto__principle-body {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.manifesto__principle-title {
+  font-family: var(--font-sans);
+  font-size: var(--fs-15);
+  font-weight: 500;
+  color: #f5f0e8;
+  line-height: var(--lh-snug);
+}
+
+.manifesto__principle-text {
+  font-family: var(--font-sans);
+  font-size: var(--fs-13);
+  font-weight: 300;
+  color: rgba(245, 240, 232, 0.55);
+  line-height: 1.65;
+  margin: 0;
+}
+
+// Cierre
+.manifesto__closing {
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  padding-top: var(--s-8);
+  text-align: center;
+}
+
+.manifesto__quote {
+  font-family: var(--font-display);
+  font-size: clamp(18px, 2.5vw, 26px);
+  font-weight: 500;
+  font-style: italic;
+  color: rgba(245, 240, 232, 0.85);
+  line-height: 1.4;
+  max-width: 580px;
+  margin: 0 auto var(--s-4);
+  quotes: none;
+}
+
+.manifesto__attribution {
+  font-family: var(--font-sans);
+  font-size: var(--fs-13);
+  font-weight: 300;
+  color: rgba(245, 240, 232, 0.4);
+  line-height: 1.6;
+}
+
+// Mobile
+@media (max-width: 768px) {
+  .manifesto__principle {
+    grid-template-columns: 36px 1fr;
+    gap: var(--s-4);
+  }
+
+  .manifesto__num {
+    font-size: 18px;
+  }
+}
