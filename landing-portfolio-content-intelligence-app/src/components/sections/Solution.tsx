@@ -1,7 +1,8 @@
 import { useTranslation } from 'react-i18next';
 import SolutionDiagram from './SolutionDiagram';
 
-const caps = ['c1', 'c2', 'c3', 'c4'] as const;
+const caps  = ['c1', 'c2', 'c3', 'c4'] as const;
+const nodes = ['n1', 'n2', 'n3', 'n4'] as const;
 
 // Colores por posición — terracota top row, slate bottom row
 const dotColor = (index: number) => index < 2 ? '#c47859' : '#364965';
@@ -22,6 +23,23 @@ const Solution = () => {
         </div>
 
         <SolutionDiagram />
+
+        {/* ── Mobile fallback list (hidden on desktop via CSS) ── */}
+        <div className="sol-list" aria-hidden="false">
+          {nodes.map((key, i) => (
+            <div
+              key={key}
+              className={`sol-list__item sol-list__item--${i < 2 ? 'terracota' : 'slate'}`}
+            >
+              <h4 className="sol-list__title">{t(`nodes.${key}.title`)}</h4>
+              <p className="sol-list__body">
+                {t(`nodes.${key}.desc1`)}{' '}
+                {t(`nodes.${key}.desc2`)}{' '}
+                {t(`nodes.${key}.desc3`, '')}
+              </p>
+            </div>
+          ))}
+        </div>
 
         {/* ── Franja de capabilities ── */}
         <div className="sol-caps">
