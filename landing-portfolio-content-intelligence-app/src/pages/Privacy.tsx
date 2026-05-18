@@ -1,7 +1,6 @@
 import { useEffect } from "react";
 import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
-import "../styles/pages/_legal.scss"
 
 const CONTACT_EMAIL = "andres@content-intel.app";
 const WEBSITE = "content-intel.app";
