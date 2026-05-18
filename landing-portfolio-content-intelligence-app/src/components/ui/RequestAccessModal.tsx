@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef } from "react";
 import { useTranslation } from "react-i18next";
-import { PLATFORMS, ROLES } from "../../constants/earlyAccessOptions";
+import { useEarlyAccessOptions } from "../../hooks/useEarlyAccessOptions";
 
 type Props = {
   isOpen: boolean;
@@ -8,19 +8,19 @@ type Props = {
   source?: string;
 };
 
-// Map role label → i18n key (labels are in English in the constants)
-const ROLE_KEY: Record<string, string> = {
-  Creator: "independent_creator",
-  Agency:  "agency",
-  Brand:   "brand",
-};
-
 // Validation constants
 const EMAIL_REGEX = /^[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}$/;
 const FOCUS_MAX_CHARS = 120;
 
+// Skeleton widths for platform and role chips while loading
+const PLATFORM_SKELETON_WIDTHS = [80, 70, 90, 65, 40, 55];
+const ROLE_SKELETON_WIDTHS = [120, 70, 60];
+
 const RequestAccessModal = ({ isOpen, onClose, source = "landing" }: Props) => {
   const { t, i18n } = useTranslation("early_access_modal");
+
+  // Options fetched from Supabase at runtime
+  const { platforms, roles, optionsLoading, optionsError } = useEarlyAccessOptions();
 
   // Form state
   const [email, setEmail]               = useState("");
@@ -72,7 +72,7 @@ const RequestAccessModal = ({ isOpen, onClose, source = "landing" }: Props) => {
     }
   };
 
-  // ── handleSubmit — lógica de submit intacta ───────────────────────────
+  // ── handleSubmit ──────────────────────────────────────────────────────
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
 
@@ -96,8 +96,8 @@ const RequestAccessModal = ({ isOpen, onClose, source = "landing" }: Props) => {
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify({
             email,
-            platform_id:   platform,
-            role_id:       role,
+            platform_id:   platform,   // UUID from Supabase — no longer hardcoded
+            role_id:       role,        // UUID from Supabase — no longer hardcoded
             creator_focus: creatorFocus,
             source,
             language,
@@ -223,19 +223,33 @@ const RequestAccessModal = ({ isOpen, onClose, source = "landing" }: Props) => {
                   {t("platform_label")}{" "}
                   <span className="modal-field__required">*</span>
                 </label>
-                <div className="modal-chips">
-                  {PLATFORMS.map((p) => (
-                    <button
-                      key={p.id}
-                      type="button"
-                      className={`modal-chip${platform === p.id ? " modal-chip--active-t" : ""}`}
-                      onClick={() => handlePlatformSelect(p.id)}
-                      aria-pressed={platform === p.id}
-                    >
-                      {t(`platforms.${p.label.toLowerCase()}`)}
-                    </button>
-                  ))}
-                </div>
+
+                {optionsLoading ? (
+                  <div className="modal-chips modal-chips--loading" aria-hidden="true">
+                    {PLATFORM_SKELETON_WIDTHS.map((w, i) => (
+                      <div
+                        key={i}
+                        className="modal-chip modal-chip--skeleton"
+                        style={{ width: w }}
+                      />
+                    ))}
+                  </div>
+                ) : (
+                  <div className="modal-chips">
+                    {platforms.map((p) => (
+                      <button
+                        key={p.id}
+                        type="button"
+                        className={`modal-chip${platform === p.id ? " modal-chip--active-t" : ""}`}
+                        onClick={() => handlePlatformSelect(p.id)}
+                        aria-pressed={platform === p.id}
+                      >
+                        {p.label}
+                      </button>
+                    ))}
+                  </div>
+                )}
+
                 {showPlatformError && (
                   <p className="modal-field__error" role="alert">
                     {t("error_platform")}
@@ -249,25 +263,46 @@ const RequestAccessModal = ({ isOpen, onClose, source = "landing" }: Props) => {
                   {t("role_label")}{" "}
                   <span className="modal-field__required">*</span>
                 </label>
-                <div className="modal-chips">
-                  {ROLES.map((r) => (
-                    <button
-                      key={r.id}
-                      type="button"
-                      className={`modal-chip${role === r.id ? " modal-chip--active-s" : ""}`}
-                      onClick={() => handleRoleSelect(r.id)}
-                      aria-pressed={role === r.id}
-                    >
-                      {t(`roles.${ROLE_KEY[r.label] ?? r.label.toLowerCase()}`)}
-                    </button>
-                  ))}
-                </div>
+
+                {optionsLoading ? (
+                  <div className="modal-chips modal-chips--loading" aria-hidden="true">
+                    {ROLE_SKELETON_WIDTHS.map((w, i) => (
+                      <div
+                        key={i}
+                        className="modal-chip modal-chip--skeleton"
+                        style={{ width: w }}
+                      />
+                    ))}
+                  </div>
+                ) : (
+                  <div className="modal-chips">
+                    {roles.map((r) => (
+                      <button
+                        key={r.id}
+                        type="button"
+                        className={`modal-chip${role === r.id ? " modal-chip--active-s" : ""}`}
+                        onClick={() => handleRoleSelect(r.id)}
+                        aria-pressed={role === r.id}
+                      >
+                        {r.label}
+                      </button>
+                    ))}
+                  </div>
+                )}
+
                 {showRoleError && (
                   <p className="modal-field__error" role="alert">
                     {t("error_role")}
                   </p>
                 )}
               </div>
+
+              {/* Error al cargar opciones desde Supabase */}
+              {optionsError && !optionsLoading && (
+                <p className="modal-field__error modal-field__error--global" role="alert">
+                  {optionsError}
+                </p>
+              )}
 
               <div className="modal-divider" aria-hidden="true" />
 
@@ -298,7 +333,7 @@ const RequestAccessModal = ({ isOpen, onClose, source = "landing" }: Props) => {
               <button
                 type="submit"
                 className="modal-submit"
-                disabled={loading || !isFormValid}
+                disabled={loading || optionsLoading || !isFormValid}
               >
                 {loading ? t("loading") : t("submit")}
               </button>

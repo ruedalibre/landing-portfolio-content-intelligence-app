@@ -332,6 +332,40 @@
   }
 }
 
+// ── Skeleton loader — chips mientras cargan desde Supabase ──
+
+.modal-chips--loading {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.modal-chip--skeleton {
+  height: 29px; // misma altura que un chip real con padding 5px 12px + border
+  border-radius: var(--r-pill);
+  background: linear-gradient(
+    90deg,
+    var(--border-subtle, #e8e4dd) 25%,
+    var(--bg-elevated, #f0ede7) 50%,
+    var(--border-subtle, #e8e4dd) 75%
+  );
+  background-size: 200% 100%;
+  animation: skeleton-shimmer 1.4s ease-in-out infinite;
+  border: none;
+  cursor: default;
+  pointer-events: none;
+}
+
+@keyframes skeleton-shimmer {
+  0%   { background-position: 200% 0; }
+  100% { background-position: -200% 0; }
+}
+
+// Global options error (below chips, above divider)
+.modal-field__error--global {
+  margin-top: var(--s-3);
+}
+
 // Mobile
 @media (max-width: 480px) {
   .modal {
