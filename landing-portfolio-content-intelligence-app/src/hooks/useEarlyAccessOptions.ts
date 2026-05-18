@@ -3,7 +3,7 @@
 //
 // Confirmed DB schemas:
 //   roles:     id (uuid), code (text: creator|agency|brand|admin), name (text), description (text), created_at
-//   platforms: id (uuid), name (text), slug (text) — ⚠️ slug column TBC, adjust if differs
+//   platforms: id (uuid), name (text), slug (text), icon (text), is_active (boolean), type_id (uuid), created_at
 //
 // RLS requirement: both tables must allow SELECT for the `anon` role,
 // since the modal is shown to unauthenticated users.
@@ -37,10 +37,11 @@ export const useEarlyAccessOptions = (): EarlyAccessOptions => {
           { data: platformData, error: platformError },
           { data: roleData,     error: roleError },
         ] = await Promise.all([
-          // platforms: column name TBC — update "slug" if the actual column differs
+          // platforms: slug confirmed. Filter is_active = true to exclude deactivated entries.
           supabase
             .from("platforms")
             .select("id, name, slug")
+            .eq("is_active", true)
             .order("name"),
 
           // roles: confirmed schema uses "code" (not "slug").
@@ -59,7 +60,7 @@ export const useEarlyAccessOptions = (): EarlyAccessOptions => {
           (platformData ?? []).map((p) => ({
             id:    p.id,
             label: p.name,
-            value: p.slug,   // ⚠️ update if column name differs
+            value: p.slug,   // confirmed: "slug" column exists
           }))
         );
         setRoles(
