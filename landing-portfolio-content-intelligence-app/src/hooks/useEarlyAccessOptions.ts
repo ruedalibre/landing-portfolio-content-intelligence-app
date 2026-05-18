@@ -1,11 +1,9 @@
 // useEarlyAccessOptions — fetches platform and role options from Supabase at runtime.
 // Replaces the hardcoded UUIDs that lived in constants/earlyAccessOptions.ts.
 //
-// NOTE: Verify column names match the actual DB schema before deploying.
-// Expected schema:
-//   platforms: id (uuid), name (text), slug (text)
-//   roles:     id (uuid), name (text), slug (text)
-// If columns differ (e.g. "label"/"value"), update the .select() and map() below.
+// Confirmed DB schemas:
+//   roles:     id (uuid), code (text: creator|agency|brand|admin), name (text), description (text), created_at
+//   platforms: id (uuid), name (text), slug (text) — ⚠️ slug column TBC, adjust if differs
 //
 // RLS requirement: both tables must allow SELECT for the `anon` role,
 // since the modal is shown to unauthenticated users.
@@ -14,9 +12,9 @@ import { useEffect, useState } from "react";
 import { supabase } from "../lib/supabase";
 
 export type EarlyAccessOption = {
-  id: string;   // UUID — sent to the edge function as platform_id / role_id
+  id: string;    // UUID — sent to the edge function as platform_id / role_id
   label: string; // Display name shown in the chip (e.g. "LinkedIn", "Creator")
-  value: string; // Slug (e.g. "linkedin", "creator") — used for i18n key lookup if needed
+  value: string; // Code/slug (e.g. "linkedin", "creator") — for i18n key lookup if needed
 };
 
 type EarlyAccessOptions = {
@@ -39,8 +37,19 @@ export const useEarlyAccessOptions = (): EarlyAccessOptions => {
           { data: platformData, error: platformError },
           { data: roleData,     error: roleError },
         ] = await Promise.all([
-          supabase.from("platforms").select("id, name, slug").order("name"),
-          supabase.from("roles").select("id, name, slug").order("name"),
+          // platforms: column name TBC — update "slug" if the actual column differs
+          supabase
+            .from("platforms")
+            .select("id, name, slug")
+            .order("name"),
+
+          // roles: confirmed schema uses "code" (not "slug").
+          // Exclude "admin" — system role, not meant for the public-facing form.
+          supabase
+            .from("roles")
+            .select("id, name, code")
+            .neq("code", "admin")
+            .order("name"),
         ]);
 
         if (platformError) throw platformError;
@@ -50,14 +59,14 @@ export const useEarlyAccessOptions = (): EarlyAccessOptions => {
           (platformData ?? []).map((p) => ({
             id:    p.id,
             label: p.name,
-            value: p.slug,
+            value: p.slug,   // ⚠️ update if column name differs
           }))
         );
         setRoles(
           (roleData ?? []).map((r) => ({
             id:    r.id,
             label: r.name,
-            value: r.slug,
+            value: r.code,   // confirmed: "code" column (creator | agency | brand)
           }))
         );
       } catch {
