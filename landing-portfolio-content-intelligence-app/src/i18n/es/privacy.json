@@ -1,69 +1,142 @@
 {
-  "page_title": "Política de Privacidad",
-  "last_updated": "Última actualización: 3 de mayo de 2026",
-  "back": "← Volver a Content Intelligence",
-
-  "s1_title": "1. Quiénes Somos",
-  "s1_p1": "Content Intelligence App es operada por Andrés Pérez Díaz, ciudadano colombiano. Estamos comprometidos con proteger tu información personal y ser transparentes sobre cómo la utilizamos.",
-  "s1_contact": "Contacto:",
-
-  "s2_title": "2. Información que Recopilamos",
-  "s2_direct_title": "Información que proporcionas directamente:",
-  "s2_direct_li1": "Correo electrónico — utilizado para la creación de cuenta y comunicaciones",
-  "s2_direct_li2": "Contraseña — almacenada de forma segura y cifrada por nuestro proveedor de autenticación",
-  "s2_direct_li3": "Datos de contenido — ideas, temas, registros de contenido y descripciones que creas en la App",
-  "s2_direct_li4": "Información de perfil — campos opcionales proporcionados durante el proceso de incorporación",
-  "s2_auto_title": "Información recopilada automáticamente:",
-  "s2_auto_li1": "Datos de uso — qué funciones utilizas, con qué frecuencia generas briefs o informes, eventos de descarga",
-  "s2_auto_li2": "Datos de sesión — marcas de tiempo de inicio de sesión e información de sesión",
-  "s2_not_title": "Información que no recopilamos:",
-  "s2_not_li1": "Información de pago o financiera (el Servicio es actualmente gratuito)",
-  "s2_not_li2": "Datos de ubicación precisos",
-  "s2_not_li3": "Identificadores de dispositivo o IDs publicitarios",
-  "s2_not_li4": "Datos de menores (el Servicio está restringido a usuarios de 18 años o más)",
-
-  "s3_title": "3. Cómo Usamos tu Información",
-  "s3_intro": "Usamos tu información para:",
-  "s3_li1": "Proporcionar y mejorar el Servicio",
-  "s3_li2": "Generar briefs creativos e informes impulsados por IA personalizados a tus patrones de contenido",
-  "s3_li3": "Enviar comunicaciones relacionadas con tu cuenta",
-  "s3_li4": "Analizar tendencias de uso agregadas y anonimizadas para mejorar la plataforma",
-  "s3_li5": "Mantener la seguridad e integridad del Servicio",
-  "s3_not_intro": "No usamos tu información para:",
-  "s3_not_li1": "Vender o compartir con anunciantes de terceros",
-  "s3_not_li2": "Entrenar modelos de IA",
-  "s3_not_li3": "Crear perfiles individuales con fines publicitarios",
-
-  "s4_title": "4. Servicios de Terceros",
-  "s4_intro": "Utilizamos los siguientes servicios de terceros de confianza:",
-  "s4_li1": "Supabase — Base de datos, autenticación e infraestructura backend",
-  "s4_li2": "Anthropic (Claude API) — Generación de briefs e informes impulsada por IA",
-  "s4_li3": "Resend — Entrega de correos electrónicos transaccionales",
-  "s4_note": "Tus datos no se comparten con ningún otro tercero.",
-
-  "s5_title": "5. Procesamiento por IA",
-  "s5_p1": "Cuando generas un brief o informe creativo, tus patrones de contenido se envían a la API Claude de Anthropic para generar una respuesta personalizada. Estos datos se procesan en tiempo real y Anthropic no los retiene con fines de entrenamiento bajo sus términos estándar de API.",
-
-  "s6_title": "6. Almacenamiento y Seguridad de Datos",
-  "s6_p1": "Tus datos se almacenan en la infraestructura de Supabase con Seguridad a Nivel de Fila (RLS), conexiones cifradas (HTTPS/TLS) y contraseñas con hash. Implementamos medidas de seguridad razonables, pero no podemos garantizar seguridad absoluta.",
-
-  "s7_title": "7. Retención de Datos",
-  "s7_p1": "Retenemos tus datos mientras tu cuenta esté activa. Si eliminas tu cuenta, tus datos de perfil personal y contenido se eliminarán en un plazo de 30 días. Los datos agregados y anonimizados pueden retenerse para análisis de la plataforma.",
-
-  "s8_title": "8. Tus Derechos",
-  "s8_p1": "Bajo la ley colombiana de protección de datos (Ley 1581 de 2012), tienes derecho a acceder, corregir, eliminar y exportar tus datos personales, y a objetar usos específicos. Contáctanos en",
-  "s8_p2": "y responderemos en un plazo de 15 días hábiles.",
-
-  "s9_title": "9. Cookies",
-  "s9_p1": "La App utiliza únicamente cookies de sesión esenciales necesarias para la autenticación. No utilizamos cookies publicitarias, píxeles de seguimiento ni cookies de análisis de terceros.",
-
-  "s10_title": "10. Privacidad de Menores",
-  "s10_p1": "Este Servicio no está dirigido a personas menores de 18 años. No recopilamos conscientemente información personal de menores.",
-
-  "s11_title": "11. Cambios a Esta Política",
-  "s11_p1": "Podemos actualizar esta Política de Privacidad ocasionalmente. Notificaremos a los usuarios registrados por correo electrónico sobre cualquier cambio significativo.",
-
-  "s12_title": "12. Contacto",
-  "s12_name": "Andrés Pérez Díaz",
-  "s12_country": "Colombia"
+  "page_title": "Política de Privacidad — Content Intelligence Platform",
+  "hero_label": "Legal",
+  "hero_title": "Política de Privacidad",
+  "hero_entity": "Content Intelligence Platform",
+  "hero_effective": "Fecha de vigencia: 1 de enero de 2026",
+  "hero_updated": "Última actualización: 1 de enero de 2026",
+  "summary_label": "Resumen en lenguaje simple",
+  "summary_text": "Solo recopilamos lo necesario para operar el servicio. No vendemos tus datos. No usamos tu contenido creativo para entrenar modelos de IA sin tu consentimiento. Puedes solicitar la eliminación de tus datos en cualquier momento.",
+  "toc_title": "Contenido",
+  "back_to_site": "← Volver al sitio",
+  "footer_copyright": "© 2026 Content Intelligence Platform",
+  "footer_terms": "Términos de Servicio",
+  "footer_privacy": "Política de Privacidad",
+  "toc": {
+    "intro":         "1. Introducción",
+    "collect":       "2. Datos que recopilamos",
+    "use":           "3. Cómo usamos tus datos",
+    "sharing":       "4. Compartir datos",
+    "ai_data":       "5. IA y tus datos",
+    "storage":       "6. Almacenamiento",
+    "cookies":       "7. Cookies",
+    "rights":        "8. Tus derechos",
+    "children":      "9. Menores de edad",
+    "international": "10. Transferencias internacionales",
+    "changes":       "11. Cambios",
+    "contact":       "12. Contacto"
+  },
+  "s_intro": {
+    "title": "Introducción",
+    "p1_before": "Content Intelligence Platform (\"nosotros\") se compromete a proteger tu privacidad. Esta Política de Privacidad explica cómo recopilamos, usamos, divulgamos y protegemos tu información personal cuando usas nuestro Servicio en",
+    "p1_after": ".",
+    "p2": "Al usar el Servicio, consientes las prácticas descritas en esta política. Si no estás de acuerdo, por favor deja de usar el Servicio."
+  },
+  "s_collect": {
+    "title": "Datos que Recopilamos",
+    "p1": "Recopilamos información en las siguientes categorías:",
+    "table_headers": ["Categoría", "Ejemplos", "Propósito"],
+    "table_rows": [
+      ["Datos de cuenta",      "Email, preferencia de plataforma, tipo de creador",       "Registro y onboarding"],
+      ["Datos de contenido",   "Ideas, briefs, registros de contenido, etiquetas",         "Funcionalidad principal"],
+      ["Datos de uso",         "Funciones usadas, duración de sesión, patrones",            "Mejora del servicio"],
+      ["Datos técnicos",       "IP, tipo de navegador, dispositivo",                        "Seguridad y analítica"],
+      ["Comunicaciones",       "Mensajes de soporte, envíos de feedback",                   "Atención al cliente"]
+    ],
+    "p2": "No recopilamos datos personales sensibles como documentos de identidad, números de cuentas financieras, información de salud o datos biométricos."
+  },
+  "s_use": {
+    "title": "Cómo Usamos tus Datos",
+    "p1": "Usamos la información que recopilamos para:",
+    "list": [
+      "Proporcionar, mantener y mejorar el Servicio",
+      "Personalizar tu experiencia y generar insights con IA",
+      "Enviar correos transaccionales (confirmación de cuenta, actualizaciones)",
+      "Notificarte sobre el estado de tu acceso anticipado y novedades del producto",
+      "Responder a tus solicitudes de soporte y feedback",
+      "Detectar y prevenir fraudes, abusos o incidentes de seguridad",
+      "Cumplir con obligaciones legales"
+    ],
+    "p2": "No enviaremos correos de marketing sin tu consentimiento explícito y puedes cancelar la suscripción en cualquier momento."
+  },
+  "s_sharing": {
+    "title": "Compartir y Divulgar Datos",
+    "no_sell": "No vendemos tus datos personales.",
+    "p1": "Podemos compartir tu información solo en estas circunstancias limitadas:",
+    "list": [
+      "Proveedores de servicios: Usamos servicios de terceros de confianza incluyendo Supabase (base de datos y autenticación), Stripe (procesamiento de pagos, cuando esté activo) y Anthropic (API del modelo de IA). Estos proveedores procesan datos solo en la medida necesaria para prestar sus servicios.",
+      "Requisitos legales: Podemos divulgar tu información si lo requiere la ley, una orden judicial o una autoridad gubernamental.",
+      "Transferencias de negocio: En caso de fusión, adquisición o venta de activos, tus datos pueden ser transferidos. Te notificaremos antes de que tus datos queden sujetos a una política de privacidad diferente.",
+      "Con tu consentimiento: Podemos compartir datos para otros fines con tu consentimiento explícito."
+    ]
+  },
+  "s_ai_data": {
+    "title": "Funciones de IA y tus Datos",
+    "p1": "Content Intelligence Platform usa IA para generar briefs, insights y sugerencias creativas. Así es como manejamos tus datos en este contexto:",
+    "list": [
+      "Tu contenido e ideas se envían a nuestro proveedor de modelos de IA (Anthropic) únicamente para generar respuestas para ti",
+      "No usamos tu contenido creativo para entrenar modelos de IA sin tu consentimiento explícito de participación",
+      "Los outputs generados por IA se almacenan en tu cuenta y no se comparten con otros usuarios",
+      "Puedes eliminar tu contenido y los outputs de IA asociados en cualquier momento"
+    ],
+    "p2": "Tu voz creativa sigue siendo tuya. Usamos la IA como herramienta para amplificar tu proceso, no para extraer valor de tu trabajo."
+  },
+  "s_storage": {
+    "title": "Almacenamiento y Seguridad de Datos",
+    "p1": "Tus datos se almacenan en la infraestructura de Supabase, en servidores ubicados en los Estados Unidos. Implementamos medidas de seguridad estándar de la industria que incluyen:",
+    "list": [
+      "Cifrado en tránsito (TLS/HTTPS) y en reposo",
+      "Políticas de seguridad a nivel de fila en el acceso a la base de datos",
+      "Revisiones de seguridad periódicas y controles de acceso",
+      "Acceso limitado de empleados a los datos de producción"
+    ],
+    "p2": "Conservamos tus datos personales mientras tu cuenta esté activa o sea necesario para prestar el Servicio. Puedes solicitar la eliminación de tu cuenta y datos asociados en cualquier momento.",
+    "p3": "Aunque tomamos precauciones razonables, ningún sistema es completamente seguro. No podemos garantizar la seguridad absoluta de tus datos."
+  },
+  "s_cookies": {
+    "title": "Cookies y Rastreo",
+    "p1": "Usamos cookies mínimas y tecnologías similares para operar el Servicio:",
+    "list": [
+      "Cookies esenciales: Necesarias para la autenticación y la gestión de sesiones. No se pueden desactivar.",
+      "Cookies analíticas: Usadas para entender cómo se usa el Servicio y mejorarlo. Pueden ser rechazadas."
+    ],
+    "p2": "No usamos cookies publicitarias ni píxeles de rastreo de terceros. Puedes controlar las preferencias de cookies a través de la configuración de tu navegador."
+  },
+  "s_rights": {
+    "title": "Tus Derechos",
+    "p1": "Dependiendo de tu ubicación, puedes tener los siguientes derechos sobre tus datos personales:",
+    "list": [
+      "Acceso: Solicitar una copia de los datos personales que tenemos sobre ti",
+      "Corrección: Solicitar la corrección de datos inexactos o incompletos",
+      "Eliminación: Solicitar la eliminación de tus datos personales (\"derecho al olvido\")",
+      "Portabilidad: Solicitar tus datos en un formato legible por máquina",
+      "Objeción: Oponerte al procesamiento de tus datos para ciertos fines",
+      "Retiro del consentimiento: Retirar el consentimiento cuando el procesamiento se base en él"
+    ],
+    "p2_before": "Para ejercer cualquiera de estos derechos, contáctanos a",
+    "p2_after": ". Responderemos en un plazo de 30 días."
+  },
+  "s_children": {
+    "title": "Privacidad de Menores de Edad",
+    "p1": "El Servicio no está dirigido a personas menores de 18 años. No recopilamos intencionalmente información personal de menores. Si sabes que un menor nos ha proporcionado datos personales, contáctanos y tomaremos medidas para eliminar dicha información."
+  },
+  "s_international": {
+    "title": "Transferencias Internacionales de Datos",
+    "p1": "Content Intelligence Platform opera desde los Estados Unidos. Si estás ubicado fuera de EE.UU., tu información será transferida y procesada allí, donde las leyes de protección de datos pueden diferir de las de tu país.",
+    "p2": "Al usar el Servicio, consientes esta transferencia. Tomamos medidas razonables para garantizar que tus datos sean tratados de forma segura y conforme a esta Política.",
+    "p3": "Para usuarios en el Espacio Económico Europeo (EEE) o el Reino Unido, nos apoyamos en Cláusulas Contractuales Estándar como base legal para las transferencias de datos."
+  },
+  "s_changes": {
+    "title": "Cambios a esta Política",
+    "p1": "Podemos actualizar esta Política de Privacidad de vez en cuando. Cuando hagamos cambios materiales, te notificaremos por correo electrónico y actualizaremos la fecha de \"Última actualización\".",
+    "p2": "Te recomendamos revisar esta política periódicamente. El uso continuado del Servicio después de que los cambios entren en vigor constituye tu aceptación de la política revisada."
+  },
+  "s_contact": {
+    "title": "Contáctanos",
+    "p1": "Si tienes preguntas, inquietudes o solicitudes relacionadas con esta Política de Privacidad o tus datos personales, contáctanos:",
+    "email_label": "Correo electrónico",
+    "website_label": "Sitio web",
+    "entity_label": "Entidad",
+    "p2": "Estamos comprometidos a resolver las inquietudes de privacidad de forma rápida y transparente."
+  }
 }

@@ -1,63 +1,148 @@
 {
-  "page_title": "Términos de Servicio",
-  "last_updated": "Última actualización: 3 de mayo de 2026",
-  "back": "← Volver a Content Intelligence",
-
-  "s1_title": "1. Aceptación de los Términos",
-  "s1_p1": "Al crear una cuenta o utilizar Content Intelligence App (\"la App\", \"el Servicio\"), aceptas estos Términos de Servicio. Si no estás de acuerdo, no uses el Servicio.",
-  "s1_p2": "El Servicio es operado por Andrés Pérez Díaz (\"nosotros\", \"nuestro\"), ciudadano colombiano que opera de forma individual hasta el momento de la formalización empresarial.",
-
-  "s2_title": "2. Elegibilidad",
-  "s2_p1": "Debes tener al menos 18 años para usar este Servicio. Al usar la App, confirmas que cumples con este requisito. No prestamos servicios a menores de manera consciente.",
-
-  "s3_title": "3. Acceso Anticipado",
-  "s3_p1": "El Servicio se encuentra actualmente en fase de acceso anticipado. El acceso es por invitación únicamente. Nos reservamos el derecho de limitar, suspender o revocar el acceso en cualquier momento durante esta fase sin previo aviso.",
-
-  "s4_title": "4. Tu Cuenta",
-  "s4_intro": "Eres responsable de:",
-  "s4_li1": "Mantener tu contraseña segura y confidencial",
-  "s4_li2": "Toda la actividad que ocurra bajo tu cuenta",
-  "s4_li3": "Proporcionar información precisa durante el registro",
-  "s4_note": "No puedes compartir tu cuenta con otros ni crear cuentas en nombre de terceros.",
-
-  "s5_title": "5. Uso del Servicio",
-  "s5_intro": "Aceptas usar el Servicio únicamente para fines lícitos. No puedes:",
-  "s5_li1": "Usar el Servicio para crear contenido que infrinja los derechos de propiedad intelectual de terceros",
-  "s5_li2": "Intentar realizar ingeniería inversa, copiar o replicar el Servicio",
-  "s5_li3": "Usar herramientas automatizadas para acceder al Servicio sin nuestro permiso por escrito",
-  "s5_li4": "Cargar o transmitir contenido dañino, ofensivo o ilegal",
-
-  "s6_title": "6. Contenido que Creas",
-  "s6_p1_label": "Tus ideas y contenido:",
-  "s6_p1": "Todas las ideas, temas y registros de contenido que creas en la App siguen siendo tuyos. No reclamamos propiedad sobre la información que ingresas.",
-  "s6_p2_label": "Briefs e informes generados por IA:",
-  "s6_p2": "Los briefs e informes creativos generados por la App son resultados asistidos por IA basados en patrones derivados de tu propio contenido e ideas. Se proporcionan como guías creativas y herramientas de orientación — no como contenido terminado ni como estrategias creativas definitivas.",
-  "s6_p3_label": "Aviso importante sobre el contenido generado por IA y los derechos de autor:",
-  "s6_p3": "Los resultados generados por IA pueden no ser elegibles para protección de derechos de autor bajo las leyes de Colombia, Estados Unidos u otras jurisdicciones. Los marcos legales actuales en muchos países requieren autoría humana para la elegibilidad de derechos de autor. Los briefs e informes proporcionados por este Servicio son herramientas para apoyar tu proceso creativo. El contenido original que creas usando estas herramientas como referencia es tu propio trabajo y puede ser elegible para protección de derechos de autor. Recomendamos consultar con un profesional legal si tienes preguntas específicas sobre derechos de propiedad intelectual relacionados con contenido asistido por IA.",
-  "s6_p4": "No reclamamos derechos de propiedad intelectual sobre los resultados generados por IA que te entregamos a través del Servicio.",
-
-  "s7_title": "7. Datos y Entrenamiento de IA",
-  "s7_p1": "No utilizamos tus datos personales ni tu contenido para entrenar modelos de IA. Las funciones de IA de este Servicio son impulsadas por la API Claude de Anthropic. Tus datos se procesan para generar respuestas, pero Anthropic no los retiene con fines de entrenamiento de modelos bajo sus términos estándar de API.",
-  "s7_p2": "Podemos usar patrones de uso agregados, anonimizados y no identificables para mejorar el Servicio con el tiempo.",
-
-  "s8_title": "8. Propiedad Intelectual del Servicio",
-  "s8_p1": "La App, su diseño, funcionalidades y tecnología subyacente son propiedad intelectual de Andrés Pérez Díaz. No puedes copiar, reproducir ni distribuir ninguna parte del Servicio sin permiso por escrito.",
-
-  "s9_title": "9. Disponibilidad y Cambios",
-  "s9_p1": "Nos esforzamos por mantener el Servicio disponible, pero no garantizamos acceso ininterrumpido. Podemos modificar, suspender o discontinuar funcionalidades en cualquier momento. Haremos esfuerzos razonables para notificar a los usuarios sobre cambios significativos.",
-
-  "s10_title": "10. Exclusión de Garantías",
-  "s10_p1": "El Servicio se proporciona \"tal cual\" sin garantías de ningún tipo. No garantizamos que el contenido generado por IA sea preciso, completo o adecuado para ningún propósito específico. Usa los resultados del Servicio según tu propio criterio.",
-
-  "s11_title": "11. Limitación de Responsabilidad",
-  "s11_p1": "En la máxima medida permitida por la ley colombiana, Andrés Pérez Díaz no será responsable por daños indirectos, incidentales o consecuentes derivados del uso del Servicio.",
-
-  "s12_title": "12. Terminación",
-  "s12_p1": "Podemos terminar o suspender tu cuenta si violas estos Términos. Puedes eliminar tu cuenta en cualquier momento contactándonos.",
-
-  "s13_title": "13. Ley Aplicable",
-  "s13_p1": "Estos Términos se rigen por las leyes de la República de Colombia. Cualquier disputa se resolverá bajo jurisdicción colombiana.",
-
-  "s14_title": "14. Contacto",
-  "s14_p1": "Para preguntas sobre estos Términos, contáctanos en:"
+  "page_title": "Términos de Servicio — Content Intelligence Platform",
+  "hero_label": "Legal",
+  "hero_title": "Términos de Servicio",
+  "hero_entity": "Content Intelligence Platform",
+  "hero_effective": "Fecha de vigencia: 1 de enero de 2026",
+  "hero_updated": "Última actualización: 1 de enero de 2026",
+  "summary_label": "Resumen en lenguaje simple",
+  "summary_text": "Estos términos rigen el uso de Content Intelligence Platform. Al usar nuestro servicio, aceptas estos términos. Ofrecemos una plataforma con IA para ayudar a creadores de contenido a organizar ideas y mejorar su proceso creativo. Por favor léelos con atención.",
+  "toc_title": "Contenido",
+  "back_to_site": "← Volver al sitio",
+  "footer_copyright": "© 2026 Content Intelligence Platform",
+  "footer_terms": "Términos de Servicio",
+  "footer_privacy": "Política de Privacidad",
+  "toc": {
+    "acceptance": "1. Aceptación",
+    "description": "2. Descripción del Servicio",
+    "accounts": "3. Cuentas",
+    "early_access": "4. Acceso Anticipado",
+    "content": "5. Tu Contenido",
+    "ai": "6. Funciones de IA",
+    "payments": "7. Pagos",
+    "prohibited": "8. Uso Prohibido",
+    "ip": "9. Propiedad Intelectual",
+    "disclaimer": "10. Descargo de Garantías",
+    "limitation": "11. Limitación de Responsabilidad",
+    "termination": "12. Terminación",
+    "governing": "13. Ley Aplicable",
+    "changes": "14. Cambios",
+    "contact": "15. Contacto"
+  },
+  "s_acceptance": {
+    "title": "Aceptación de los Términos",
+    "p1": "Al acceder o usar Content Intelligence Platform (\"el Servicio\", \"nosotros\"), aceptas quedar vinculado por estos Términos de Servicio (\"Términos\"). Si no estás de acuerdo, por favor no uses el Servicio.",
+    "p2": "Estos Términos aplican a todos los usuarios, incluyendo visitantes, usuarios registrados y participantes del acceso anticipado. Al registrarte o crear una cuenta, confirmas que tienes al menos 18 años y capacidad legal para celebrar este acuerdo."
+  },
+  "s_description": {
+    "title": "Descripción del Servicio",
+    "p1": "Content Intelligence Platform es una aplicación SaaS que ayuda a los creadores de contenido a capturar ideas, generar briefs asistidos por IA, descubrir patrones creativos y construir sistemas de contenido personales.",
+    "includes": "El Servicio incluye, entre otros:",
+    "list": [
+      "Herramientas de captura y organización de ideas",
+      "Generación de briefs de contenido con IA",
+      "Análisis de patrones creativos e insights",
+      "Perfil de ADN creativo",
+      "Participación en el programa de acceso anticipado"
+    ],
+    "p2": "Nos reservamos el derecho de modificar, suspender o descontinuar cualquier aspecto del Servicio en cualquier momento, especialmente durante la fase de acceso anticipado."
+  },
+  "s_accounts": {
+    "title": "Cuentas y Registro",
+    "p1": "Para acceder a ciertas funciones debes crear una cuenta con información precisa y actualizada.",
+    "p2_before": "Eres responsable de mantener la confidencialidad de tus credenciales. Debes notificarnos inmediatamente a",
+    "p2_after": "sobre cualquier uso no autorizado de tu cuenta.",
+    "p3": "Nos reservamos el derecho de rechazar el servicio, terminar cuentas o eliminar contenido a nuestra entera discreción."
+  },
+  "s_early_access": {
+    "title": "Programa de Acceso Anticipado",
+    "p1": "El Servicio está actualmente en fase de acceso anticipado. Al unirte, reconoces que:",
+    "list": [
+      "El Servicio aún no está completamente lanzado y puede contener errores o funciones incompletas",
+      "Las características, funcionalidades y precios están sujetos a cambios sin previo aviso",
+      "Los precios de acceso anticipado se ofrecen como beneficio y pueden no reflejar el precio final",
+      "Podemos recopilar datos de uso y feedback adicional para mejorar el Servicio",
+      "El acceso puede ser limitado, revocado o modificado en cualquier momento"
+    ],
+    "p2": "Tu participación ayuda a dar forma al producto final. Agradecemos tu feedback y paciencia mientras construimos."
+  },
+  "s_content": {
+    "title": "Tu Contenido",
+    "p1": "Conservas la propiedad total de todas las ideas, contenidos y materiales creativos que envíes al Servicio (\"Tu Contenido\"). Al usarlo, nos otorgas una licencia limitada, no exclusiva y libre de regalías para procesar, almacenar y mostrar Tu Contenido únicamente con el fin de prestarte el Servicio.",
+    "p2": "No reclamamos propiedad sobre Tu Contenido. No venderemos, compartiremos ni usaremos Tu Contenido para entrenar modelos de IA sin tu consentimiento explícito.",
+    "p3": "Garantizas que Tu Contenido no viola derechos de terceros, incluyendo derechos de propiedad intelectual, y cumple con la ley aplicable."
+  },
+  "s_ai": {
+    "title": "Contenido Generado por IA",
+    "p1": "El Servicio usa inteligencia artificial para generar briefs, insights y sugerencias. Reconoces que:",
+    "list": [
+      "El contenido generado por IA es un punto de partida y puede requerir edición o verificación",
+      "No garantizamos la exactitud o idoneidad del contenido generado por IA",
+      "Eres responsable de revisar cualquier contenido generado por IA antes de publicarlo",
+      "Los outputs de IA pueden ocasionalmente producir resultados inesperados o imperfectos"
+    ],
+    "p2": "Content Intelligence Platform amplifica tu creatividad — no reemplaza tu juicio ni tu voz creativa."
+  },
+  "s_payments": {
+    "title": "Pagos y Facturación",
+    "p1": "Las funciones de pago se introducirán después de la fase de acceso anticipado. Cuando estén disponibles:",
+    "list": [
+      "Los pagos se procesarán de forma segura a través de Stripe",
+      "Las suscripciones se facturan por adelantado mensual o anualmente",
+      "Todas las tarifas no son reembolsables salvo que la ley lo requiera",
+      "Nos reservamos el derecho de cambiar precios con al menos 30 días de aviso a los suscriptores existentes"
+    ],
+    "p2": "Los participantes del acceso anticipado con precios especiales serán notificados de sus términos de facturación por separado."
+  },
+  "s_prohibited": {
+    "title": "Uso Prohibido",
+    "p1": "Aceptas no usar el Servicio para:",
+    "list": [
+      "Violar leyes o regulaciones aplicables",
+      "Infringir derechos de propiedad intelectual de terceros",
+      "Generar o distribuir contenido dañino, abusivo o ilegal",
+      "Intentar acceder sin autorización a cualquier parte del Servicio",
+      "Usar medios automatizados para extraer datos del Servicio",
+      "Revender o redistribuir el Servicio sin permiso escrito",
+      "Hacerse pasar por otra persona o entidad",
+      "Interferir con la integridad o el rendimiento del Servicio"
+    ]
+  },
+  "s_ip": {
+    "title": "Propiedad Intelectual",
+    "p1": "El Servicio y su contenido original, características y funcionalidades son y seguirán siendo propiedad exclusiva de Content Intelligence Platform y sus licenciantes.",
+    "p2": "Nuestras marcas registradas no pueden usarse en relación con ningún producto o servicio sin nuestro consentimiento previo por escrito."
+  },
+  "s_disclaimer": {
+    "title": "Descargo de Garantías",
+    "p1": "El Servicio se proporciona \"tal como está\" y \"según disponibilidad\" sin garantías de ningún tipo, ya sean expresas o implícitas.",
+    "p2": "No garantizamos que el Servicio sea ininterrumpido, libre de errores o completamente seguro."
+  },
+  "s_limitation": {
+    "title": "Limitación de Responsabilidad",
+    "p1": "En la máxima medida permitida por la ley aplicable, Content Intelligence Platform no será responsable de daños indirectos, incidentales, especiales, consecuentes o punitivos.",
+    "p2": "Nuestra responsabilidad total no excederá el monto pagado por ti en los doce meses anteriores al reclamo, o $50 USD si no se han realizado pagos."
+  },
+  "s_termination": {
+    "title": "Terminación",
+    "p1_before": "Puedes terminar tu cuenta en cualquier momento contactándonos a",
+    "p2": "Nos reservamos el derecho de suspender o terminar tu acceso al Servicio en cualquier momento, con o sin causa, con o sin previo aviso."
+  },
+  "s_governing": {
+    "title": "Ley Aplicable",
+    "p1": "Estos Términos se regirán e interpretarán de conformidad con las leyes del Estado de Wyoming, Estados Unidos.",
+    "p2": "Cualquier disputa estará sujeta a la jurisdicción exclusiva de los tribunales estatales y federales ubicados en Wyoming."
+  },
+  "s_changes": {
+    "title": "Cambios a estos Términos",
+    "p1": "Nos reservamos el derecho de actualizar estos Términos en cualquier momento. Cuando hagamos cambios materiales, notificaremos a los usuarios registrados por correo electrónico.",
+    "p2": "El uso continuado del Servicio después de que los cambios entren en vigor constituye tu aceptación de los nuevos Términos."
+  },
+  "s_contact": {
+    "title": "Contáctanos",
+    "p1": "Si tienes preguntas sobre estos Términos, contáctanos:",
+    "email_label": "Correo electrónico",
+    "website_label": "Sitio web",
+    "entity_label": "Entidad"
+  }
 }
