@@ -11,18 +11,14 @@
 @use "./layout/section";
 
 // sections
-@use "./sections/capabilities";
 @use "./sections/core-insight";
 @use "./sections/cta";
 @use "./sections/hero";
 @use "./sections/layout";
-@use "./sections/north-star";
+@use "./sections/manifesto";
 @use "./sections/problem";
 @use "./sections/product-visuals";
-@use "./sections/manifesto";
 @use "./sections/solution";
-@use "./sections/vision";
-@use "./sections/why-it-matters";
 
 // ui
 @use "./ui/button";
