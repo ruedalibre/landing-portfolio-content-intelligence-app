@@ -1,0 +1,69 @@
+{
+  "page_title": "Política de Privacidad",
+  "last_updated": "Última actualización: 3 de mayo de 2026",
+  "back": "← Volver a Content Intelligence",
+
+  "s1_title": "1. Quiénes Somos",
+  "s1_p1": "Content Intelligence App es operada por Andrés Pérez Díaz, ciudadano colombiano. Estamos comprometidos con proteger tu información personal y ser transparentes sobre cómo la utilizamos.",
+  "s1_contact": "Contacto:",
+
+  "s2_title": "2. Información que Recopilamos",
+  "s2_direct_title": "Información que proporcionas directamente:",
+  "s2_direct_li1": "Correo electrónico — utilizado para la creación de cuenta y comunicaciones",
+  "s2_direct_li2": "Contraseña — almacenada de forma segura y cifrada por nuestro proveedor de autenticación",
+  "s2_direct_li3": "Datos de contenido — ideas, temas, registros de contenido y descripciones que creas en la App",
+  "s2_direct_li4": "Información de perfil — campos opcionales proporcionados durante el proceso de incorporación",
+  "s2_auto_title": "Información recopilada automáticamente:",
+  "s2_auto_li1": "Datos de uso — qué funciones utilizas, con qué frecuencia generas briefs o informes, eventos de descarga",
+  "s2_auto_li2": "Datos de sesión — marcas de tiempo de inicio de sesión e información de sesión",
+  "s2_not_title": "Información que no recopilamos:",
+  "s2_not_li1": "Información de pago o financiera (el Servicio es actualmente gratuito)",
+  "s2_not_li2": "Datos de ubicación precisos",
+  "s2_not_li3": "Identificadores de dispositivo o IDs publicitarios",
+  "s2_not_li4": "Datos de menores (el Servicio está restringido a usuarios de 18 años o más)",
+
+  "s3_title": "3. Cómo Usamos tu Información",
+  "s3_intro": "Usamos tu información para:",
+  "s3_li1": "Proporcionar y mejorar el Servicio",
+  "s3_li2": "Generar briefs creativos e informes impulsados por IA personalizados a tus patrones de contenido",
+  "s3_li3": "Enviar comunicaciones relacionadas con tu cuenta",
+  "s3_li4": "Analizar tendencias de uso agregadas y anonimizadas para mejorar la plataforma",
+  "s3_li5": "Mantener la seguridad e integridad del Servicio",
+  "s3_not_intro": "No usamos tu información para:",
+  "s3_not_li1": "Vender o compartir con anunciantes de terceros",
+  "s3_not_li2": "Entrenar modelos de IA",
+  "s3_not_li3": "Crear perfiles individuales con fines publicitarios",
+
+  "s4_title": "4. Servicios de Terceros",
+  "s4_intro": "Utilizamos los siguientes servicios de terceros de confianza:",
+  "s4_li1": "Supabase — Base de datos, autenticación e infraestructura backend",
+  "s4_li2": "Anthropic (Claude API) — Generación de briefs e informes impulsada por IA",
+  "s4_li3": "Resend — Entrega de correos electrónicos transaccionales",
+  "s4_note": "Tus datos no se comparten con ningún otro tercero.",
+
+  "s5_title": "5. Procesamiento por IA",
+  "s5_p1": "Cuando generas un brief o informe creativo, tus patrones de contenido se envían a la API Claude de Anthropic para generar una respuesta personalizada. Estos datos se procesan en tiempo real y Anthropic no los retiene con fines de entrenamiento bajo sus términos estándar de API.",
+
+  "s6_title": "6. Almacenamiento y Seguridad de Datos",
+  "s6_p1": "Tus datos se almacenan en la infraestructura de Supabase con Seguridad a Nivel de Fila (RLS), conexiones cifradas (HTTPS/TLS) y contraseñas con hash. Implementamos medidas de seguridad razonables, pero no podemos garantizar seguridad absoluta.",
+
+  "s7_title": "7. Retención de Datos",
+  "s7_p1": "Retenemos tus datos mientras tu cuenta esté activa. Si eliminas tu cuenta, tus datos de perfil personal y contenido se eliminarán en un plazo de 30 días. Los datos agregados y anonimizados pueden retenerse para análisis de la plataforma.",
+
+  "s8_title": "8. Tus Derechos",
+  "s8_p1": "Bajo la ley colombiana de protección de datos (Ley 1581 de 2012), tienes derecho a acceder, corregir, eliminar y exportar tus datos personales, y a objetar usos específicos. Contáctanos en",
+  "s8_p2": "y responderemos en un plazo de 15 días hábiles.",
+
+  "s9_title": "9. Cookies",
+  "s9_p1": "La App utiliza únicamente cookies de sesión esenciales necesarias para la autenticación. No utilizamos cookies publicitarias, píxeles de seguimiento ni cookies de análisis de terceros.",
+
+  "s10_title": "10. Privacidad de Menores",
+  "s10_p1": "Este Servicio no está dirigido a personas menores de 18 años. No recopilamos conscientemente información personal de menores.",
+
+  "s11_title": "11. Cambios a Esta Política",
+  "s11_p1": "Podemos actualizar esta Política de Privacidad ocasionalmente. Notificaremos a los usuarios registrados por correo electrónico sobre cualquier cambio significativo.",
+
+  "s12_title": "12. Contacto",
+  "s12_name": "Andrés Pérez Díaz",
+  "s12_country": "Colombia"
+}

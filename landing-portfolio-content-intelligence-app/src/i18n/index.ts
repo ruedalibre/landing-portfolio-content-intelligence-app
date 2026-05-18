@@ -14,6 +14,8 @@ import enVision from "./en/vision.json" with { type: "json" };
 import enWhyItMatters from "./en/why_it_matters.json" with { type: "json" };
 import enFinalCTA from "./en/final_cta.json" with { type: "json" };
 import enEarlyAccessModal from "./en/request_access_modal.json" with { type: "json" };
+import enTerms from "./en/terms.json" with { type: "json" };
+import enPrivacy from "./en/privacy.json" with { type: "json" };
 
 import esHero from "./es/hero.json" with { type: "json" };
 import esNavbar from "./es/navbar.json" with { type: "json" };
@@ -28,6 +30,8 @@ import esVision from "./es/vision.json" with { type: "json" };
 import esWhyItMatters from "./es/why_it_matters.json" with { type: "json" };
 import esFinalCTA from "./es/final_cta.json" with { type: "json" };
 import esEarlyAccessModal from "./es/request_access_modal.json" with { type: "json" };
+import esTerms from "./es/terms.json" with { type: "json" };
+import esPrivacy from "./es/privacy.json" with { type: "json" };
 
 /* Detect language */
 
@@ -57,6 +61,8 @@ i18n.use(initReactI18next).init({
       why_it_matters: enWhyItMatters,
       final_cta: enFinalCTA,
       early_access_modal: enEarlyAccessModal,
+      terms: enTerms,
+      privacy: enPrivacy,
     },
     es: {
       hero: esHero,
@@ -72,6 +78,8 @@ i18n.use(initReactI18next).init({
       why_it_matters: esWhyItMatters,
       final_cta: esFinalCTA,
       early_access_modal: esEarlyAccessModal,
+      terms: esTerms,
+      privacy: esPrivacy,
     },
   },
 
@@ -92,6 +100,8 @@ i18n.use(initReactI18next).init({
     "why_it_matters",
     "final_cta",
     "early_access_modal",
+    "terms",
+    "privacy",
   ],
 
   defaultNS: "hero",
