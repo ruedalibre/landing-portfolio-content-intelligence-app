@@ -1,164 +1,330 @@
-import { useTranslation } from "react-i18next";
+import { useEffect } from "react";
 import { Link } from "react-router-dom";
+import { useTranslation } from "react-i18next";
+import "../styles/pages/_legal.scss"
 
-export default function Privacy() {
+const CONTACT_EMAIL = "andres@content-intel.app";
+const WEBSITE = "content-intel.app";
+
+const Privacy = () => {
   const { t } = useTranslation("privacy");
+
+  useEffect(() => {
+    document.title = t("page_title");
+    window.scrollTo(0, 0);
+  }, [t]);
 
   return (
     <div className="legal-page">
-      <div className="legal-page__band" aria-hidden="true" />
+      {/* Nav */}
+      <nav className="legal-nav">
+        <div className="legal-nav__inner">
+          <Link to="/" className="legal-nav__logo">
+            Content <span>Intelligence</span>
+          </Link>
+          <Link to="/" className="legal-nav__back">
+            {t("back_to_site")}
+          </Link>
+        </div>
+      </nav>
 
-      <div className="legal-page__inner">
-        <Link to="/" className="legal-page__back">{t("back")}</Link>
-
-        <header className="legal-page__header">
-          <h1 className="legal-page__title">{t("page_title")}</h1>
-          <p className="legal-page__updated">{t("last_updated")}</p>
-        </header>
-
-        <div className="legal-page__body">
-
-          {/* 1. Who We Are */}
-          <section className="legal-section">
-            <h2 className="legal-section__title">{t("s1_title")}</h2>
-            <p className="legal-section__p">{t("s1_p1")}</p>
-            <p className="legal-section__p">
-              {t("s1_contact")}{" "}
-              <a
-                href="mailto:andres@content-intel.app"
-                className="legal-section__link"
-              >
-                andres@content-intel.app
-              </a>
-            </p>
-          </section>
-
-          {/* 2. Information We Collect */}
-          <section className="legal-section">
-            <h2 className="legal-section__title">{t("s2_title")}</h2>
-
-            <h3 className="legal-section__sub">{t("s2_direct_title")}</h3>
-            <ul className="legal-section__list">
-              <li className="legal-section__item">{t("s2_direct_li1")}</li>
-              <li className="legal-section__item">{t("s2_direct_li2")}</li>
-              <li className="legal-section__item">{t("s2_direct_li3")}</li>
-              <li className="legal-section__item">{t("s2_direct_li4")}</li>
-            </ul>
-
-            <h3 className="legal-section__sub">{t("s2_auto_title")}</h3>
-            <ul className="legal-section__list">
-              <li className="legal-section__item">{t("s2_auto_li1")}</li>
-              <li className="legal-section__item">{t("s2_auto_li2")}</li>
-            </ul>
-
-            <h3 className="legal-section__sub">{t("s2_not_title")}</h3>
-            <ul className="legal-section__list">
-              <li className="legal-section__item">{t("s2_not_li1")}</li>
-              <li className="legal-section__item">{t("s2_not_li2")}</li>
-              <li className="legal-section__item">{t("s2_not_li3")}</li>
-              <li className="legal-section__item">{t("s2_not_li4")}</li>
-            </ul>
-          </section>
-
-          {/* 3. How We Use Your Information */}
-          <section className="legal-section">
-            <h2 className="legal-section__title">{t("s3_title")}</h2>
-            <p className="legal-section__p">{t("s3_intro")}</p>
-            <ul className="legal-section__list">
-              <li className="legal-section__item">{t("s3_li1")}</li>
-              <li className="legal-section__item">{t("s3_li2")}</li>
-              <li className="legal-section__item">{t("s3_li3")}</li>
-              <li className="legal-section__item">{t("s3_li4")}</li>
-              <li className="legal-section__item">{t("s3_li5")}</li>
-            </ul>
-            <p className="legal-section__p">{t("s3_not_intro")}</p>
-            <ul className="legal-section__list">
-              <li className="legal-section__item">{t("s3_not_li1")}</li>
-              <li className="legal-section__item">{t("s3_not_li2")}</li>
-              <li className="legal-section__item">{t("s3_not_li3")}</li>
-            </ul>
-          </section>
-
-          {/* 4. Third-Party Services */}
-          <section className="legal-section">
-            <h2 className="legal-section__title">{t("s4_title")}</h2>
-            <p className="legal-section__p">{t("s4_intro")}</p>
-            <ul className="legal-section__list">
-              <li className="legal-section__item">{t("s4_li1")}</li>
-              <li className="legal-section__item">{t("s4_li2")}</li>
-              <li className="legal-section__item">{t("s4_li3")}</li>
-            </ul>
-            <p className="legal-section__p">{t("s4_note")}</p>
-          </section>
-
-          {/* 5. AI Processing */}
-          <section className="legal-section">
-            <h2 className="legal-section__title">{t("s5_title")}</h2>
-            <p className="legal-section__p">{t("s5_p1")}</p>
-          </section>
-
-          {/* 6. Data Storage and Security */}
-          <section className="legal-section">
-            <h2 className="legal-section__title">{t("s6_title")}</h2>
-            <p className="legal-section__p">{t("s6_p1")}</p>
-          </section>
-
-          {/* 7. Data Retention */}
-          <section className="legal-section">
-            <h2 className="legal-section__title">{t("s7_title")}</h2>
-            <p className="legal-section__p">{t("s7_p1")}</p>
-          </section>
-
-          {/* 8. Your Rights */}
-          <section className="legal-section">
-            <h2 className="legal-section__title">{t("s8_title")}</h2>
-            <p className="legal-section__p">
-              {t("s8_p1")}{" "}
-              <a
-                href="mailto:andres@content-intel.app"
-                className="legal-section__link"
-              >
-                andres@content-intel.app
-              </a>{" "}
-              {t("s8_p2")}
-            </p>
-          </section>
-
-          {/* 9. Cookies */}
-          <section className="legal-section">
-            <h2 className="legal-section__title">{t("s9_title")}</h2>
-            <p className="legal-section__p">{t("s9_p1")}</p>
-          </section>
-
-          {/* 10. Children's Privacy */}
-          <section className="legal-section">
-            <h2 className="legal-section__title">{t("s10_title")}</h2>
-            <p className="legal-section__p">{t("s10_p1")}</p>
-          </section>
-
-          {/* 11. Changes to This Policy */}
-          <section className="legal-section">
-            <h2 className="legal-section__title">{t("s11_title")}</h2>
-            <p className="legal-section__p">{t("s11_p1")}</p>
-          </section>
-
-          {/* 12. Contact */}
-          <section className="legal-section">
-            <h2 className="legal-section__title">{t("s12_title")}</h2>
-            <div className="legal-section__contact">
-              <span>{t("s12_name")}</span>
-              <a
-                href="mailto:andres@content-intel.app"
-                className="legal-section__link"
-              >
-                andres@content-intel.app
-              </a>
-              <span>{t("s12_country")}</span>
-            </div>
-          </section>
-
+      {/* Hero */}
+      <div className="legal-hero">
+        <div className="legal-hero__band" aria-hidden="true" />
+        <div className="legal-hero__inner">
+          <p className="legal-hero__label">{t("hero_label")}</p>
+          <h1 className="legal-hero__title">{t("hero_title")}</h1>
+          <div className="legal-hero__meta">
+            <span>{t("hero_entity")}</span>
+            <span aria-hidden="true">·</span>
+            <span>{t("hero_effective")}</span>
+            <span aria-hidden="true">·</span>
+            <span>{t("hero_updated")}</span>
+          </div>
         </div>
       </div>
+
+      {/* Layout */}
+      <div className="legal-layout">
+        {/* TOC */}
+        <aside className="legal-toc" aria-label={t("toc_title")}>
+          <p className="legal-toc__title">{t("toc_title")}</p>
+          <ul className="legal-toc__list">
+            <li className="legal-toc__item">
+              <a href="#intro" className="legal-toc__link">
+                {t("toc.intro")}
+              </a>
+            </li>
+            <li className="legal-toc__item">
+              <a href="#collect" className="legal-toc__link">
+                {t("toc.collect")}
+              </a>
+            </li>
+            <li className="legal-toc__item">
+              <a href="#use" className="legal-toc__link">
+                {t("toc.use")}
+              </a>
+            </li>
+            <li className="legal-toc__item">
+              <a href="#sharing" className="legal-toc__link">
+                {t("toc.sharing")}
+              </a>
+            </li>
+            <li className="legal-toc__item">
+              <a href="#ai-data" className="legal-toc__link">
+                {t("toc.ai_data")}
+              </a>
+            </li>
+            <li className="legal-toc__item">
+              <a href="#storage" className="legal-toc__link">
+                {t("toc.storage")}
+              </a>
+            </li>
+            <li className="legal-toc__item">
+              <a href="#cookies" className="legal-toc__link">
+                {t("toc.cookies")}
+              </a>
+            </li>
+            <li className="legal-toc__item">
+              <a href="#rights" className="legal-toc__link">
+                {t("toc.rights")}
+              </a>
+            </li>
+            <li className="legal-toc__item">
+              <a href="#children" className="legal-toc__link">
+                {t("toc.children")}
+              </a>
+            </li>
+            <li className="legal-toc__item">
+              <a href="#international" className="legal-toc__link">
+                {t("toc.international")}
+              </a>
+            </li>
+            <li className="legal-toc__item">
+              <a href="#changes" className="legal-toc__link">
+                {t("toc.changes")}
+              </a>
+            </li>
+            <li className="legal-toc__item">
+              <a href="#contact" className="legal-toc__link">
+                {t("toc.contact")}
+              </a>
+            </li>
+          </ul>
+        </aside>
+
+        {/* Content */}
+        <main className="legal-content">
+          <div className="legal-highlight">
+            <p>
+              <strong>{t("summary_label")}:</strong> {t("summary_text")}
+            </p>
+          </div>
+
+          {/* 01 */}
+          <div className="legal-section" id="intro">
+            <span className="legal-section__num">01</span>
+            <h2>{t("s_intro.title")}</h2>
+            <p>
+              {t("s_intro.p1_before")}{" "}
+              <a href={`https://${WEBSITE}`}>{WEBSITE}</a>
+              {t("s_intro.p1_after")}
+            </p>
+            <p>{t("s_intro.p2")}</p>
+          </div>
+
+          {/* 02 */}
+          <div className="legal-section" id="collect">
+            <span className="legal-section__num">02</span>
+            <h2>{t("s_collect.title")}</h2>
+            <p>{t("s_collect.p1")}</p>
+            <table className="legal-table">
+              <thead>
+                <tr>
+                  {(
+                    t("s_collect.table_headers", {
+                      returnObjects: true,
+                    }) as string[]
+                  ).map((h, i) => (
+                    <th key={i}>{h}</th>
+                  ))}
+                </tr>
+              </thead>
+              <tbody>
+                {(
+                  t("s_collect.table_rows", {
+                    returnObjects: true,
+                  }) as string[][]
+                ).map((row, i) => (
+                  <tr key={i}>
+                    {row.map((cell, j) => (
+                      <td key={j}>
+                        {j === 0 ? <strong>{cell}</strong> : cell}
+                      </td>
+                    ))}
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+            <p>{t("s_collect.p2")}</p>
+          </div>
+
+          {/* 03 */}
+          <div className="legal-section" id="use">
+            <span className="legal-section__num">03</span>
+            <h2>{t("s_use.title")}</h2>
+            <p>{t("s_use.p1")}</p>
+            <ul>
+              {(t("s_use.list", { returnObjects: true }) as string[]).map(
+                (item, i) => (
+                  <li key={i}>{item}</li>
+                ),
+              )}
+            </ul>
+            <p>{t("s_use.p2")}</p>
+          </div>
+
+          {/* 04 */}
+          <div className="legal-section" id="sharing">
+            <span className="legal-section__num">04</span>
+            <h2>{t("s_sharing.title")}</h2>
+            <p>
+              <strong>{t("s_sharing.no_sell")}</strong> {t("s_sharing.p1")}
+            </p>
+            <ul>
+              {(t("s_sharing.list", { returnObjects: true }) as string[]).map(
+                (item, i) => (
+                  <li key={i}>{item}</li>
+                ),
+              )}
+            </ul>
+          </div>
+
+          {/* 05 */}
+          <div className="legal-section" id="ai-data">
+            <span className="legal-section__num">05</span>
+            <h2>{t("s_ai_data.title")}</h2>
+            <p>{t("s_ai_data.p1")}</p>
+            <ul>
+              {(t("s_ai_data.list", { returnObjects: true }) as string[]).map(
+                (item, i) => (
+                  <li key={i}>{item}</li>
+                ),
+              )}
+            </ul>
+            <p>{t("s_ai_data.p2")}</p>
+          </div>
+
+          {/* 06 */}
+          <div className="legal-section" id="storage">
+            <span className="legal-section__num">06</span>
+            <h2>{t("s_storage.title")}</h2>
+            <p>{t("s_storage.p1")}</p>
+            <ul>
+              {(t("s_storage.list", { returnObjects: true }) as string[]).map(
+                (item, i) => (
+                  <li key={i}>{item}</li>
+                ),
+              )}
+            </ul>
+            <p>{t("s_storage.p2")}</p>
+            <p>{t("s_storage.p3")}</p>
+          </div>
+
+          {/* 07 */}
+          <div className="legal-section" id="cookies">
+            <span className="legal-section__num">07</span>
+            <h2>{t("s_cookies.title")}</h2>
+            <p>{t("s_cookies.p1")}</p>
+            <ul>
+              {(t("s_cookies.list", { returnObjects: true }) as string[]).map(
+                (item, i) => (
+                  <li key={i}>{item}</li>
+                ),
+              )}
+            </ul>
+            <p>{t("s_cookies.p2")}</p>
+          </div>
+
+          {/* 08 */}
+          <div className="legal-section" id="rights">
+            <span className="legal-section__num">08</span>
+            <h2>{t("s_rights.title")}</h2>
+            <p>{t("s_rights.p1")}</p>
+            <ul>
+              {(t("s_rights.list", { returnObjects: true }) as string[]).map(
+                (item, i) => (
+                  <li key={i}>{item}</li>
+                ),
+              )}
+            </ul>
+            <p>
+              {t("s_rights.p2_before")}{" "}
+              <a href={`mailto:${CONTACT_EMAIL}`}>{CONTACT_EMAIL}</a>
+              {t("s_rights.p2_after")}
+            </p>
+          </div>
+
+          {/* 09 */}
+          <div className="legal-section" id="children">
+            <span className="legal-section__num">09</span>
+            <h2>{t("s_children.title")}</h2>
+            <p>{t("s_children.p1")}</p>
+          </div>
+
+          {/* 10 */}
+          <div className="legal-section" id="international">
+            <span className="legal-section__num">10</span>
+            <h2>{t("s_international.title")}</h2>
+            <p>{t("s_international.p1")}</p>
+            <p>{t("s_international.p2")}</p>
+            <p>{t("s_international.p3")}</p>
+          </div>
+
+          {/* 11 */}
+          <div className="legal-section" id="changes">
+            <span className="legal-section__num">11</span>
+            <h2>{t("s_changes.title")}</h2>
+            <p>{t("s_changes.p1")}</p>
+            <p>{t("s_changes.p2")}</p>
+          </div>
+
+          {/* 12 */}
+          <div className="legal-section" id="contact">
+            <span className="legal-section__num">12</span>
+            <h2>{t("s_contact.title")}</h2>
+            <p>{t("s_contact.p1")}</p>
+            <ul>
+              <li>
+                <strong>{t("s_contact.email_label")}:</strong>{" "}
+                <a href={`mailto:${CONTACT_EMAIL}`}>{CONTACT_EMAIL}</a>
+              </li>
+              <li>
+                <strong>{t("s_contact.website_label")}:</strong>{" "}
+                <a href={`https://${WEBSITE}`}>{WEBSITE}</a>
+              </li>
+              <li>
+                <strong>{t("s_contact.entity_label")}:</strong> Content
+                Intelligence Platform
+              </li>
+            </ul>
+            <p>{t("s_contact.p2")}</p>
+          </div>
+        </main>
+      </div>
+
+      {/* Footer */}
+      <footer className="legal-footer">
+        <div className="legal-footer__inner">
+          <p>
+            {t("footer_copyright")} ·{" "}
+            <Link to="/terms">{t("footer_terms")}</Link> ·{" "}
+            <Link to="/privacy">{t("footer_privacy")}</Link>
+          </p>
+        </div>
+      </footer>
     </div>
   );
-}
+};
+
+export default Privacy;
