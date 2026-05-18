@@ -2,7 +2,7 @@
   "label": "How it works",
   "title": "Your creative process,",
   "highlight": "finally visible.",
-  "subtitle": "Content Intelligence doesn't tell you what to create. It shows you how to get more from what you already have, discover your creative patterns, and open possibilities you hadn't seen.",
+  "subtitle": "Content Intelligence shows you how to get more out of what you already have, discover your patterns, and find new ways to evolve your content.",
   "nodes": {
     "n1": {
       "title": "1. Capture your ideas",
@@ -30,9 +30,9 @@
   },
   "caps_label": "The system also allows you to:",
   "caps": {
-    "c1": "Create content series from a single idea",
-    "c2": "Measure the impact of each idea",
-    "c3": "Rate briefs and request alternatives",
-    "c4": "Discover your creative DNA"
+    "c1": "Discover your creative DNA",
+    "c2": "Measure the impact of an idea",
+    "c3": "Create series from an idea",
+    "c4": "Pick the most suitable proposal"
   }
 }

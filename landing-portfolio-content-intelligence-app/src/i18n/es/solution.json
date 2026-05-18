@@ -2,7 +2,7 @@
   "label": "Cómo funciona",
   "title": "Tu proceso creativo,",
   "highlight": "por fin visible.",
-  "subtitle": "Content Intelligence no te dice qué crear. Te muestra cómo sacar mejor provecho de lo que ya tienes, descubrir tus patrones creativos y abrir posibilidades que no habías visto.",
+  "subtitle": "Content Intelligence te muestra cómo sacar más provecho de lo que ya tienes, descubrir tus patrones y encontrar nuevas formas de evolucionar tus contenidos.",
   "nodes": {
     "n1": {
       "title": "1. Captura tus ideas",
@@ -28,11 +28,11 @@
       "desc3": "y haces más con menos."
     }
   },
-  "caps_label": "El sistema también permite:",
+  "caps_label": "El sistema también te permite:",
   "caps": {
-    "c1": "Crear series de contenidos a partir de una idea",
+    "c1": "Descubrir tu ADN creativo",
     "c2": "Medir el impacto de una idea",
-    "c3": "Calificar los brief y solicitar alternativas",
-    "c4": "Descubrir tu ADN creativo"
+    "c3": "Crear series a partir de una idea",
+    "c4": "Elegir la propuesta más adecuada"
   }
 }
