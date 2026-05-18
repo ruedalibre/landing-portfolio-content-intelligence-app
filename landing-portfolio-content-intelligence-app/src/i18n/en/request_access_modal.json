@@ -19,16 +19,26 @@
   "error_platform": "Select at least one platform",
   "error_role": "Please select an option",
   "platforms": {
-    "linkedin": "LinkedIn",
     "instagram": "Instagram",
     "youtube": "YouTube",
     "tiktok": "TikTok",
+    "linkedin": "LinkedIn",
     "x": "X",
-    "other": "Other"
+    "facebook": "Facebook",
+    "pinterest": "Pinterest",
+    "threads": "Threads",
+    "snapchat": "Snapchat",
+    "twitch": "Twitch",
+    "telegram": "Telegram",
+    "discord": "Discord",
+    "unknown": "Other platform"
   },
   "roles": {
-    "independent_creator": "Independent creator",
+    "creator": "Independent creator",
     "agency": "Agency",
-    "brand": "Brand"
+    "brand": "Brand",
+    "content_manager": "Content Manager",
+    "marketing_team": "Marketing team",
+    "other": "Other"
   }
 }
