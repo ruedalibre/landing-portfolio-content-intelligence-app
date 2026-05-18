@@ -1,0 +1,26 @@
+{
+  "eyebrow": "Nuestra convicción",
+  "title_line1": "Cada persona tiene un proceso",
+  "title_line2": "creativo único que vale la pena",
+  "title_highlight": "entender.",
+  "principles": {
+    "p1": {
+      "title": "La creatividad es tu mayor diferenciador",
+      "text": "En un mundo donde todos tienen acceso a las mismas herramientas de IA, lo que te diferencia no es la tecnología que usas — es la visión que tienes. Tu intuición, tu voz, tu proceso creativo son lo que ningún modelo puede replicar."
+    },
+    "p2": {
+      "title": "Tú creas. La IA amplifica.",
+      "text": "Content Intelligence no está aquí para hacer el trabajo creativo por ti. Está aquí para que llegues a crear con más claridad, más contexto y más confianza en tu propio proceso. La IA trabaja para tu visión — no al revés."
+    },
+    "p3": {
+      "title": "Tus ideas son el origen de todo",
+      "text": "La mayoría de las herramientas miden lo que ya publicaste. Nosotros trabajamos con lo que todavía no has creado — las ideas que tienes, los patrones que no puedes ver, los ángulos que aún no exploraste."
+    },
+    "p4": {
+      "title": "Para creadores que se toman en serio su proceso",
+      "text": "Esta plataforma no es para quien quiere delegar su creatividad. Es para quien quiere entenderla mejor, sistematizarla y hacerla crecer — con la IA como herramienta, no como autor."
+    }
+  },
+  "closing_quote": "Pienso que uno de los mayores desafíos que tenemos en la era de la IA es expandir la creatividad humana porque esto es lo que nos hace únicos",
+  "closing_attribution": "— Andrés, founder de Content Intelligence"
+}
