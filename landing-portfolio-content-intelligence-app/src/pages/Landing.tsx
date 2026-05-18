@@ -4,6 +4,7 @@ import Problem from "../components/sections/Problem.tsx";
 import Solution from "../components/sections/Solution.tsx";
 import CoreInsight from "../components/sections/CoreInsight.tsx";
 import ProductVisuals from "../components/sections/ProductVisuals.tsx";
+import Manifesto from "../components/sections/Manifesto.tsx";
 import FinalCTA from "../components/sections/FinalCTA.tsx";
 import RequestAccessModal from "../components/ui/RequestAccessModal.tsx";
 import { useState, useEffect } from "react";
@@ -82,6 +83,9 @@ const Landing = () => {
 
       {/* PRODUCT VISUALS */}
       <ProductVisuals />
+
+      {/* MANIFESTO */}
+      <Manifesto />
 
       {/* FINAL CTA */}
       <FinalCTA onRequestAccess={() => setModalOpen(true)} />

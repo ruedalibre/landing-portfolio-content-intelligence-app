@@ -14,6 +14,7 @@ import enVision from "./en/vision.json" with { type: "json" };
 import enWhyItMatters from "./en/why_it_matters.json" with { type: "json" };
 import enFinalCTA from "./en/final_cta.json" with { type: "json" };
 import enEarlyAccessModal from "./en/request_access_modal.json" with { type: "json" };
+import enManifesto from "./en/manifesto.json" with { type: "json" };
 import enTerms from "./en/terms.json" with { type: "json" };
 import enPrivacy from "./en/privacy.json" with { type: "json" };
 
@@ -30,6 +31,7 @@ import esVision from "./es/vision.json" with { type: "json" };
 import esWhyItMatters from "./es/why_it_matters.json" with { type: "json" };
 import esFinalCTA from "./es/final_cta.json" with { type: "json" };
 import esEarlyAccessModal from "./es/request_access_modal.json" with { type: "json" };
+import esManifesto from "./es/manifesto.json" with { type: "json" };
 import esTerms from "./es/terms.json" with { type: "json" };
 import esPrivacy from "./es/privacy.json" with { type: "json" };
 
@@ -61,6 +63,7 @@ i18n.use(initReactI18next).init({
       why_it_matters: enWhyItMatters,
       final_cta: enFinalCTA,
       early_access_modal: enEarlyAccessModal,
+      manifesto: enManifesto,
       terms: enTerms,
       privacy: enPrivacy,
     },
@@ -78,6 +81,7 @@ i18n.use(initReactI18next).init({
       why_it_matters: esWhyItMatters,
       final_cta: esFinalCTA,
       early_access_modal: esEarlyAccessModal,
+      manifesto: esManifesto,
       terms: esTerms,
       privacy: esPrivacy,
     },
@@ -100,6 +104,7 @@ i18n.use(initReactI18next).init({
     "why_it_matters",
     "final_cta",
     "early_access_modal",
+    "manifesto",
     "terms",
     "privacy",
   ],
