@@ -6,6 +6,9 @@
 @use "./base/reset";
 @use "./base/typography";
 
+// ui base (must load before layout so layout media queries win over cascading display rules)
+@use "./ui/button";
+
 // layout
 @use "./layout/navbar";
 @use "./layout/section";
@@ -19,9 +22,6 @@
 @use "./sections/problem";
 @use "./sections/product-visuals";
 @use "./sections/solution";
-
-// ui
-@use "./ui/button";
 
 // modal
 @use "./ui/modal";
