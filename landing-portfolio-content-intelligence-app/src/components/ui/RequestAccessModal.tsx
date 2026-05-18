@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef } from "react";
 import { useTranslation } from "react-i18next";
-import { useEarlyAccessOptions } from "../../hooks/useEarlyAccessOptions";
+import { useEarlyAccessOptions } from "../../hooks/useEarlyAccessOptions.ts";
 
 type Props = {
   isOpen: boolean;
