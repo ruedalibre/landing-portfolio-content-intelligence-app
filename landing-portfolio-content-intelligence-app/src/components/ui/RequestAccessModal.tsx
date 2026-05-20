@@ -28,6 +28,9 @@ const RequestAccessModal = ({ isOpen, onClose, source = "landing" }: Props) => {
   const [role, setRole]                 = useState<string | null>(null);
   const [creatorFocus, setCreatorFocus] = useState("");
 
+  // Honeypot — invisible para humanos, los bots lo llenan
+  const [honeypotValue, setHoneypotValue] = useState("");
+
   // Submit state
   const [submitted, setSubmitted] = useState(false);
   const [loading, setLoading]     = useState(false);
@@ -96,11 +99,12 @@ const RequestAccessModal = ({ isOpen, onClose, source = "landing" }: Props) => {
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify({
             email,
-            platform_id:   platform,   // UUID from Supabase — no longer hardcoded
-            role_id:       role,        // UUID from Supabase — no longer hardcoded
+            platform_id:   platform,
+            role_id:       role,
             creator_focus: creatorFocus,
             source,
             language,
+            website:       honeypotValue, // vacío si es humano, bot lo llenará
           }),
         },
       );
@@ -123,6 +127,7 @@ const RequestAccessModal = ({ isOpen, onClose, source = "landing" }: Props) => {
     setPlatform(null);
     setRole(null);
     setCreatorFocus("");
+    setHoneypotValue("");
     setError(false);
     setEmailTouched(false);
     setPlatformTouched(false);
@@ -328,6 +333,24 @@ const RequestAccessModal = ({ isOpen, onClose, source = "landing" }: Props) => {
                   /{FOCUS_MAX_CHARS}
                 </div>
               </div>
+
+              {/* Honeypot — invisible para humanos, bots lo llenan automáticamente */}
+              <input
+                type="text"
+                name="website"
+                value={honeypotValue}
+                onChange={(e) => setHoneypotValue(e.target.value)}
+                style={{
+                  position: "absolute",
+                  left: "-9999px",
+                  opacity: 0,
+                  height: 0,
+                  width: 0,
+                }}
+                aria-hidden="true"
+                tabIndex={-1}
+                autoComplete="off"
+              />
 
               <button
                 type="submit"
