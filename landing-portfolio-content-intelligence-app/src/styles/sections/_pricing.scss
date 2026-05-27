@@ -186,7 +186,7 @@
   &__top {
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;  // nombre+precio sube al inicio de la fila
+    justify-content: center;  // nombre+precio sube al inicio de la fila
   }
 
   &__name {
