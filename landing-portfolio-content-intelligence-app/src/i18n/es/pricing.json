@@ -1,0 +1,41 @@
+{
+  "eyebrow": "Planes y precios",
+  "title": "Invierte en tu proceso creativo",
+  "subtitle": "Empieza gratis. Actualiza cuando el producto te demuestre su valor.",
+  "free": "Free",
+  "forever": "para siempre",
+  "freeCta": "Comenzar gratis",
+  "flexible": "Flexible",
+  "recommended": "Recomendado",
+  "creatorMonthly": "Creator · Mensual",
+  "creatorAnnual": "Creator · Anual",
+  "perMonth": "/ mes",
+  "perYear": "/ año",
+  "monthlySub": "Cancela cuando quieras",
+  "annualSaving": "Ahorras $65 vs mensual",
+  "launchPrice": "Precio de lanzamiento",
+  "trialCta": "Prueba 14 días gratis",
+  "includes": "Incluye",
+  "everythingFree": "Todo en Free, más",
+  "footer": "Sin tarjeta de crédito para el trial · Cancela cuando quieras · Precios en USD",
+  "faqTitle": "Preguntas frecuentes",
+  "faq": {
+    "trial":    { "q": "¿Necesito tarjeta de crédito para el trial?", "a": "No. El trial de 14 días es completamente gratuito y no requiere método de pago." },
+    "cancel":   { "q": "¿Puedo cancelar cuando quiera?", "a": "Sí. Puedes cancelar desde tu perfil en cualquier momento. Sin penalizaciones ni preguntas." },
+    "currency": { "q": "¿En qué moneda se cobra?", "a": "Todos los precios están en dólares americanos (USD). Stripe convierte automáticamente según tu país." },
+    "team":     { "q": "¿Hay planes para equipos?", "a": "Los planes de equipo están en el roadmap. Por ahora el plan Creator es individual. Escríbenos si te interesa acceso anticipado." }
+  },
+  "feature": {
+    "ideas10":           "Hasta 10 ideas",
+    "ideasUnlimited":    "Ideas ilimitadas",
+    "contentsUnlimited": "Contenidos ilimitados",
+    "dashboard":         "Dashboard de actividad",
+    "briefsTrial":       "3 briefs durante el trial",
+    "briefsUnlimited":   "Briefs con IA ilimitados",
+    "dnaBasic":          "DNA básico sin IA",
+    "dnaFull":           "DNA completo + IA",
+    "insightsAI":        "Insights IA",
+    "report":            "Informe creativo",
+    "ideaGenerator":     "Generador de ideas"
+  }
+}

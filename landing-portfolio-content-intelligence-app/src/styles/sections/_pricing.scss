@@ -1,0 +1,326 @@
+// ── Pricing Section ──
+
+.pricing-section {
+  background: var(--bg-canvas, #fbf9f4);
+  padding: var(--s-11) 0 var(--s-10);
+  border-top: 1px solid rgba(54, 73, 101, 0.08);
+
+  &__inner {
+    max-width: 920px;
+    margin: 0 auto;
+    padding: 0 var(--s-5);
+  }
+
+  &__header {
+    text-align: center;
+    margin-bottom: var(--s-9);
+  }
+
+  &__eyebrow {
+    font-family: var(--font-sans);
+    font-size: var(--fs-12);
+    font-weight: 500;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--accent);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: var(--s-4);
+
+    &::before,
+    &::after {
+      content: "";
+      width: 24px;
+      height: 1px;
+      background: var(--accent);
+      opacity: 0.5;
+    }
+  }
+
+  &__title {
+    font-family: var(--font-display);
+    font-size: clamp(28px, 4vw, 44px);
+    font-weight: 500;
+    font-style: italic;
+    color: var(--primary);
+    line-height: 1.15;
+    letter-spacing: var(--tracking-tight);
+    margin-bottom: var(--s-3);
+  }
+
+  &__subtitle {
+    font-size: var(--fs-16);
+    color: var(--text-muted, #6b7280);
+    line-height: 1.6;
+    max-width: 480px;
+    margin: 0 auto;
+  }
+
+  &__plans {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--s-5);
+    margin-bottom: var(--s-6);
+    align-items: stretch;
+
+    @media (max-width: 768px) {
+      grid-template-columns: 1fr;
+      max-width: 420px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+
+  &__note {
+    text-align: center;
+    font-size: var(--fs-12);
+    color: rgba(54, 73, 101, 0.4);
+    margin-bottom: var(--s-10);
+  }
+
+  &__faq {
+    border-top: 1px solid rgba(54, 73, 101, 0.08);
+    padding-top: var(--s-8);
+  }
+
+  &__faq-title {
+    font-family: var(--font-display);
+    font-size: clamp(22px, 3vw, 32px);
+    font-weight: 500;
+    font-style: italic;
+    color: var(--primary);
+    text-align: center;
+    margin-bottom: var(--s-7);
+  }
+
+  &__faq-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--s-6) var(--s-8);
+
+    @media (max-width: 600px) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &__faq-item {
+    display: flex;
+    flex-direction: column;
+    gap: var(--s-2);
+  }
+
+  &__faq-q {
+    font-size: var(--fs-14);
+    font-weight: 600;
+    color: var(--primary);
+    margin: 0;
+  }
+
+  &__faq-a {
+    font-size: var(--fs-13);
+    color: var(--text-muted, #6b7280);
+    line-height: 1.6;
+    margin: 0;
+  }
+}
+
+// ── Plan cards ──
+
+.ps-plan {
+  background: #fff;
+  border: 1px solid rgba(54, 73, 101, 0.12);
+  border-radius: 12px;
+  padding: 24px 22px 28px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  transition: box-shadow 0.2s;
+
+  &:hover {
+    box-shadow: 0 4px 24px rgba(54, 73, 101, 0.08);
+  }
+
+  &--featured {
+    background: #f9f8f6;
+  }
+
+  &--annual {
+    border-color: var(--accent);
+    border-width: 1.5px;
+  }
+
+  &__badge {
+    display: inline-block;
+    font-size: 10px;
+    font-weight: 500;
+    padding: 2px 10px;
+    border-radius: 99px;
+    margin-bottom: var(--s-3);
+    background: rgba(54, 73, 101, 0.06);
+    color: rgba(54, 73, 101, 0.6);
+    border: 1px solid rgba(54, 73, 101, 0.12);
+    align-self: flex-start;
+    min-height: 20px;
+
+    &--recommended {
+      background: rgba(54, 73, 101, 0.08);
+      color: var(--primary);
+      border-color: rgba(54, 73, 101, 0.2);
+    }
+  }
+
+  &__top {
+    margin-bottom: var(--s-4);
+    min-height: 110px; // altura fija para alinear CTAs entre las 3 columnas
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end; // precio siempre pegado al CTA
+  }
+
+  &__name {
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.07em;
+    text-transform: uppercase;
+    color: rgba(54, 73, 101, 0.5);
+    margin-bottom: var(--s-2);
+  }
+
+  &__price {
+    font-size: 2rem;
+    font-weight: 600;
+    color: var(--primary);
+    line-height: 1.1;
+    margin-bottom: 2px;
+
+    span {
+      font-size: 13px;
+      font-weight: 400;
+      color: rgba(54, 73, 101, 0.5);
+      margin-left: 2px;
+    }
+  }
+
+  &__price-row {
+    display: flex;
+    align-items: baseline;
+    gap: var(--s-2);
+    margin-bottom: 2px;
+  }
+
+  &__original {
+    font-size: 14px;
+    color: rgba(54, 73, 101, 0.35);
+    text-decoration: line-through;
+  }
+
+  &__sub {
+    font-size: 12px;
+    color: rgba(54, 73, 101, 0.5);
+    margin-top: 2px;
+    min-height: 18px;
+
+    &--saving {
+      color: #059669;
+      font-weight: 500;
+    }
+  }
+
+  &__launch {
+    color: var(--accent);
+    font-weight: 500;
+  }
+
+  &__cta {
+    display: block;
+    width: 100%;
+    padding: 10px 0;
+    border-radius: 99px;
+    font-family: var(--font-sans);
+    font-size: var(--fs-13);
+    font-weight: 500;
+    text-align: center;
+    text-decoration: none;
+    margin-bottom: var(--s-5);
+    cursor: pointer;
+    border: none;
+    transition: all 0.15s;
+
+    &--secondary {
+      border: 1px solid rgba(54, 73, 101, 0.2);
+      color: rgba(54, 73, 101, 0.6);
+      background: none;
+
+      &:hover {
+        background: rgba(54, 73, 101, 0.05);
+        color: var(--primary);
+      }
+    }
+
+    &--primary {
+      background: var(--primary);
+      color: #fbf9f4;
+
+      &:hover {
+        background: var(--primary-hover, #2b3b54);
+      }
+    }
+
+    &--accent {
+      background: var(--accent);
+      color: #fbf9f4;
+
+      &:hover {
+        background: var(--accent-hover, #aa6448);
+      }
+    }
+  }
+
+  &__features-label {
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 0.07em;
+    text-transform: uppercase;
+    color: rgba(54, 73, 101, 0.4);
+    margin-bottom: var(--s-3);
+  }
+
+  &__features {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    flex: 1;
+  }
+}
+
+.ps-feature {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--s-2);
+  font-size: var(--fs-13);
+  line-height: 1.4;
+
+  svg {
+    flex-shrink: 0;
+    margin-top: 1px;
+  }
+
+  &--included {
+    color: rgba(54, 73, 101, 0.8);
+    svg {
+      color: #059669;
+    }
+  }
+
+  &--locked {
+    color: rgba(54, 73, 101, 0.3);
+    svg {
+      color: rgba(54, 73, 101, 0.2);
+    }
+  }
+}

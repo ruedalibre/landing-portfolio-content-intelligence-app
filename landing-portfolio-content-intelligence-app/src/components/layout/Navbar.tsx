@@ -47,6 +47,10 @@ const Navbar = ({ onRequestAccess }: Props) => {
             {t("links.how_it_works")}
           </a>
 
+          <a className="nav__link" href="#pricing">
+            {t("links.pricing")}
+          </a>
+
           <a className="nav__link" href="#contact">
             {t("links.contact")}
           </a>

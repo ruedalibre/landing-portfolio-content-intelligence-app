@@ -24,6 +24,8 @@ import esEarlyAccessModal from "./es/request_access_modal.json" with { type: "js
 import esManifesto from "./es/manifesto.json" with { type: "json" };
 import esTerms from "./es/terms.json" with { type: "json" };
 import esPrivacy from "./es/privacy.json" with { type: "json" };
+import enPricing from "./en/pricing.json" with { type: "json" };
+import esPricing from "./es/pricing.json" with { type: "json" };
 
 /* Detect language */
 
@@ -51,6 +53,7 @@ i18n.use(initReactI18next).init({
       manifesto: enManifesto,
       terms: enTerms,
       privacy: enPrivacy,
+      pricing: enPricing,
     },
     es: {
       hero: esHero,
@@ -64,6 +67,7 @@ i18n.use(initReactI18next).init({
       manifesto: esManifesto,
       terms: esTerms,
       privacy: esPrivacy,
+      pricing: esPricing,
     },
   },
 
@@ -82,6 +86,7 @@ i18n.use(initReactI18next).init({
     "manifesto",
     "terms",
     "privacy",
+    "pricing",
   ],
 
   defaultNS: "hero",
