@@ -66,13 +66,15 @@ const Pricing = ({ onRequestAccess }: Props) => {
 
           {/* FREE */}
           <div className="ps-plan">
+            {/* badge placeholder — ocupa fila 1 del grid, invisible */}
+            <div className="ps-plan__badge" aria-hidden="true" />
             <div className="ps-plan__top">
               <p className="ps-plan__name">{t("free")}</p>
               <p className="ps-plan__price">
                 $0 <span>{t("forever")}</span>
               </p>
-              <p className="ps-plan__sub">&nbsp;</p>
             </div>
+            <p className="ps-plan__sub">&nbsp;</p>
             <button
               className="ps-plan__cta ps-plan__cta--secondary"
               type="button"
@@ -105,12 +107,12 @@ const Pricing = ({ onRequestAccess }: Props) => {
               <p className="ps-plan__price">
                 $12 <span>{t("perMonth")}</span>
               </p>
-              <p className="ps-plan__sub">{t("monthlySub")}</p>
             </div>
-            
-              <a href={`${APP_URL}/login`}
-              className="ps-plan__cta ps-plan__cta--primary">
-            
+            <p className="ps-plan__sub">{t("monthlySub")}</p>
+            <a
+              href={`${APP_URL}/login`}
+              className="ps-plan__cta ps-plan__cta--primary"
+            >
               {t("trialCta")}
             </a>
             <p className="ps-plan__features-label">{t("everythingFree")}</p>
@@ -137,12 +139,12 @@ const Pricing = ({ onRequestAccess }: Props) => {
                 </p>
                 <span className="ps-plan__original">$99</span>
               </div>
-              <p className="ps-plan__sub ps-plan__sub--saving">
-                {t("annualSaving")} · <span className="ps-plan__launch">{t("launchPrice")}</span>
-              </p>
             </div>
-            
-              <a href={`${APP_URL}/login`}
+            <p className="ps-plan__sub ps-plan__sub--saving">
+              {t("annualSaving")} · <span className="ps-plan__launch">{t("launchPrice")}</span>
+            </p>
+            <a
+              href={`${APP_URL}/login`}
               className="ps-plan__cta ps-plan__cta--accent"
             >
               {t("trialCta")}

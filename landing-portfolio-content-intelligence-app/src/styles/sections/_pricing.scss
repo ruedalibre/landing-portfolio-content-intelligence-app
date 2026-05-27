@@ -169,6 +169,11 @@
     width: fit-content;
     height: 20px;
 
+    // Placeholder vacío en el plan Free — ocupa la fila del grid sin mostrarse
+    &:empty {
+      visibility: hidden;
+    }
+
     &--recommended {
       background: rgba(54, 73, 101, 0.08);
       color: var(--primary);
