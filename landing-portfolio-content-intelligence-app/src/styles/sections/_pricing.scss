@@ -141,6 +141,7 @@
     48px   /* CTA */
     20px   /* features label */
     1fr;   /* lista de features */
+  row-gap: 8px;  /* aire uniforme entre filas — todas las columnas crecen igual */
   position: relative;
   transition: box-shadow 0.2s;
 
@@ -185,8 +186,7 @@
   &__top {
     display: flex;
     flex-direction: column;
-    justify-content: flex-end;
-    padding-bottom: 4px;
+    justify-content: flex-start;  // nombre+precio sube al inicio de la fila
   }
 
   &__name {
