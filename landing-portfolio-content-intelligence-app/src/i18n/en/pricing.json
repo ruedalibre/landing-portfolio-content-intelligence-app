@@ -1,0 +1,41 @@
+{
+  "eyebrow": "Plans & Pricing",
+  "title": "Invest in your creative process",
+  "subtitle": "Start free. Upgrade when the product proves its value to you.",
+  "free": "Free",
+  "forever": "forever",
+  "freeCta": "Start for free",
+  "flexible": "Flexible",
+  "recommended": "Recommended",
+  "creatorMonthly": "Creator · Monthly",
+  "creatorAnnual": "Creator · Annual",
+  "perMonth": "/ mo",
+  "perYear": "/ year",
+  "monthlySub": "Cancel anytime",
+  "annualSaving": "Save $65 vs monthly",
+  "launchPrice": "Launch price",
+  "trialCta": "Start 14-day free trial",
+  "includes": "Includes",
+  "everythingFree": "Everything in Free, plus",
+  "footer": "No credit card for trial · Cancel anytime · Prices in USD",
+  "faqTitle": "Frequently asked questions",
+  "faq": {
+    "trial":    { "q": "Do I need a credit card for the trial?", "a": "No. The 14-day trial is completely free and requires no payment method." },
+    "cancel":   { "q": "Can I cancel anytime?", "a": "Yes. You can cancel from your profile at any time. No penalties, no questions asked." },
+    "currency": { "q": "What currency are prices in?", "a": "All prices are in US dollars (USD). Stripe automatically converts based on your country." },
+    "team":     { "q": "Are there team plans?", "a": "Team plans are on the roadmap. For now the Creator plan is individual. Contact us if you're interested in early access." }
+  },
+  "feature": {
+    "ideas10":           "Up to 10 ideas",
+    "ideasUnlimited":    "Unlimited ideas",
+    "contentsUnlimited": "Unlimited contents",
+    "dashboard":         "Activity dashboard",
+    "briefsTrial":       "3 briefs during trial",
+    "briefsUnlimited":   "Unlimited AI briefs",
+    "dnaBasic":          "Basic DNA without AI",
+    "dnaFull":           "Full DNA + AI",
+    "insightsAI":        "AI insights",
+    "report":            "Creative report",
+    "ideaGenerator":     "Idea generator"
+  }
+}

@@ -5,6 +5,7 @@ import Solution from "../components/sections/Solution.tsx";
 import CoreInsight from "../components/sections/CoreInsight.tsx";
 import ProductVisuals from "../components/sections/ProductVisuals.tsx";
 import Manifesto from "../components/sections/Manifesto.tsx";
+import Pricing from "../components/sections/Pricing.tsx";
 import FinalCTA from "../components/sections/FinalCTA.tsx";
 import RequestAccessModal from "../components/ui/RequestAccessModal.tsx";
 import { useState, useEffect } from "react";
@@ -79,6 +80,8 @@ const Landing = () => {
         <ProductVisuals />
 
         <Manifesto />
+
+        <Pricing onRequestAccess={() => setModalOpen(true)} />
 
         <FinalCTA onRequestAccess={() => setModalOpen(true)} />
       </main>
