@@ -133,8 +133,14 @@
   border: 1px solid rgba(54, 73, 101, 0.12);
   border-radius: 12px;
   padding: 24px 22px 28px;
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-rows:
+    24px   /* badge */
+    80px   /* bloque nombre + precio */
+    24px   /* subtítulo */
+    48px   /* CTA */
+    20px   /* features label */
+    1fr;   /* lista de features */
   position: relative;
   transition: box-shadow 0.2s;
 
@@ -142,9 +148,7 @@
     box-shadow: 0 4px 24px rgba(54, 73, 101, 0.08);
   }
 
-  &--featured {
-    background: #f9f8f6;
-  }
+  &--featured { background: #f9f8f6; }
 
   &--annual {
     border-color: var(--accent);
@@ -152,17 +156,18 @@
   }
 
   &__badge {
-    display: inline-block;
+    display: inline-flex;
+    align-items: center;
     font-size: 10px;
     font-weight: 500;
     padding: 2px 10px;
     border-radius: 99px;
-    margin-bottom: var(--s-3);
     background: rgba(54, 73, 101, 0.06);
     color: rgba(54, 73, 101, 0.6);
     border: 1px solid rgba(54, 73, 101, 0.12);
-    align-self: flex-start;
-    min-height: 20px;
+    align-self: start;
+    width: fit-content;
+    height: 20px;
 
     &--recommended {
       background: rgba(54, 73, 101, 0.08);
@@ -171,12 +176,12 @@
     }
   }
 
+  // Fila 2 — nombre + precio juntos en 80px
   &__top {
-    margin-bottom: var(--s-4);
-    min-height: 110px; // altura fija para alinear CTAs entre las 3 columnas
     display: flex;
     flex-direction: column;
-    justify-content: flex-end; // precio siempre pegado al CTA
+    justify-content: flex-end;
+    padding-bottom: 4px;
   }
 
   &__name {
@@ -185,7 +190,7 @@
     letter-spacing: 0.07em;
     text-transform: uppercase;
     color: rgba(54, 73, 101, 0.5);
-    margin-bottom: var(--s-2);
+    margin-bottom: 4px;
   }
 
   &__price {
@@ -193,7 +198,6 @@
     font-weight: 600;
     color: var(--primary);
     line-height: 1.1;
-    margin-bottom: 2px;
 
     span {
       font-size: 13px;
@@ -207,7 +211,6 @@
     display: flex;
     align-items: baseline;
     gap: var(--s-2);
-    margin-bottom: 2px;
   }
 
   &__original {
@@ -216,11 +219,11 @@
     text-decoration: line-through;
   }
 
+  // Fila 3 — subtítulo en 24px
   &__sub {
     font-size: 12px;
     color: rgba(54, 73, 101, 0.5);
-    margin-top: 2px;
-    min-height: 18px;
+    align-self: center;
 
     &--saving {
       color: #059669;
@@ -233,20 +236,22 @@
     font-weight: 500;
   }
 
+  // Fila 4 — CTA en 48px
   &__cta {
-    display: block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     width: 100%;
-    padding: 10px 0;
     border-radius: 99px;
     font-family: var(--font-sans);
     font-size: var(--fs-13);
     font-weight: 500;
-    text-align: center;
     text-decoration: none;
-    margin-bottom: var(--s-5);
     cursor: pointer;
     border: none;
     transition: all 0.15s;
+    align-self: center;
+    height: 40px;
 
     &--secondary {
       border: 1px solid rgba(54, 73, 101, 0.2);
@@ -263,38 +268,35 @@
       background: var(--primary);
       color: #fbf9f4;
 
-      &:hover {
-        background: var(--primary-hover, #2b3b54);
-      }
+      &:hover { background: var(--primary-hover, #2b3b54); }
     }
 
     &--accent {
       background: var(--accent);
       color: #fbf9f4;
 
-      &:hover {
-        background: var(--accent-hover, #aa6448);
-      }
+      &:hover { background: var(--accent-hover, #aa6448); }
     }
   }
 
+  // Fila 5 — features label en 20px
   &__features-label {
     font-size: 10px;
     font-weight: 600;
     letter-spacing: 0.07em;
     text-transform: uppercase;
     color: rgba(54, 73, 101, 0.4);
-    margin-bottom: var(--s-3);
+    align-self: center;
   }
 
+  // Fila 6 — lista de features
   &__features {
     list-style: none;
     padding: 0;
-    margin: 0;
+    margin: var(--s-2) 0 0;
     display: flex;
     flex-direction: column;
     gap: 10px;
-    flex: 1;
   }
 }
 
