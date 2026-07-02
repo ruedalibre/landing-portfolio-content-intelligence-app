@@ -83,7 +83,7 @@
   },
   "s_storage": {
     "title": "Data Storage and Security",
-    "p1": "Your data is stored on Supabase infrastructure, hosted on servers located in the United States. We implement industry-standard security measures including:",
+    "p1": "Your data is stored on Supabase infrastructure, hosted on Amazon Web Services (AWS) servers located in the United States (us-east-2, Ohio region). We implement industry-standard security measures including:",
     "list": [
       "Encryption in transit (TLS/HTTPS) and at rest",
       "Row-level security policies on database access",
@@ -122,7 +122,7 @@
   },
   "s_international": {
     "title": "International Data Transfers",
-    "p1": "Creadora is operated from the United States. If you are located outside the United States, your information will be transferred to and processed in the United States, where data protection laws may differ from those in your country.",
+    "p1": "Creadora is operated by Slipway LLC, incorporated in Wyoming, United States. Your data is processed and stored by Supabase on Amazon Web Services (AWS) servers located in the United States (us-east-2, Ohio region). If you are located outside the United States, your information will be transferred to and processed there, where data protection laws may differ from those in your country.",
     "p2": "By using the Service, you consent to this transfer. We take reasonable steps to ensure your data is treated securely and in accordance with this Privacy Policy.",
     "p3": "For users in the European Economic Area (EEA) or United Kingdom, we rely on Standard Contractual Clauses as the legal basis for data transfers."
   },

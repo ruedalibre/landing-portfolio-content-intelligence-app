@@ -83,7 +83,7 @@
   },
   "s_storage": {
     "title": "Almacenamiento y Seguridad de Datos",
-    "p1": "Tus datos se almacenan en la infraestructura de Supabase, en servidores ubicados en los Estados Unidos. Implementamos medidas de seguridad estándar de la industria que incluyen:",
+    "p1": "Tus datos se almacenan en la infraestructura de Supabase, alojada en servidores de Amazon Web Services (AWS) ubicados en Estados Unidos (región us-east-2, Ohio). Implementamos medidas de seguridad estándar de la industria que incluyen:",
     "list": [
       "Cifrado en tránsito (TLS/HTTPS) y en reposo",
       "Políticas de seguridad a nivel de fila en el acceso a la base de datos",
@@ -122,7 +122,7 @@
   },
   "s_international": {
     "title": "Transferencias Internacionales de Datos",
-    "p1": "Creadora opera desde los Estados Unidos. Si estás ubicado fuera de EE.UU., tu información será transferida y procesada allí, donde las leyes de protección de datos pueden diferir de las de tu país.",
+    "p1": "Creadora es operada por Slipway LLC, constituida en Wyoming, Estados Unidos. Tus datos son procesados y almacenados por Supabase en servidores de Amazon Web Services (AWS) ubicados en Estados Unidos (región us-east-2, Ohio). Si estás ubicado fuera de EE.UU., tu información será transferida y procesada allí, donde las leyes de protección de datos pueden diferir de las de tu país.",
     "p2": "Al usar el Servicio, consientes esta transferencia. Tomamos medidas razonables para garantizar que tus datos sean tratados de forma segura y conforme a esta Política.",
     "p3": "Para usuarios en el Espacio Económico Europeo (EEE) o el Reino Unido, nos apoyamos en Cláusulas Contractuales Estándar como base legal para las transferencias de datos."
   },
