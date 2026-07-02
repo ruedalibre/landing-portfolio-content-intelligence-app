@@ -102,7 +102,7 @@ const FinalCTA = ({ onRequestAccess }: Props) => {
             Privacy Policy
           </a>
           <span aria-hidden="true">·</span>
-          <span>© 2026 Content Intelligence Platform</span>
+          <span>© 2026 Creadora</span>
         </div>
 
       </div>

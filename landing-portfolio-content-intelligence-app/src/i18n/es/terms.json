@@ -1,15 +1,15 @@
 {
-  "page_title": "Términos de Servicio — Content Intelligence Platform",
+  "page_title": "Términos de Servicio — Creadora",
   "hero_label": "Legal",
   "hero_title": "Términos de Servicio",
-  "hero_entity": "Content Intelligence Platform",
+  "hero_entity": "Creadora",
   "hero_effective": "Fecha de vigencia: 1 de enero de 2026",
   "hero_updated": "Última actualización: 1 de enero de 2026",
   "summary_label": "Resumen en lenguaje simple",
-  "summary_text": "Estos términos rigen el uso de Content Intelligence Platform. Al usar nuestro servicio, aceptas estos términos. Ofrecemos una plataforma con IA para ayudar a creadores de contenido a organizar ideas y mejorar su proceso creativo. Por favor léelos con atención.",
+  "summary_text": "Estos términos rigen el uso de Creadora. Al usar nuestro servicio, aceptas estos términos. Ofrecemos una plataforma con IA para ayudar a creadores de contenido a organizar ideas y mejorar su proceso creativo. Por favor léelos con atención.",
   "toc_title": "Contenido",
   "back_to_site": "← Volver al sitio",
-  "footer_copyright": "© 2026 Content Intelligence Platform",
+  "footer_copyright": "© 2026 Creadora",
   "footer_terms": "Términos de Servicio",
   "footer_privacy": "Política de Privacidad",
   "toc": {
@@ -31,12 +31,12 @@
   },
   "s_acceptance": {
     "title": "Aceptación de los Términos",
-    "p1": "Al acceder o usar Content Intelligence Platform (\"el Servicio\", \"nosotros\"), aceptas quedar vinculado por estos Términos de Servicio (\"Términos\"). Si no estás de acuerdo, por favor no uses el Servicio.",
+    "p1": "Al acceder o usar Creadora (\"el Servicio\", \"nosotros\"), aceptas quedar vinculado por estos Términos de Servicio (\"Términos\"). Si no estás de acuerdo, por favor no uses el Servicio.",
     "p2": "Estos Términos aplican a todos los usuarios, incluyendo visitantes, usuarios registrados y participantes del acceso anticipado. Al registrarte o crear una cuenta, confirmas que tienes al menos 18 años y capacidad legal para celebrar este acuerdo."
   },
   "s_description": {
     "title": "Descripción del Servicio",
-    "p1": "Content Intelligence Platform es una aplicación SaaS que ayuda a los creadores de contenido a capturar ideas, generar briefs asistidos por IA, descubrir patrones creativos y construir sistemas de contenido personales.",
+    "p1": "Creadora es una aplicación SaaS que ayuda a los creadores de contenido a capturar ideas, generar briefs asistidos por IA, descubrir patrones creativos y construir sistemas de contenido personales.",
     "includes": "El Servicio incluye, entre otros:",
     "list": [
       "Herramientas de captura y organización de ideas",
@@ -81,7 +81,7 @@
       "Eres responsable de revisar cualquier contenido generado por IA antes de publicarlo",
       "Los outputs de IA pueden ocasionalmente producir resultados inesperados o imperfectos"
     ],
-    "p2": "Content Intelligence Platform amplifica tu creatividad — no reemplaza tu juicio ni tu voz creativa."
+    "p2": "Creadora amplifica tu creatividad — no reemplaza tu juicio ni tu voz creativa."
   },
   "s_payments": {
     "title": "Pagos y Facturación",
@@ -110,7 +110,7 @@
   },
   "s_ip": {
     "title": "Propiedad Intelectual",
-    "p1": "El Servicio y su contenido original, características y funcionalidades son y seguirán siendo propiedad exclusiva de Content Intelligence Platform y sus licenciantes.",
+    "p1": "El Servicio y su contenido original, características y funcionalidades son y seguirán siendo propiedad exclusiva de Creadora y sus licenciantes.",
     "p2": "Nuestras marcas registradas no pueden usarse en relación con ningún producto o servicio sin nuestro consentimiento previo por escrito."
   },
   "s_disclaimer": {
@@ -120,7 +120,7 @@
   },
   "s_limitation": {
     "title": "Limitación de Responsabilidad",
-    "p1": "En la máxima medida permitida por la ley aplicable, Content Intelligence Platform no será responsable de daños indirectos, incidentales, especiales, consecuentes o punitivos.",
+    "p1": "En la máxima medida permitida por la ley aplicable, Creadora no será responsable de daños indirectos, incidentales, especiales, consecuentes o punitivos.",
     "p2": "Nuestra responsabilidad total no excederá el monto pagado por ti en los doce meses anteriores al reclamo, o $50 USD si no se han realizado pagos."
   },
   "s_termination": {

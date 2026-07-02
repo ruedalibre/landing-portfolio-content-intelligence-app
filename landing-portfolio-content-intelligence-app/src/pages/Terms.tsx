@@ -19,7 +19,7 @@ const Terms = () => {
       <nav className="legal-nav">
         <div className="legal-nav__inner">
           <Link to="/" className="legal-nav__logo">
-            Content <span>Intelligence</span>
+            Creadora
           </Link>
           <Link to="/" className="legal-nav__back">
             {t("back_to_site")}

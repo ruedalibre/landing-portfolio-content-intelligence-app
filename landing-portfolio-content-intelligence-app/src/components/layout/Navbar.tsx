@@ -34,7 +34,7 @@ const Navbar = ({ onRequestAccess }: Props) => {
       <div className="container navbar__content">
         {/* LOGO */}
         <a href="#top" className="navbar__logo">
-          Content <span>Intelligence</span>
+          <span>Creadora</span>
         </a>
 
         {/* LINKS */}

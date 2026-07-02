@@ -1,15 +1,15 @@
 {
-  "page_title": "Política de Privacidad — Content Intelligence Platform",
+  "page_title": "Política de Privacidad — Creadora",
   "hero_label": "Legal",
   "hero_title": "Política de Privacidad",
-  "hero_entity": "Content Intelligence Platform",
+  "hero_entity": "Creadora",
   "hero_effective": "Fecha de vigencia: 1 de enero de 2026",
   "hero_updated": "Última actualización: 1 de enero de 2026",
   "summary_label": "Resumen en lenguaje simple",
   "summary_text": "Solo recopilamos lo necesario para operar el servicio. No vendemos tus datos. No usamos tu contenido creativo para entrenar modelos de IA sin tu consentimiento. Puedes solicitar la eliminación de tus datos en cualquier momento.",
   "toc_title": "Contenido",
   "back_to_site": "← Volver al sitio",
-  "footer_copyright": "© 2026 Content Intelligence Platform",
+  "footer_copyright": "© 2026 Creadora",
   "footer_terms": "Términos de Servicio",
   "footer_privacy": "Política de Privacidad",
   "toc": {
@@ -28,7 +28,7 @@
   },
   "s_intro": {
     "title": "Introducción",
-    "p1_before": "Content Intelligence Platform (\"nosotros\") se compromete a proteger tu privacidad. Esta Política de Privacidad explica cómo recopilamos, usamos, divulgamos y protegemos tu información personal cuando usas nuestro Servicio en",
+    "p1_before": "Creadora (\"nosotros\") se compromete a proteger tu privacidad. Esta Política de Privacidad explica cómo recopilamos, usamos, divulgamos y protegemos tu información personal cuando usas nuestro Servicio en",
     "p1_after": ".",
     "p2": "Al usar el Servicio, consientes las prácticas descritas en esta política. Si no estás de acuerdo, por favor deja de usar el Servicio."
   },
@@ -72,7 +72,7 @@
   },
   "s_ai_data": {
     "title": "Funciones de IA y tus Datos",
-    "p1": "Content Intelligence Platform usa IA para generar briefs, insights y sugerencias creativas. Así es como manejamos tus datos en este contexto:",
+    "p1": "Creadora usa IA para generar briefs, insights y sugerencias creativas. Así es como manejamos tus datos en este contexto:",
     "list": [
       "Tu contenido e ideas se envían a nuestro proveedor de modelos de IA (Anthropic) únicamente para generar respuestas para ti",
       "No usamos tu contenido creativo para entrenar modelos de IA sin tu consentimiento explícito de participación",
@@ -122,7 +122,7 @@
   },
   "s_international": {
     "title": "Transferencias Internacionales de Datos",
-    "p1": "Content Intelligence Platform opera desde los Estados Unidos. Si estás ubicado fuera de EE.UU., tu información será transferida y procesada allí, donde las leyes de protección de datos pueden diferir de las de tu país.",
+    "p1": "Creadora opera desde los Estados Unidos. Si estás ubicado fuera de EE.UU., tu información será transferida y procesada allí, donde las leyes de protección de datos pueden diferir de las de tu país.",
     "p2": "Al usar el Servicio, consientes esta transferencia. Tomamos medidas razonables para garantizar que tus datos sean tratados de forma segura y conforme a esta Política.",
     "p3": "Para usuarios en el Espacio Económico Europeo (EEE) o el Reino Unido, nos apoyamos en Cláusulas Contractuales Estándar como base legal para las transferencias de datos."
   },
