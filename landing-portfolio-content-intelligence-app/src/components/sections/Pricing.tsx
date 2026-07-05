@@ -44,7 +44,7 @@ const LockIcon = () => (
   </svg>
 );
 
-const APP_URL = "https://app.content-intel.app";
+const APP_URL = "https://app.usecreadora.com";
 
 const Pricing = ({ onRequestAccess }: Props) => {
   const { t } = useTranslation("pricing");
